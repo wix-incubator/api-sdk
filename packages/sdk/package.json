@@ -1,0 +1,70 @@
+{
+  "name": "@wix/sdk",
+  "version": "1.1.13",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Ronny Ringel",
+    "email": "ronnyr@wix.com"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "versionBumpStrategy": "manual",
+    "preserveSemverRange": true
+  },
+  "scripts": {
+    "build": "yoshi-library build",
+    "start": "yoshi-library start",
+    "test": "yoshi-library test",
+    "lint": "yoshi-library lint"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "yarn lint"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@wix/image-kit": "^1.23.0",
+    "@wix/sdk-types": "^1.0.0",
+    "querystring": "^0.2.1",
+    "type-fest": "^2.19.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.0.0",
+    "@wix/ecom": "^1.0.0",
+    "@wix/jest-yoshi-preset": "^6.0.0",
+    "@wix/yoshi-flow-library": "^6.0.0",
+    "ts-jest": "^27.1.2",
+    "typescript": "~4.6.0"
+  },
+  "jest": {
+    "preset": "@wix/jest-yoshi-preset"
+  },
+  "yoshiFlowLibrary": {
+    "buildEsmWithBabel": true
+  },
+  "eslintConfig": {
+    "extends": "@wix/eslint-config-yoshi"
+  },
+  "wix": {
+    "artifact": {
+      "groupId": "com.wixpress",
+      "artifactId": "sdk"
+    },
+    "validations": {
+      "source": [
+        "lint"
+      ]
+    }
+  },
+  "wallaby": {
+    "autoDetect": true
+  }
+}
