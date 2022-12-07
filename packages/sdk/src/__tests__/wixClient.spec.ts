@@ -31,6 +31,7 @@ describe('wixClient', () => {
       // @ts-expect-error
       global.fetch = jest.fn(() =>
         Promise.resolve({
+          status: 200,
           json: () =>
             Promise.resolve({
               cart: {

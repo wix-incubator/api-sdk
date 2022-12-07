@@ -23,39 +23,58 @@ const wrapperBuilder = <T extends Function>(
     request: async (factory: any) => {
       if (!headers.Authorization) {
         // eslint-disable-next-line no-throw-literal
-        throw {
-          response: {
-            data: {
-              details: {
-                applicationError: {
-                  description:
-                    'You must set Authorization header before triggering a call',
-                  code: 500,
-                },
-              },
-              message:
-                'You must set Authorization header before triggering a call',
-            },
-            status: 400,
-          },
-        };
+        throw errorBuilder(
+          500,
+          'You must set Authorization header before triggering a call',
+        );
       }
 
       const requestOptions = factory({ host: API_URL });
-      const res = await fetch(`https://${API_URL}${requestOptions.url}`, {
-        method: requestOptions.method,
-        ...(requestOptions.data && {
-          body: JSON.stringify(requestOptions.data),
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-          ...headers,
-        },
-      });
-      const data = await res.json();
-      return { data };
+      try {
+        const res = await fetch(`https://${API_URL}${requestOptions.url}`, {
+          method: requestOptions.method,
+          ...(requestOptions.data && {
+            body: JSON.stringify(requestOptions.data),
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+            ...headers,
+          },
+        });
+
+        if (res.status !== 200) {
+          throw errorBuilder(
+            res.status,
+            `Request failed with status ${res.status}`,
+          );
+        }
+        const data = await res.json();
+        return { data };
+      } catch (e: any) {
+        if (e.message?.includes('fetch is not defined')) {
+          console.error('Node.js v18+ is required');
+        }
+        throw e;
+      }
     },
   });
+};
+
+const errorBuilder = (code: number, description: string) => {
+  return {
+    response: {
+      data: {
+        details: {
+          applicationError: {
+            description,
+            code,
+          },
+        },
+        message: description,
+      },
+      status: code,
+    },
+  };
 };
 
 export function createClient<T = any>(config: {
