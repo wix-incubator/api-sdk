@@ -41,11 +41,17 @@ const wrapperBuilder = <T extends Function>(
             ...headers,
           },
         });
-
         if (res.status !== 200) {
+          let dataError: any = null;
+          try {
+            dataError = await res.json();
+          } catch (e) {
+            //
+          }
           throw errorBuilder(
             res.status,
-            `Request failed with status ${res.status}`,
+            dataError?.message,
+            dataError?.details,
           );
         }
         const data = await res.json();
@@ -60,15 +66,18 @@ const wrapperBuilder = <T extends Function>(
   });
 };
 
-const errorBuilder = (code: number, description: string) => {
+const errorBuilder = (code: number, description: string, details?: any) => {
   return {
     response: {
       data: {
         details: {
-          applicationError: {
-            description,
-            code,
-          },
+          ...details,
+          ...(!details?.validationError && {
+            applicationError: {
+              description,
+              code,
+            },
+          }),
         },
         message: description,
       },
