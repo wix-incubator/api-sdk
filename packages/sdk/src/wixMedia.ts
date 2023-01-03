@@ -5,13 +5,13 @@ const URL_HASH_PREFIX = '#';
 const WIX_PROTOCOL = 'wix:';
 const WIX_IMAGE = 'image';
 
-function getScaleToFillImageUrl(
+function getScaledToFillImageUrl(
   wixMediaIdentifier: string,
   targetWidth: number,
   targetHeight: number,
   options: ImageTransformOptions,
 ) {
-  const img = getRawImageUrl(wixMediaIdentifier);
+  const img = getImageUrl(wixMediaIdentifier);
 
   return sdk.getScaleToFillImageURL(
     img.id,
@@ -23,13 +23,13 @@ function getScaleToFillImageUrl(
   );
 }
 
-function getScaleToFitImageURL(
+function getScaledToFitImageUrl(
   wixMediaIdentifier: string,
   targetWidth: number,
   targetHeight: number,
   options: ImageTransformOptions,
 ) {
-  const img = getRawImageUrl(wixMediaIdentifier);
+  const img = getImageUrl(wixMediaIdentifier);
 
   return sdk.getScaleToFitImageURL(
     img.id,
@@ -41,7 +41,7 @@ function getScaleToFitImageURL(
   );
 }
 
-function getCropImageURL(
+function getCroppedImageUrl(
   wixMediaIdentifier: string,
   cropX: number,
   cropY: number,
@@ -51,7 +51,7 @@ function getCropImageURL(
   targetHeight: number,
   options?: ImageTransformOptions,
 ) {
-  const img = getRawImageUrl(wixMediaIdentifier);
+  const img = getImageUrl(wixMediaIdentifier);
 
   return sdk.getCropImageURL(
     img.id,
@@ -67,7 +67,7 @@ function getCropImageURL(
   );
 }
 
-function getRawImageUrl(val: string) {
+function getImageUrl(val: string) {
   const alignedImage = alignIfLegacy(val, WIX_IMAGE);
 
   const { hash, pathname } = new URL(alignedImage);
@@ -114,8 +114,8 @@ function alignIfLegacy(url: string, type: string): string {
 }
 
 export const media = {
-  getCropImageURL,
-  getScaleToFillImageUrl,
-  getScaleToFitImageURL,
-  getRawImageUrl,
+  getCroppedImageUrl,
+  getScaledToFillImageUrl,
+  getScaledToFitImageUrl,
+  getImageUrl,
 };

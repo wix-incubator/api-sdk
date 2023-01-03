@@ -2,7 +2,7 @@ import { media } from '../wixMedia';
 
 describe('media utils', () => {
   it('should return url', () => {
-    const obj = media.getRawImageUrl(
+    const obj = media.getImageUrl(
       'image://v1/a9ff3b_9928686dcfa740bd802821d0b6f4ac03.jpg#originWidth=1000&originHeight=1000',
     );
     expect(obj.url).toEqual(
@@ -11,7 +11,7 @@ describe('media utils', () => {
   });
 
   it('should return fill image', () => {
-    const url = media.getScaleToFillImageUrl(
+    const url = media.getScaledToFillImageUrl(
       'image://v1/a9ff3b_9928686dcfa740bd802821d0b6f4ac03.jpg#originWidth=1000&originHeight=1000',
       50,
       50,
@@ -23,7 +23,7 @@ describe('media utils', () => {
   });
 
   it('should return fit image', () => {
-    const url = media.getScaleToFitImageURL(
+    const url = media.getScaledToFitImageUrl(
       'image://v1/a9ff3b_9928686dcfa740bd802821d0b6f4ac03.jpg#originWidth=1000&originHeight=1000',
       50,
       50,
@@ -35,7 +35,7 @@ describe('media utils', () => {
   });
 
   it('should return crop image', () => {
-    const url = media.getCropImageURL(
+    const url = media.getCroppedImageUrl(
       'image://v1/a9ff3b_9928686dcfa740bd802821d0b6f4ac03.jpg#originWidth=1000&originHeight=1000',
       450,
       450,
