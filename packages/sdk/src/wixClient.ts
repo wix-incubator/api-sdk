@@ -30,8 +30,12 @@ const wrapperBuilder = <T extends Function>(
       }
 
       const requestOptions = factory({ host: API_URL });
+      let url = `https://${API_URL}${requestOptions.url}`;
+      if (requestOptions.params) {
+        url += `?${new URLSearchParams(requestOptions.params)}`;
+      }
       try {
-        const res = await fetch(`https://${API_URL}${requestOptions.url}`, {
+        const res = await fetch(url, {
           method: requestOptions.method,
           ...(requestOptions.data && {
             body: JSON.stringify(requestOptions.data),
