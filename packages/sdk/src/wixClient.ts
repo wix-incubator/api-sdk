@@ -8,41 +8,36 @@ type WithoutFunctionWrapper<T> = {
     : Simplify<WithoutFunctionWrapper<T[Key]>>;
 };
 
-export interface IWrapper {
+export interface IWrapper<Z extends AuthenticationStrategy> {
   setHeaders(headers: Headers): void;
+  auth: Z;
 }
 
 const API_URL = 'www.wixapis.com';
 
-const wrapperBuilder = <T extends Function>(
+const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
   origFunc: T,
+  authStrategy: Z,
   headers: Headers,
   // @ts-expect-error
 ): ReturnType<T> => {
   return origFunc({
     request: async (factory: any) => {
-      if (!headers.Authorization) {
-        // eslint-disable-next-line no-throw-literal
-        throw errorBuilder(
-          500,
-          'You must set Authorization header before triggering a call',
-        );
-      }
-
       const requestOptions = factory({ host: API_URL });
       let url = `https://${API_URL}${requestOptions.url}`;
-      if (requestOptions.params) {
-        url += `?${new URLSearchParams(requestOptions.params)}`;
+      if (requestOptions.params && requestOptions.params.toString()) {
+        url += `?${requestOptions.params.toString()}`;
       }
       try {
+        const authHeaders = await authStrategy.getAuthHeaders();
         const res = await fetch(url, {
           method: requestOptions.method,
           ...(requestOptions.data && {
             body: JSON.stringify(requestOptions.data),
           }),
           headers: {
-            'Content-Type': 'application/json',
             ...headers,
+            ...authHeaders?.headers,
           },
         });
         if (res.status !== 200) {
@@ -56,6 +51,7 @@ const wrapperBuilder = <T extends Function>(
             res.status,
             dataError?.message,
             dataError?.details,
+            { requestId: res.headers.get('X-Wix-Request-Id') },
           );
         }
         const data = await res.json();
@@ -70,7 +66,12 @@ const wrapperBuilder = <T extends Function>(
   });
 };
 
-const errorBuilder = (code: number, description: string, details?: any) => {
+const errorBuilder = (
+  code: number,
+  description: string,
+  details?: any,
+  data?: Record<string, any>,
+) => {
   return {
     response: {
       data: {
@@ -80,6 +81,7 @@ const errorBuilder = (code: number, description: string, details?: any) => {
             applicationError: {
               description,
               code,
+              data,
             },
           }),
         },
@@ -90,15 +92,23 @@ const errorBuilder = (code: number, description: string, details?: any) => {
   };
 };
 
-export function createClient<T = any>(config: {
+export function createClient<
+  T = any,
+  Z extends AuthenticationStrategy = any,
+>(config: {
   modules: T;
+  auth?: Z;
   headers?: Headers;
-}): WithoutFunctionWrapper<T> & IWrapper {
+}): WithoutFunctionWrapper<T> & IWrapper<Z> {
   if (!config.modules || Object.entries(config.modules).length < 1) {
     throw new Error('Missing modules');
   }
 
   const _headers: Headers = config.headers || { Authorization: '' };
+  const authStrategy = config.auth || {
+    getAuthHeaders: () => Promise.resolve({ headers: {} }),
+  };
+
   const isObject = (val: any) =>
     val && typeof val === 'object' && !Array.isArray(val);
 
@@ -107,7 +117,7 @@ export function createClient<T = any>(config: {
       if (isObject(value)) {
         prev[key] = traverse(value);
       } else if (typeof obj[key] === 'function') {
-        prev[key] = wrapperBuilder(value as Function, _headers);
+        prev[key] = wrapperBuilder(value as Function, authStrategy, _headers);
       } else {
         prev[key] = value;
       }
@@ -115,13 +125,16 @@ export function createClient<T = any>(config: {
     }, {});
   };
 
+  const setHeaders = (headers: Headers) => {
+    for (const k in headers) {
+      _headers[k] = headers[k];
+    }
+  };
+
   const wrappedModules = traverse(config.modules);
   return {
     ...wrappedModules,
-    setHeaders: (headers: Headers) => {
-      for (const k in headers) {
-        _headers[k] = headers[k];
-      }
-    },
+    auth: authStrategy,
+    setHeaders,
   };
 }
