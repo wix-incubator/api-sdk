@@ -35,10 +35,10 @@ describe('APIKeyStrategy', () => {
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
-        headers: {
+        headers: expect.objectContaining({
           Authorization: siteLevelApiKeyConfig.apiKey,
           'wix-site-id': siteLevelApiKeyConfig.siteId,
-        },
+        }),
       }),
     );
   });
@@ -59,10 +59,10 @@ describe('APIKeyStrategy', () => {
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
-        headers: {
+        headers: expect.objectContaining({
           Authorization: accountLevelApiKeyConfig.apiKey,
           'wix-account-id': accountLevelApiKeyConfig.accountId,
-        },
+        }),
       }),
     );
   });
@@ -84,11 +84,11 @@ describe('APIKeyStrategy', () => {
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
-        headers: {
+        headers: expect.objectContaining({
           Authorization: bothLevelsApiKeyConfig.apiKey,
           'wix-account-id': bothLevelsApiKeyConfig.accountId,
           'wix-site-id': bothLevelsApiKeyConfig.siteId,
-        },
+        }),
       }),
     );
   });
@@ -112,10 +112,10 @@ describe('APIKeyStrategy', () => {
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
-        headers: {
+        headers: expect.objectContaining({
           Authorization: baseConfig.apiKey,
           'wix-site-id': siteId,
-        },
+        }),
       }),
     );
 
@@ -126,11 +126,11 @@ describe('APIKeyStrategy', () => {
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
-        headers: {
+        headers: expect.objectContaining({
           Authorization: baseConfig.apiKey,
           'wix-site-id': siteId,
           'wix-account-id': accountId,
-        },
+        }),
       }),
     );
   });

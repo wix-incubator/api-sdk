@@ -1426,12 +1426,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
-  version: 7.21.0
-  resolution: "@babel/runtime@npm:7.21.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40babel%2Fruntime%2F-%2Fruntime-7.21.0.tgz"
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.21.5, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
+  version: 7.21.5
+  resolution: "@babel/runtime@npm:7.21.5::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40babel%2Fruntime%2F-%2Fruntime-7.21.5.tgz"
   dependencies:
     regenerator-runtime: ^0.13.11
-  checksum: 8fc28acf3b353390a8188a63d443719847b24b66028fdc8bb301c08e2ee013b52aaeb9d0e9783fa5dcd72bb3c0172fb647419db32392101001738356bdc1f4ab
+  checksum: c704c36bf1c7f948b1d404e3ad3b00897f6dbaf8bb9455b0a78f96ed0e2f24599f89fd3950a277566be6694ab8814a47bec743e98dd7c7f57e9f0fedc6c6c32f
   languageName: node
   linkType: hard
 
@@ -1515,12 +1515,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@evilmartians/lefthook@npm:^1.3.3":
-  version: 1.3.3
-  resolution: "@evilmartians/lefthook@npm:1.3.3::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40evilmartians%2Flefthook%2F-%2Flefthook-1.3.3.tgz"
+"@evilmartians/lefthook@npm:^1.0.4":
+  version: 1.3.12
+  resolution: "@evilmartians/lefthook@npm:1.3.12::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40evilmartians%2Flefthook%2F-%2Flefthook-1.3.12.tgz"
   bin:
     lefthook: bin/index.js
-  checksum: 58c2dfeb99bea20fde3f7a551c63289aa61344c375a5344d44b9396cd3a726c7f088cb5faed7bcecc8929b21fa469c8367ff9367b8569a2816811315b8859f7c
+  checksum: 08a6f6e1a7a8d96e394af7e4665e1745ff8369d70a7a2d92c78d53e9ed531c4f9f5e03f6d4824cfc54f03c9cfc0eaff46489c85d2a867442d0ca0ef279b94e1b
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=ia32)
   languageName: node
   linkType: hard
@@ -2896,6 +2896,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/grecaptcha@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/grecaptcha@npm:3.0.4::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40types%2Fgrecaptcha%2F-%2Fgrecaptcha-3.0.4.tgz"
+  checksum: 2614957ae87f3b4a27dec9469dc3ed73db20207c99c4701a5cb19c8b17ff9b7f385964760f5873d8f3a30789464f0afb2024631aa8b932ca8ead2f5e1f63c57d
+  languageName: node
+  linkType: hard
+
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.1.0
   resolution: "@types/html-minifier-terser@npm:6.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40types%2Fhtml-minifier-terser%2F-%2Fhtml-minifier-terser-6.1.0.tgz"
@@ -3033,10 +3040,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.18.14":
-  version: 16.18.14
-  resolution: "@types/node@npm:16.18.14::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40types%2Fnode%2F-%2Fnode-16.18.14.tgz"
-  checksum: af0229e73c08e77a9d9281c15e2fb5ea8061a2390287659d7c1abf9602792ea3e923c919430606438085823704f68afa99ca292ed0c99352a4296c3d6b12c711
+"@types/node@npm:^16.18.14, @types/node@npm:^16.18.25":
+  version: 16.18.25
+  resolution: "@types/node@npm:16.18.25::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40types%2Fnode%2F-%2Fnode-16.18.25.tgz"
+  checksum: 04ec374076b16e50e14596f0dfeb9ca669277991507d6d637055ca171b1722336adf6512e3aab360f609d35c90cf6be14dbe5d20474b6b8257c3541f222479fc
   languageName: node
   linkType: hard
 
@@ -3506,7 +3513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/ambassador-app-settings-v1-settings@npm:^1.0.24, @wix/ambassador-app-settings-v1-settings@npm:^1.0.27":
+"@wix/ambassador-app-settings-v1-settings@npm:^1.0.27":
   version: 1.0.30
   resolution: "@wix/ambassador-app-settings-v1-settings@npm:1.0.30::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fambassador-app-settings-v1-settings%2F-%2F%40wix%2Fambassador-app-settings-v1-settings-1.0.30.tgz"
   dependencies:
@@ -3514,6 +3521,19 @@ __metadata:
     "@wix/metro-runtime": ^1.0.0
     callsite: ^1.0.0
   checksum: a6e09758fcd0faf609ab12b720cbc5faffca09bd6cc745e4df075579649c3f286ed6213360b8aebe83a5622acfdb49c77655edd92d5d7440c3e0f14a5d5a5448
+  languageName: node
+  linkType: hard
+
+"@wix/ambassador-editor-document-store@npm:^3.0.373":
+  version: 3.0.405
+  resolution: "@wix/ambassador-editor-document-store@npm:3.0.405::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fambassador-editor-document-store%2F-%2F%40wix%2Fambassador-editor-document-store-3.0.405.tgz"
+  dependencies:
+    "@wix/json-proto-serializer": latest
+  peerDependencies:
+    "@types/long": 4.0.1
+    "@wix/ambassador": "*"
+    long: 4.0.0
+  checksum: fc05b64a637d7e39e4cafe108ff7e0e1a010c17fc9d5ff792042f75af9757af071a7bb6a2b728d8de037676354cd65eaeec1dd63e50e7e123827c8ac27b4dfb1
   languageName: node
   linkType: hard
 
@@ -3539,20 +3559,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wix/ambassador-wix-html-editor-info-webapp@npm:^2.0.101":
+  version: 2.0.109
+  resolution: "@wix/ambassador-wix-html-editor-info-webapp@npm:2.0.109::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fambassador-wix-html-editor-info-webapp%2F-%2F%40wix%2Fambassador-wix-html-editor-info-webapp-2.0.109.tgz"
+  peerDependencies:
+    "@wix/ambassador": "*"
+  checksum: 59a07e89028c143b6ffbedba45467f87f5b63e8e083adcc558a51569d9524ed6d36659e102f272e8c6080ed8a48c81e82a8b36bdba7e5bfe9871a57df7913500
+  languageName: node
+  linkType: hard
+
 "@wix/api-client@workspace:packages/sdk":
   version: 0.0.0-use.local
   resolution: "@wix/api-client@workspace:packages/sdk"
   dependencies:
-    "@babel/runtime": ^7.21.0
+    "@babel/runtime": ^7.21.5
+    "@types/grecaptcha": ^3.0.4
     "@types/jest": ^27.5.2
-    "@types/node": ^16.18.14
-    "@wix/ecom": ^1.0.125
-    "@wix/events": ^1.0.52
-    "@wix/identity": ^1.0.18
-    "@wix/image-kit": ^1.30.0
-    "@wix/jest-yoshi-preset": ^6.51.2
-    "@wix/sdk-types": ^1.0.0
-    "@wix/yoshi-flow-library": ^6.51.2
+    "@types/node": ^16.18.25
+    "@wix/ecom": ^1.0.165
+    "@wix/events": ^1.0.80
+    "@wix/identity": ^1.0.31
+    "@wix/image-kit": ^1.31.0
+    "@wix/jest-yoshi-preset": ^6.54.2
+    "@wix/motion": ^1.0.23
+    "@wix/redirects": ^1.0.13
+    "@wix/sdk-types": 1.1.61
+    "@wix/yoshi-flow-library": ^6.54.2
+    pkce-challenge: ^3.1.0
     querystring: ^0.2.1
     ts-jest: ^27.1.5
     type-fest: ^2.19.0
@@ -3572,15 +3605,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/artifact-description@npm:^1.0.175, @wix/artifact-description@npm:^1.0.371, @wix/artifact-description@npm:~1.0.371":
-  version: 1.0.371
-  resolution: "@wix/artifact-description@npm:1.0.371::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fartifact-description%2F-%2F%40wix%2Fartifact-description-1.0.371.tgz"
+"@wix/artifact-description@npm:^1.0.175, @wix/artifact-description@npm:^1.0.372, @wix/artifact-description@npm:~1.0.372":
+  version: 1.0.372
+  resolution: "@wix/artifact-description@npm:1.0.372::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fartifact-description%2F-%2F%40wix%2Fartifact-description-1.0.372.tgz"
   dependencies:
     "@wix/fed-build-flow-runner-error": 1.0.363
     fast-xml-parser: ^3.21.1
     lodash.pickby: ^4.6.0
     zod: 3.9.8
-  checksum: e8b756e0b5e316aefd9e56a4c41431146fa013d61a42a2110734feaa0e5750c25768d3396da6cbebd36f51139800ef1f052fe925b2d542061ec397aaee6aa125
+  checksum: afb6fc35169b36d1feecc5cff514aa6b6648c08b9b1b9c9a777b25db61e7bddbbe35bec11631527eec69011ec9d06c10612015688085ef8ce1d6ef9f3054de20
   languageName: node
   linkType: hard
 
@@ -3595,9 +3628,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/babel-preset-yoshi@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/babel-preset-yoshi@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fbabel-preset-yoshi%2F-%2F%40wix%2Fbabel-preset-yoshi-6.51.2.tgz"
+"@wix/babel-preset-yoshi@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/babel-preset-yoshi@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fbabel-preset-yoshi%2F-%2F%40wix%2Fbabel-preset-yoshi-6.54.2.tgz"
   dependencies:
     "@babel/plugin-proposal-class-properties": ^7.18.6
     "@babel/plugin-proposal-decorators": ^7.20.13
@@ -3618,7 +3651,7 @@ __metadata:
   peerDependenciesMeta:
     "@loadable/babel-plugin":
       optional: true
-  checksum: ca8010ef0df6e3021e1145b6488692064de204041d442b63bbb82a34e0818b76e66d695d046fdf59f561f2bfcafca6eb227b60a6ec834263257eddfef14c897c
+  checksum: bbd5bf02d3c3cf3707111916202954da8915064ffa105d1801ee453d956f9c2676099b35fd27326d1da44f29625bf54cf71f2aa13aea065b227ac04f8eda5585
   languageName: node
   linkType: hard
 
@@ -3634,19 +3667,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/bi-logger-settings@npm:^1.17.0":
-  version: 1.28.0
-  resolution: "@wix/bi-logger-settings@npm:1.28.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fbi-logger-settings%2F-%2F%40wix%2Fbi-logger-settings-1.28.0.tgz"
+"@wix/bi-logger-settings@npm:^1.29.0":
+  version: 1.29.0
+  resolution: "@wix/bi-logger-settings@npm:1.29.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fbi-logger-settings%2F-%2F%40wix%2Fbi-logger-settings-1.29.0.tgz"
   dependencies:
     "@babel/runtime": ^7.0.0
     "@wix/bi-logger-testkit": ^1.0.738
     is-url-superb: ^2.0.0
     tslib: ^2.0.0
-  checksum: 2a2b08a5c10ce1fad66bf0651df1f592a232ae6a62867d903ff074b5883631e7c0b62355df985b6a90e7016e397d1f3b3a0726e80b71d618f48f3176b5a35475
+  checksum: 8066f941f827744e3c01e01d6f16aab70e7b1c93d0a18f1a71857112b69066b7f449b8d3960dfee0a70d8f7682c02d265c19fe4780c1f7404f54dab18bb64451
   languageName: node
   linkType: hard
 
-"@wix/bi-logger-testkit@npm:^1.0.738, @wix/bi-logger-testkit@npm:^1.1162.2, @wix/bi-logger-testkit@npm:^1.1162.7":
+"@wix/bi-logger-testkit@npm:^1.0.738, @wix/bi-logger-testkit@npm:^1.1162.7":
   version: 1.1162.7
   resolution: "@wix/bi-logger-testkit@npm:1.1162.7::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fbi-logger-testkit%2F-%2F%40wix%2Fbi-logger-testkit-1.1162.7.tgz"
   dependencies:
@@ -3664,6 +3697,15 @@ __metadata:
     is-url-superb: ^2.0.0
     tslib: ^2.0.0
   checksum: 32f161c3eef74ba2c3e7411506c60aac620aeaac66ba48557aea39bb80c65070a91ed445d87943b18301b919902bc3071ca80b9b4084db5750b4670fab3935f7
+  languageName: node
+  linkType: hard
+
+"@wix/blocks-velo-typings@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@wix/blocks-velo-typings@npm:1.0.4::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fblocks-velo-typings%2F-%2F%40wix%2Fblocks-velo-typings-1.0.4.tgz"
+  dependencies:
+    "@wix/editorx-package-json-fixer": ^1.0.15
+  checksum: cb163e798a8a4f7f41fd02dc0f04ca9bf2fe96fae81bf6bfc44def98e879365fb433bba5a4af8899f71f9ab8d24e77fe68cb21eae06a1077bdadbd56753b612d
   languageName: node
   linkType: hard
 
@@ -3696,19 +3738,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/consent-policy-client-accessor@npm:^1.10.0, @wix/consent-policy-client-accessor@npm:^1.3.0, @wix/consent-policy-client-accessor@npm:^1.6.0, @wix/consent-policy-client-accessor@npm:^1.7.0":
-  version: 1.10.0
-  resolution: "@wix/consent-policy-client-accessor@npm:1.10.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fconsent-policy-client-accessor%2F-%2F%40wix%2Fconsent-policy-client-accessor-1.10.0.tgz"
+"@wix/consent-policy-client-accessor@npm:^1.10.0, @wix/consent-policy-client-accessor@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "@wix/consent-policy-client-accessor@npm:1.14.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fconsent-policy-client-accessor%2F-%2F%40wix%2Fconsent-policy-client-accessor-1.14.0.tgz"
   dependencies:
-    "@wix/cookie-consent-policy-client": ^1.0.216
-  checksum: 90026deaa80747d90bb442a9f176bd1ce362c98d855adec92d7ceafc5a5885fc22c3b71914e96fd79f01f8d9104f8da907bcbff6b54fb95fb122d68b141814ac
+    "@wix/cookie-consent-policy-client": ^1.0.0
+  checksum: 4980b7cdb9de64f9c266cb9e2cc96f2804c0d7e8715480380815452b01f7182a791b5a4a8c3c5c5b66e22bfad28c3981ed91eeebbab471e6e03435606e885559
   languageName: node
   linkType: hard
 
-"@wix/cookie-consent-policy-client@npm:^1.0.216":
-  version: 1.0.216
-  resolution: "@wix/cookie-consent-policy-client@npm:1.0.216::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fcookie-consent-policy-client%2F-%2F%40wix%2Fcookie-consent-policy-client-1.0.216.tgz"
-  checksum: a021d1231cf89f98574623bbf1b7b2aaf08f1baea2cd651adc223838c5e1276d5325dc3e5f46311e2d060eddf0b31c03d9df1b96959cad4d377782361580f74d
+"@wix/cookie-consent-policy-client@npm:^1.0.0":
+  version: 1.851.0
+  resolution: "@wix/cookie-consent-policy-client@npm:1.851.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fcookie-consent-policy-client%2F-%2F%40wix%2Fcookie-consent-policy-client-1.851.0.tgz"
+  checksum: 10d4271442e1a807b8f031ae5ee94a6eea35c446823922b32ebffafe67892829912ff3033cbd6915660657619fd03057a6cbf4310e4a394cf70014a14372b195
   languageName: node
   linkType: hard
 
@@ -3722,31 +3764,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/data-capsule@npm:2.108.0":
-  version: 2.108.0
-  resolution: "@wix/data-capsule@npm:2.108.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdata-capsule%2F-%2F%40wix%2Fdata-capsule-2.108.0.tgz"
+"@wix/data-capsule@npm:2.120.0":
+  version: 2.120.0
+  resolution: "@wix/data-capsule@npm:2.120.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdata-capsule%2F-%2F%40wix%2Fdata-capsule-2.120.0.tgz"
   dependencies:
     "@wix/ambassador-app-settings-v1-settings": ^1.0.27
-    "@wix/http-client": 1.526.0
+    "@wix/http-client": 1.528.0
     greedy-split: ^1.0.0
     lodash: ^4.17.21
     message-channel: ^2.0.0
     tslib: ^2.5.0
-  checksum: 46ff2d376958ee34904a6fe0b5f08f816beb6b885350eb0dfab9f57fa614c1dac125895a3c752e5131897d0bdd4f01d3af233ecc77c71cd45a689b6f7e9356ad
+  checksum: 931db250110f72101c4f6be844165f705cdff13cd04cf822eca3fef417a1dffff9c04f678667250c3b95f6daef27f9a20ee3a0fde99d2fb0fd8462998119ae5d
   languageName: node
   linkType: hard
 
-"@wix/data-capsule@npm:2.80.0":
-  version: 2.80.0
-  resolution: "@wix/data-capsule@npm:2.80.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdata-capsule%2F-%2F%40wix%2Fdata-capsule-2.80.0.tgz"
+"@wix/data-capsule@npm:2.121.0":
+  version: 2.121.0
+  resolution: "@wix/data-capsule@npm:2.121.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdata-capsule%2F-%2F%40wix%2Fdata-capsule-2.121.0.tgz"
   dependencies:
-    "@wix/ambassador-app-settings-v1-settings": ^1.0.24
-    "@wix/http-client": 1.523.0
+    "@wix/ambassador-app-settings-v1-settings": ^1.0.27
+    "@wix/http-client": 1.528.0
     greedy-split: ^1.0.0
     lodash: ^4.17.21
     message-channel: ^2.0.0
-    tslib: ^2.4.0
-  checksum: fde01a44ef049a699834e5bf207f58886ce0bf26a4b9e4d0264f83929e3801cdd2c3cbd729783ff694d7a1422aea0ff43e37115850bfa2ba01a499e717ba9606
+    tslib: ^2.5.0
+  checksum: fb5a2220cf72d6e993c7bc43d1143aa03598d9aa6e60158675d1936512d6c5b6ed6d7ae82da168aed23bd6c7263d4dfc2097760ba08a8f33e7d69f80ba86dabc
   languageName: node
   linkType: hard
 
@@ -3759,70 +3801,76 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/deeplink-core@npm:1.860.0":
-  version: 1.860.0
-  resolution: "@wix/deeplink-core@npm:1.860.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdeeplink-core%2F-%2F%40wix%2Fdeeplink-core-1.860.0.tgz"
-  checksum: a823ce3050cea009c49c656c39a720eafa3f0cc2b43479b430d741028e4e4b9764409c21eca16c44218a5f2034ddfb9c0b218ae65e0cc2f020f37e984eef9e5a
+"@wix/deeplink-core@npm:1.982.0":
+  version: 1.982.0
+  resolution: "@wix/deeplink-core@npm:1.982.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdeeplink-core%2F-%2F%40wix%2Fdeeplink-core-1.982.0.tgz"
+  checksum: 7dba66e7f404454ddcb030242245efec1cbf9e1e6f1529724447ddcb071e77cffe440d00aa3254e90f109a4449af8aeddb0029fd912cf0e9c694214b88fdfeb2
   languageName: node
   linkType: hard
 
-"@wix/document-manager-utils@npm:1.256.0":
-  version: 1.256.0
-  resolution: "@wix/document-manager-utils@npm:1.256.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdocument-manager-utils%2F-%2F%40wix%2Fdocument-manager-utils-1.256.0.tgz"
-  checksum: efe092980abab04835a6cb291b6b38bffcf57e24f249a4b88ab9b0d6eeffb6731749586d36e9f0a3559fd9e9a72af3cfe755fcd92dcdaf062ddd3508dde2878c
+"@wix/document-manager-utils@npm:1.346.0":
+  version: 1.346.0
+  resolution: "@wix/document-manager-utils@npm:1.346.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdocument-manager-utils%2F-%2F%40wix%2Fdocument-manager-utils-1.346.0.tgz"
+  dependencies:
+    lodash: ^4.17.21
+  checksum: 90cf07dbe9a85dce79e169c65cc3e3214fb4d8c16920992336ccb6cda2e23f5be8b1f49970fd2cf35fc564624803fa835f113c282cd8e12bae3abf8c78a6aaa0
   languageName: node
   linkType: hard
 
-"@wix/document-services-types@npm:^1.632.0":
-  version: 1.632.0
-  resolution: "@wix/document-services-types@npm:1.632.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdocument-services-types%2F-%2F%40wix%2Fdocument-services-types-1.632.0.tgz"
+"@wix/document-services-types@npm:^1.851.0":
+  version: 1.904.0
+  resolution: "@wix/document-services-types@npm:1.904.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fdocument-services-types%2F-%2F%40wix%2Fdocument-services-types-1.904.0.tgz"
   dependencies:
     "@types/json-schema": ^7.0.11
-    "@wix/document-manager-utils": 1.256.0
-  checksum: 7e54f09ce0877a19a77da6aa76f762815fa74e72e9843f305f93aebdff95659219f0227d8a5e2beacb3a97bede107aac60ad98fa5bacd24fc2bde4bd590f3c3b
+    "@wix/ambassador-editor-document-store": ^3.0.373
+    "@wix/ambassador-wix-html-editor-info-webapp": ^2.0.101
+    "@wix/document-manager-utils": 1.346.0
+  checksum: 024b830213cd35ea6636b481a543e2f4850e0ccbe21ef8a205922602950816cd4a6bc95d31f0c05b38ab6a4e07fe944a10f86663c1de82c6a6e48f0bd326363e
   languageName: node
   linkType: hard
 
-"@wix/ecom@npm:^1.0.125":
-  version: 1.0.125
-  resolution: "@wix/ecom@npm:1.0.125::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fecom%2F-%2Fecom-1.0.125.tgz"
+"@wix/ecom@npm:^1.0.165":
+  version: 1.0.165
+  resolution: "@wix/ecom@npm:1.0.165::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fecom%2F-%2Fecom-1.0.165.tgz"
   dependencies:
     "@wix/metro-runtime": ^1.0.0
     "@wix/motion-edm-autogen-query-wrapper": ^1.0.0
     "@wix/sdk-types": ^1.0.0
-  checksum: e5b787e07d9104f65b3af6541df49eaef7148811ab15ee225eba5c36ba134b64f8d9b97cf04d858cd3cfbefa011fbc3c262040e15d93cec0ddfb895c277fcb8d
+  checksum: 027a1523058cdc5d2a87251eb79c03396ee3bf5e4dd0d0de1734549df6c622450d7fe2baee3d371e7a1a9abbc8242b99583614fd911a4c9e7d4a70858c8f6113
   languageName: node
   linkType: hard
 
-"@wix/editor-platform-sdk-types@npm:1.893.0":
-  version: 1.893.0
-  resolution: "@wix/editor-platform-sdk-types@npm:1.893.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feditor-platform-sdk-types%2F-%2F%40wix%2Feditor-platform-sdk-types-1.893.0.tgz"
+"@wix/editor-elements-platform@npm:^1.168.0":
+  version: 1.181.0
+  resolution: "@wix/editor-elements-platform@npm:1.181.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feditor-elements-platform%2F-%2F%40wix%2Feditor-elements-platform-1.181.0.tgz"
+  checksum: 1ea443840af24458383669fb1f779747058769a762ea124aebacbfd60d631b9b638dd9eca2f7b13cde878494da9b9426548e6be813987d765f34f793fed5eeeb
+  languageName: node
+  linkType: hard
+
+"@wix/editor-platform-sdk-types@npm:1.1050.0":
+  version: 1.1050.0
+  resolution: "@wix/editor-platform-sdk-types@npm:1.1050.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feditor-platform-sdk-types%2F-%2F%40wix%2Feditor-platform-sdk-types-1.1050.0.tgz"
   dependencies:
-    "@wix/deeplink-core": 1.860.0
-    "@wix/document-services-types": ^1.632.0
-    "@wix/fe-essentials-editor": ^1.450.0
-  checksum: 971649362019c0fbef6fb05f0d908e2e9c8f71f5f65c2872add8b38c17f7e34dd193c81257fa1b94dbaec8ea709b5f9584e0ea4753a6ec5173ee42c01c9c7b91
+    "@wix/deeplink-core": 1.982.0
+    "@wix/document-services-types": ^1.851.0
+    "@wix/editor-elements-platform": ^1.168.0
+    "@wix/fe-essentials-editor": ^1.556.0
+  checksum: 007c379a36c4e5e2622063f80aee19416b1c559b593beb870f733b5da1c9ebd1bb0376f1da15096d14ee679d170ebb14ee8674182ff7fc906183995e17f1f9fc
   languageName: node
   linkType: hard
 
-"@wix/error-monitor@npm:1.279.0":
-  version: 1.279.0
-  resolution: "@wix/error-monitor@npm:1.279.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ferror-monitor%2F-%2F%40wix%2Ferror-monitor-1.279.0.tgz"
-  dependencies:
-    "@sentry/types": 5.30.0
-    "@wix/wix-recorder": ^1.20.0
-    hoist-non-react-statics: ^3.3.2
-    sentry-testkit: 3.3.8
-    tslib: ^2.4.0
-  peerDependencies:
-    react: ">= 16.8"
-  checksum: e5b33eccd3bfd39300046f454efc3a6b7b0eb4d62274175586d5b265cdeddbf7fe919cbfca5278f21aca0daed11e93f2af581481810e28993479c421fc340e96
+"@wix/editorx-package-json-fixer@npm:^1.0.15":
+  version: 1.0.15
+  resolution: "@wix/editorx-package-json-fixer@npm:1.0.15::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feditorx-package-json-fixer%2F-%2F%40wix%2Feditorx-package-json-fixer-1.0.15.tgz"
+  bin:
+    editorx-package-json-fixer: ./index.js
+  checksum: c133b46abd69e71819a66b1fd64ae3845b680ec297d73a11971a5d36386e7adb8ff984c68646d714fa87b3cd0f2c185fde6adc20eb69be2e2c0cb4bcbbfa406f
   languageName: node
   linkType: hard
 
-"@wix/error-monitor@npm:1.295.0":
-  version: 1.295.0
-  resolution: "@wix/error-monitor@npm:1.295.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ferror-monitor%2F-%2F%40wix%2Ferror-monitor-1.295.0.tgz"
+"@wix/error-monitor@npm:1.300.0":
+  version: 1.300.0
+  resolution: "@wix/error-monitor@npm:1.300.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ferror-monitor%2F-%2F%40wix%2Ferror-monitor-1.300.0.tgz"
   dependencies:
     "@sentry/types": 5.30.0
     "@wix/wix-recorder": ^1.20.0
@@ -3831,13 +3879,28 @@ __metadata:
     tslib: ^2.5.0
   peerDependencies:
     react: ">= 16.8"
-  checksum: decfb92c9362c6e4a597f642ada4045946cd6bb7c2b867fb0a782813edcfd0d57e32ce0f5c695d102e4b2ee96cce5cea2f95cbf3003ad5848e13afdaa2b344c1
+  checksum: 28853fd9de80b98dccc5a83516dbaa1d7a47605af45826887dabfd3a4a376f0991f75dd0ae6649feed64862cb2d4f64006192dc45f1229035c066484c2c9dae4
   languageName: node
   linkType: hard
 
-"@wix/eslint-config-yoshi-base@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/eslint-config-yoshi-base@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feslint-config-yoshi-base%2F-%2F%40wix%2Feslint-config-yoshi-base-6.51.2.tgz"
+"@wix/error-monitor@npm:1.301.0":
+  version: 1.301.0
+  resolution: "@wix/error-monitor@npm:1.301.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ferror-monitor%2F-%2F%40wix%2Ferror-monitor-1.301.0.tgz"
+  dependencies:
+    "@sentry/types": 5.30.0
+    "@wix/wix-recorder": ^1.20.0
+    hoist-non-react-statics: ^3.3.2
+    sentry-testkit: 3.3.8
+    tslib: ^2.5.0
+  peerDependencies:
+    react: ">= 16.8"
+  checksum: 3c60ca62c2b2fdc3b3cee7cbd9eb7370d4144cd19af7e9687866d43b66fa73f72b7902d40a1ccfb0e2f03cfda21d1d47cfdeb9774bef9c4b3c216bc8088543fa
+  languageName: node
+  linkType: hard
+
+"@wix/eslint-config-yoshi-base@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/eslint-config-yoshi-base@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feslint-config-yoshi-base%2F-%2F%40wix%2Feslint-config-yoshi-base-6.54.2.tgz"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^5.52.0
     "@typescript-eslint/parser": ^5.52.0
@@ -3849,112 +3912,86 @@ __metadata:
     prettier: ^2.8.4
   peerDependencies:
     eslint: ^7.32.0
-  checksum: 14cb8bf75cae1d67a6b487ed5b8846850f123c791010211fbfa827a35f2cb243f9bc41ab0de9abccbb3a91b5df90faa57be7fa1b2e8b560658a416149a2eb334
+  checksum: 2d8336ade1ba7cef9f1243277396c08b66d49b6141a19b6687b91faad71e3ad1cc6e1d89046df5b5f11061a42603ba9b0014df06598923bcd38c590393b65b80
   languageName: node
   linkType: hard
 
-"@wix/eslint-config-yoshi@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/eslint-config-yoshi@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feslint-config-yoshi%2F-%2F%40wix%2Feslint-config-yoshi-6.51.2.tgz"
+"@wix/eslint-config-yoshi@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/eslint-config-yoshi@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Feslint-config-yoshi%2F-%2F%40wix%2Feslint-config-yoshi-6.54.2.tgz"
   dependencies:
     "@rushstack/eslint-patch": ^1.2.0
-    "@wix/eslint-config-yoshi-base": 6.51.2
+    "@wix/eslint-config-yoshi-base": 6.54.2
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-wix-style-react: ^1.0.418
   peerDependencies:
     eslint: ^7.32.0
-  checksum: 02db22006f6618a2407744e151d90b9040a12a10404c9ae161d216e46ddc897884084d6af221d2ad53b4af9a66e16a833191295745ec9e0612b54aaf79897bd3
+  checksum: 79d13680b7d66431c89a17dfe292a6c0439d41b8e86406a7d03992866694173fc8c9f02463396426e98b539b57a316af7a5afb72a3eb46886f960d2172a293f5
   languageName: node
   linkType: hard
 
-"@wix/events@npm:^1.0.52":
-  version: 1.0.52
-  resolution: "@wix/events@npm:1.0.52::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fevents%2F-%2Fevents-1.0.52.tgz"
+"@wix/events@npm:^1.0.80":
+  version: 1.0.80
+  resolution: "@wix/events@npm:1.0.80::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fevents%2F-%2Fevents-1.0.80.tgz"
   dependencies:
     "@wix/metro-runtime": ^1.0.0
     "@wix/motion-edm-autogen-query-wrapper": ^1.0.0
     "@wix/sdk-types": ^1.0.0
-  checksum: ebc7a2bbf454d17c648799039cce086e2abee49448ff321fd6aade0f51a3fff10f6ae41f557bcdfceba3863f07be56ba8c9cf1966d8529b4200479a279a8af9a
+  checksum: 312e9e1612274082e7d845198e88e330789c7d85002b140e2217f5e91e1afcd6b62153f6f4e9a9b6d2563772058f1c79b85dd39b3f03c95ea5d40b3e00fc64b5
   languageName: node
   linkType: hard
 
-"@wix/extensions@npm:~1.0.691, @wix/extensions@npm:~1.0.707":
-  version: 1.0.707
-  resolution: "@wix/extensions@npm:1.0.707::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fextensions%2F-%2F%40wix%2Fextensions-1.0.707.tgz"
-  checksum: 8309f3a1bf24a6a0d80a2d22a882b993a47c57f057bf1358226a33dce8cc07b8b579e02517e68d8a70b6189cd68bbe0983e002904fa96a037f0c0e2a49fed681
+"@wix/extensions@npm:~1.0.691, @wix/extensions@npm:~1.0.709":
+  version: 1.0.710
+  resolution: "@wix/extensions@npm:1.0.710::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fextensions%2F-%2F%40wix%2Fextensions-1.0.710.tgz"
+  checksum: a2ec4855dd0e84af3bfdb744d07ed8eaf0c6250384b10941c1361a5d3c8b503059ecf717b3b8e072922cab60085a41460d7f252eb07892985237bd04573a21ca
   languageName: node
   linkType: hard
 
-"@wix/fe-essentials-editor@npm:^1.450.0":
-  version: 1.450.0
-  resolution: "@wix/fe-essentials-editor@npm:1.450.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials-editor%2F-%2F%40wix%2Ffe-essentials-editor-1.450.0.tgz"
+"@wix/fe-essentials-editor@npm:^1.556.0":
+  version: 1.556.0
+  resolution: "@wix/fe-essentials-editor@npm:1.556.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials-editor%2F-%2F%40wix%2Ffe-essentials-editor-1.556.0.tgz"
   dependencies:
-    "@wix/bi-logger-testkit": ^1.1162.2
-    "@wix/fe-essentials": 1.275.0
-    "@wix/web-bi-logger": 2.1.5
-    tslib: ^2.4.0
-  checksum: b068d0b9d2fd5b6defadf69b1cf8ab197c65027b105cfbb7930ee2acd2ac13dc794072fe99f4efb32325f937a4b038676c30552620808f9e12400f58f3df7f57
+    "@wix/bi-logger-testkit": ^1.1162.7
+    "@wix/fe-essentials": 1.377.0
+    "@wix/web-bi-logger": 2.1.10
+    tslib: ^2.5.0
+  checksum: 93f7a07cc2d07ac4c151d4b2fe8896fdd7515b0e9b67e0902ec33709dfa6020451fc38eef9ac573d78f3bb18ba9fa3bc28be5bb28240e2ed5b93f38730c56e1f
   languageName: node
   linkType: hard
 
-"@wix/fe-essentials-viewer-platform@npm:^1.418.0":
-  version: 1.466.0
-  resolution: "@wix/fe-essentials-viewer-platform@npm:1.466.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials-viewer-platform%2F-%2F%40wix%2Ffe-essentials-viewer-platform-1.466.0.tgz"
+"@wix/fe-essentials-viewer-platform@npm:^1.571.0":
+  version: 1.571.0
+  resolution: "@wix/fe-essentials-viewer-platform@npm:1.571.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials-viewer-platform%2F-%2F%40wix%2Ffe-essentials-viewer-platform-1.571.0.tgz"
   dependencies:
-    "@wix/bi-logger-testkit": ^1.1162.2
-    "@wix/fe-essentials": 1.275.0
-    "@wix/web-bi-logger": 2.1.5
+    "@wix/bi-logger-testkit": ^1.1162.7
+    "@wix/fe-essentials": 1.377.0
+    "@wix/web-bi-logger": 2.1.10
     raven-js: ^3.27.2
-    tslib: ^2.4.0
-  checksum: 845a2942a15b288e49f99d223018394ae24df5a587a9c120047252f7839e954a75f823059d1d43818c608a59c327ec72dc1bcaf11899caac978b10f30f6faa66
+    tslib: ^2.5.0
+  checksum: 3fc524af97ce50f1bfeb23084daae7bc807f6fbc3f699b7334adc9d9db4335074d6e319321495d5bbca6ec22cfd7fae1813b4da0be7cfd8406b21c00cabf66e2
   languageName: node
   linkType: hard
 
-"@wix/fe-essentials@npm:1.275.0":
-  version: 1.275.0
-  resolution: "@wix/fe-essentials@npm:1.275.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials%2F-%2F%40wix%2Ffe-essentials-1.275.0.tgz"
-  dependencies:
-    "@sentry/browser": 5.30.0
-    "@sentry/types": 5.30.0
-    "@wix/bi-logger-testkit": ^1.1162.2
-    "@wix/data-capsule": 2.80.0
-    "@wix/error-monitor": 1.279.0
-    "@wix/fedops-logger": 5.273.0
-    "@wix/http-client": 1.523.0
-    "@wix/http-client-testkit": ^1.578.0
-    "@wix/l10n": 1.31.0
-    "@wix/panorama-client-tracker": 1.25.0
-    "@wix/web-bi-logger": 2.1.5
-    "@wix/wix-experiments": 3.2.24
-    "@wix/wix-experiments-react": 4.0.135
-    "@wix/wix-i18n-config": 5.1.13
-    react-query: 3.39.0
-    sentry-testkit: ^3.3.8
-  peerDependencies:
-    react: ^16.13.1
-  checksum: 334f38f3367adedc07503b07634e6565c3d6d27069f92212e56d4232bd31d86d6125c74629aefb6fe35c6fd20207672c2eb6ab1952eaa7f346c8f1f51a8c399f
-  languageName: node
-  linkType: hard
-
-"@wix/fe-essentials@npm:^1.357.0":
-  version: 1.357.0
-  resolution: "@wix/fe-essentials@npm:1.357.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials%2F-%2F%40wix%2Ffe-essentials-1.357.0.tgz"
+"@wix/fe-essentials@npm:1.377.0":
+  version: 1.377.0
+  resolution: "@wix/fe-essentials@npm:1.377.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials%2F-%2F%40wix%2Ffe-essentials-1.377.0.tgz"
   dependencies:
     "@sentry/browser": 5.30.0
     "@sentry/types": 5.30.0
     "@wix/bi-logger-testkit": ^1.1162.7
-    "@wix/data-capsule": 2.108.0
-    "@wix/error-monitor": 1.295.0
-    "@wix/fedops-logger": ^5.481.0
-    "@wix/http-client": 1.526.0
-    "@wix/http-client-testkit": ^1.587.0
-    "@wix/l10n": 1.58.0
-    "@wix/panorama-client-testkit": 1.70.0
+    "@wix/data-capsule": 2.120.0
+    "@wix/error-monitor": 1.300.0
+    "@wix/fedops-logger": ^5.484.0
+    "@wix/http-client": 1.528.0
+    "@wix/http-client-testkit": ^1.590.0
+    "@wix/l10n": 1.66.0
+    "@wix/panorama-client-testkit": 1.113.0
     "@wix/panorama-client-tracker": 1.35.0
-    "@wix/panorama-client-web": 1.14.0
-    "@wix/panorama-common": 1.71.0
+    "@wix/panorama-client-web": 1.60.0
+    "@wix/panorama-common": 1.113.0
     "@wix/web-bi-logger": 2.1.10
     "@wix/wix-experiments": 3.2.24
     "@wix/wix-experiments-react": 4.0.135
@@ -3963,7 +4000,36 @@ __metadata:
     sentry-testkit: ^3.3.8
   peerDependencies:
     react: ^16.13.1
-  checksum: 4e37485d3dd27c1d4d63fe79a77e94d0bb1b00914a39ea485d74f852ad00e9ed7f516995025ae1f71f6ed8ac895753e05febdfb39f13419bc9b373b74210fa21
+  checksum: 53983a2da8ba66c787ace3797d2ac44b7ddeb503790b21dd9fbe4296103688f3031175ffe8d47da47f81992749b409af4af7afe9b945322f5f33b5f28f32bfb4
+  languageName: node
+  linkType: hard
+
+"@wix/fe-essentials@npm:^1.378.0":
+  version: 1.378.0
+  resolution: "@wix/fe-essentials@npm:1.378.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffe-essentials%2F-%2F%40wix%2Ffe-essentials-1.378.0.tgz"
+  dependencies:
+    "@sentry/browser": 5.30.0
+    "@sentry/types": 5.30.0
+    "@wix/bi-logger-testkit": ^1.1162.7
+    "@wix/data-capsule": 2.121.0
+    "@wix/error-monitor": 1.301.0
+    "@wix/fedops-logger": ^5.484.0
+    "@wix/http-client": 1.528.0
+    "@wix/http-client-testkit": ^1.590.0
+    "@wix/l10n": 1.67.0
+    "@wix/panorama-client-testkit": 1.113.0
+    "@wix/panorama-client-tracker": 1.35.0
+    "@wix/panorama-client-web": 1.60.0
+    "@wix/panorama-common": 1.113.0
+    "@wix/web-bi-logger": 2.1.10
+    "@wix/wix-experiments": 3.2.24
+    "@wix/wix-experiments-react": 4.0.135
+    "@wix/wix-i18n-config": 5.1.13
+    react-query: 3.39.0
+    sentry-testkit: ^3.3.8
+  peerDependencies:
+    react: ^16.13.1
+  checksum: 788674f90d40311f3cb06df7e25120c89b90e61630b182ee8d08160682784b5f810d0bc9f5992f6abf685337c9b066f9e789feaac936d1a561f461e5b80e4980
   languageName: node
   linkType: hard
 
@@ -4004,49 +4070,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/fedology-client@npm:^1.30.0":
-  version: 1.30.0
-  resolution: "@wix/fedology-client@npm:1.30.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedology-client%2F-%2F%40wix%2Ffedology-client-1.30.0.tgz"
+"@wix/fedops-logger@npm:^5.484.0":
+  version: 5.484.0
+  resolution: "@wix/fedops-logger@npm:5.484.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-logger%2F-%2F%40wix%2Ffedops-logger-5.484.0.tgz"
   dependencies:
-    "@babel/runtime": ^7.0.0
-    "@wix/wix-bi-logger-client": ^1.0.0
-    tslib: ^2.0.0
-  checksum: 31341fd07aef956bba45851bcfbc19779462ae2e1296ef9dedce87c083824a76dd9a8f5a313d5e48668e35f3f616e75821b109f88d613a37f499641998312e64
-  languageName: node
-  linkType: hard
-
-"@wix/fedops-logger@npm:5.273.0":
-  version: 5.273.0
-  resolution: "@wix/fedops-logger@npm:5.273.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-logger%2F-%2F%40wix%2Ffedops-logger-5.273.0.tgz"
-  dependencies:
-    "@wix/consent-policy-client-accessor": ^1.3.0
-    "@wix/fedops-overrides": ^1.0.0
-    "@wix/fedops-presets": ^1.0.33
-    "@wix/web-bi-logger": ^2.0.922
-  checksum: f20521a6b2f87e2c445ea51a9fc2538b2e6c9df147cd231c2db6ed85e8927baeffc4b7d06db661e7f3f5149902df2a7b44a61fde46677adb0418bd1fa3d56660
-  languageName: node
-  linkType: hard
-
-"@wix/fedops-logger@npm:^5.481.0":
-  version: 5.481.0
-  resolution: "@wix/fedops-logger@npm:5.481.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-logger%2F-%2F%40wix%2Ffedops-logger-5.481.0.tgz"
-  dependencies:
-    "@wix/consent-policy-client-accessor": ^1.10.0
-    "@wix/fedops-overrides": 1.2.5
+    "@wix/consent-policy-client-accessor": ^1.14.0
+    "@wix/fedops-overrides": 1.2.6
     "@wix/fedops-presets": 1.3.0
     "@wix/web-bi-logger": ^2.1.10
-  checksum: fbd4c739d04b70fa8c5f40b9b8f43059f5616401ad7505b4283ccc034dee22475f6c1180a1e708b7344017cb4e3010119ad05452614e4490d0cda618ff8cafe0
+  checksum: 17c756a9cecb6c1d817c9129a5c6765f945dd4a3656029d6042d76d67b14f3edc17db82a148388852374d0ed4d23977a73583f4437c8811e7f26e86322f30a8e
   languageName: node
   linkType: hard
 
-"@wix/fedops-overrides@npm:1.2.5, @wix/fedops-overrides@npm:^1.0.0":
-  version: 1.2.5
-  resolution: "@wix/fedops-overrides@npm:1.2.5::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-overrides%2F-%2F%40wix%2Ffedops-overrides-1.2.5.tgz"
-  checksum: 044e98b0f414655777f822abeae515395733bcf99ae38421ac988037a99e940df5718c1622ce14f3f6b3713df165c23520c835e514e87ffd3ae07e2ff8c06434
+"@wix/fedops-overrides@npm:1.2.6":
+  version: 1.2.6
+  resolution: "@wix/fedops-overrides@npm:1.2.6::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-overrides%2F-%2F%40wix%2Ffedops-overrides-1.2.6.tgz"
+  checksum: 96c492434755bfcad4a079e32aa821d6473adf30bb63640e2303c6db4db9c437a449618ec644b3a9f28f3dff8e463f3a9d5c837f253b4810ce18d29b1c1bbd34
   languageName: node
   linkType: hard
 
-"@wix/fedops-presets@npm:1.3.0, @wix/fedops-presets@npm:^1.0.33":
+"@wix/fedops-presets@npm:1.3.0":
   version: 1.3.0
   resolution: "@wix/fedops-presets@npm:1.3.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ffedops-presets%2F-%2F%40wix%2Ffedops-presets-1.3.0.tgz"
   dependencies:
@@ -4076,15 +4119,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/http-client-testkit@npm:^1.578.0, @wix/http-client-testkit@npm:^1.587.0":
-  version: 1.587.0
-  resolution: "@wix/http-client-testkit@npm:1.587.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fhttp-client-testkit%2F-%2F%40wix%2Fhttp-client-testkit-1.587.0.tgz"
+"@wix/http-client-testkit@npm:^1.590.0":
+  version: 1.590.0
+  resolution: "@wix/http-client-testkit@npm:1.590.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fhttp-client-testkit%2F-%2F%40wix%2Fhttp-client-testkit-1.590.0.tgz"
   dependencies:
-    "@wix/http-client": 1.526.0
-    "@wix/wix-testkit-base": ^1.0.1407
+    "@wix/http-client": 1.528.0
+    "@wix/wix-testkit-base": ^1.0.1410
     dedent-js: ^1.0.1
     lodash: ^4.17.21
-  checksum: 0187dfa644a62d17e452282d882f27df18d7ff1dbf896a92a6a69c4aaa18b43942a105cbe58e4539cf0281bd602649a45ca7e62b0f15c145f1c3ba080818d813
+  checksum: c56e864b857da58ca7b2206ff0e95d24492533961ccbadb01c51ac1428849881f919e9f473ba75317eeaf1ef2b8e50b35139604e3107a0589db298456347d0aa
   languageName: node
   linkType: hard
 
@@ -4099,74 +4142,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/http-client@npm:1.526.0, @wix/http-client@npm:^1.526.0":
-  version: 1.526.0
-  resolution: "@wix/http-client@npm:1.526.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fhttp-client%2F-%2F%40wix%2Fhttp-client-1.526.0.tgz"
+"@wix/http-client@npm:1.528.0, @wix/http-client@npm:^1.528.0":
+  version: 1.528.0
+  resolution: "@wix/http-client@npm:1.528.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fhttp-client%2F-%2F%40wix%2Fhttp-client-1.528.0.tgz"
   dependencies:
     "@wix/headers": ^1.26.0
     axios: ^0.21.4
     tslib: ^2.3.1
-  checksum: 2e9f9018f65c6a08a14c52d14358cac48dc6fe3faa0ea8f4591296ef834e46a6e62f233d2b069360fc9d9cb12eb4752a593b3ce44e70a43fe253f169aea6f49c
+  checksum: e890867210688e2284f130bd594ccf312285946b6bb4893e60809835033f10bc85b8e8c213478dab401256cba2e2df9a72b276b403174d867e99bc0ee5cca0c5
   languageName: node
   linkType: hard
 
-"@wix/identity@npm:^1.0.18":
-  version: 1.0.18
-  resolution: "@wix/identity@npm:1.0.18::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fidentity%2F-%2Fidentity-1.0.18.tgz"
+"@wix/identity@npm:^1.0.31":
+  version: 1.0.31
+  resolution: "@wix/identity@npm:1.0.31::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fidentity%2F-%2Fidentity-1.0.31.tgz"
   dependencies:
     "@wix/metro-runtime": ^1.0.0
     "@wix/motion-edm-autogen-query-wrapper": ^1.0.0
     "@wix/sdk-types": ^1.0.0
-  checksum: e3b2b31159775bb4613fbf3a976ee4a46729c1a20f3d0546667ea6520ca2f5c19c5c88b034e7fdda35c73215e385e8bc24601fb287c809b9eb6ca20467117eb0
+  checksum: e787c626708cca3369db40aa36d11ff70d15fd0958498d3b99b485bfd181d066ad2ca237f42d51cc07e4bca3e611def48358af31784748202fcff357c70cd789
   languageName: node
   linkType: hard
 
-"@wix/iframe-app-bi-context@npm:2.0.8":
-  version: 2.0.8
-  resolution: "@wix/iframe-app-bi-context@npm:2.0.8::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fiframe-app-bi-context%2F-%2F%40wix%2Fiframe-app-bi-context-2.0.8.tgz"
+"@wix/iframe-app-bi-context@npm:2.0.13":
+  version: 2.0.13
+  resolution: "@wix/iframe-app-bi-context@npm:2.0.13::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fiframe-app-bi-context%2F-%2F%40wix%2Fiframe-app-bi-context-2.0.13.tgz"
   dependencies:
     "@wix/bsi-manager": ^1.31.0
-    "@wix/consent-policy-client-accessor": ^1.6.0
-  checksum: 3ede3c7a064bb99abb6ed0d20eb8d2b94b3c4a770d7315225d48f073cea8492af52cc9dd5a58a94bcfa83deb02d1ed53b1df4ee393a4e95d2d33846d81ce4944
+    "@wix/consent-policy-client-accessor": ^1.10.0
+  checksum: dff147bebbe2f8ccbeda7157c7626d98c12fecde41b9167efa7fe2fcb7e382fd9e9ed8a45d600c31a45ce2277bebb2501d0b78511f02cfe7bcb73fcfa2f18d00
   languageName: node
   linkType: hard
 
-"@wix/iframe-app-bi-logger@npm:^2.0.107":
-  version: 2.1.5
-  resolution: "@wix/iframe-app-bi-logger@npm:2.1.5::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fiframe-app-bi-logger%2F-%2F%40wix%2Fiframe-app-bi-logger-2.1.5.tgz"
+"@wix/iframe-app-bi-logger@npm:^2.1.12":
+  version: 2.1.12
+  resolution: "@wix/iframe-app-bi-logger@npm:2.1.12::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fiframe-app-bi-logger%2F-%2F%40wix%2Fiframe-app-bi-logger-2.1.12.tgz"
   dependencies:
-    "@wix/iframe-app-bi-context": 2.0.8
-    "@wix/web-bi-logger": 2.1.5
-  checksum: 563aaf2026808e86f689c8be983590e5df6cbc8bbe4aab03ac574810ac23b8f4bb666098f0f4aa3f10774e3d4ac060cd35fd80772efc17f2cf926008654dd121
+    "@wix/iframe-app-bi-context": 2.0.13
+    "@wix/web-bi-logger": 2.1.10
+  checksum: 2ee3189fc80cb89ccec215a468c4c9613d6c9a92e5814c40798e77246034e28ccac3a284ede75243fcc2802104d3892cdf63a4594154a693510c8dbf7514df09
   languageName: node
   linkType: hard
 
-"@wix/image-kit@npm:^1.30.0":
-  version: 1.30.0
-  resolution: "@wix/image-kit@npm:1.30.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fimage-kit%2F-%2Fimage-kit-1.30.0.tgz"
+"@wix/image-kit@npm:^1.31.0":
+  version: 1.31.0
+  resolution: "@wix/image-kit@npm:1.31.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fimage-kit%2F-%2Fimage-kit-1.31.0.tgz"
   dependencies:
     "@babel/runtime": ^7.0.0
     tslib: ^2.0.0
-  checksum: 6806174959991b0d1c4a7afaa05ffe47b6f70cab3b3bdab5d301c25d4d332a09a528adc1fae0af75a700d8daa3bac13041abf5c81f3f5ba37219f9964113645d
+  checksum: 95ddae43698e5804db3944d6a87f8228f360030d35074c2a5f2771ba46a564dfbadd8d2f116f2682bd741c699d78813561fd0cb9607425dc2535a9501ec784d2
   languageName: node
   linkType: hard
 
-"@wix/jest-yoshi-preset@npm:^6.51.2":
-  version: 6.51.2
-  resolution: "@wix/jest-yoshi-preset@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fjest-yoshi-preset%2F-%2F%40wix%2Fjest-yoshi-preset-6.51.2.tgz"
+"@wix/jest-yoshi-preset@npm:^6.54.2":
+  version: 6.54.2
+  resolution: "@wix/jest-yoshi-preset@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fjest-yoshi-preset%2F-%2F%40wix%2Fjest-yoshi-preset-6.54.2.tgz"
   dependencies:
     "@stylable/core": ^4.15.1
     "@stylable/jest": ^4.15.1
     "@types/jest": ^27.5.2
     "@types/puppeteer": ^5.4.7
     "@wix/ci-build-info": ^1.0.314
-    "@wix/yoshi-common": 6.51.2
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-config-compat": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
-    "@wix/yoshi-server-tools": 6.51.2
-    "@wix/yoshi-tsconfig": 6.51.2
-    "@wix/yoshi-webpack-utils": 6.51.2
+    "@wix/yoshi-common": 6.54.2
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-config-compat": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
+    "@wix/yoshi-server-tools": 6.54.2
+    "@wix/yoshi-tsconfig": 6.54.2
+    "@wix/yoshi-webpack-utils": 6.54.2
     babel-jest: ^27.5.1
     chalk: ^4.1.2
     fs-extra: ^9.1.0
@@ -4190,37 +4233,37 @@ __metadata:
     graphql: ^14.1.1 || ^15.0.0
     graphql-tag: ^2.10.1
     jest: ^27.4.5
-  checksum: 78aa66c04a131003b47abf700e9ace67019f79983696012bad77bd85b1bc0da28be2f27071493994d9b2c82e8fbb2fc6bd3a600e99fdc7c83dadbad406e37e8e
+  checksum: 63efdb24c01bb6cbce3c10c52ed15a1bd85f0937e6d4880a022a5f8e2bbbdcd5065eed2b06c614921b4852c169fc6f305bef8791303c0f57d4bbb8dd2c2e85b1
   languageName: node
   linkType: hard
 
-"@wix/json-proto-serializer@npm:^1.20.0":
-  version: 1.20.0
-  resolution: "@wix/json-proto-serializer@npm:1.20.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fjson-proto-serializer%2F-%2F%40wix%2Fjson-proto-serializer-1.20.0.tgz"
+"@wix/json-proto-serializer@npm:^1.20.0, @wix/json-proto-serializer@npm:latest":
+  version: 1.21.0
+  resolution: "@wix/json-proto-serializer@npm:1.21.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fjson-proto-serializer%2F-%2F%40wix%2Fjson-proto-serializer-1.21.0.tgz"
   dependencies:
     "@types/bytebuffer": ^5.0.41
     "@types/long": 4.0.1
     lodash.clonedeep: ^4.5.0
     long: 4.0.0
-  checksum: 964ba7669255411c9d7f0346504e177559a61495faff74e3acd8517531187265bcbb436763d04e49d5479c1161634d66a3f8acd23d63d74f26d22b25c83ad0da
+  checksum: 46315660754715d3f164171802ec542919f868f9d9f4c22d0d4c743c804056fa0e73f80cd35532d07cbac69cc9feda65a8c2e5a232df1b3ba76196f653edb6ee
   languageName: node
   linkType: hard
 
-"@wix/l10n@npm:1.31.0":
-  version: 1.31.0
-  resolution: "@wix/l10n@npm:1.31.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fl10n%2F-%2F%40wix%2Fl10n-1.31.0.tgz"
+"@wix/l10n@npm:1.66.0":
+  version: 1.66.0
+  resolution: "@wix/l10n@npm:1.66.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fl10n%2F-%2F%40wix%2Fl10n-1.66.0.tgz"
   dependencies:
-    "@wix/protos-common": ^1.0.267
-  checksum: 0b21338d05ddf3833675592bbdd02e761e2819df8d43e2c58ff658ed441c0c4cb59ec474039c8d78f523bf31b457bf1bc74d17f579e1551cc6c8c7eef3e75576
+    "@wix/protos-common": ^1.0.280
+  checksum: a0d9d502feee2afdcaf97628f8562d60294cafb12df73a7c98df1bccb78619f93f743ac68c0188c7079b4bb2f815e60af1914e585169ba1fc6e27944c15f5081
   languageName: node
   linkType: hard
 
-"@wix/l10n@npm:1.58.0":
-  version: 1.58.0
-  resolution: "@wix/l10n@npm:1.58.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fl10n%2F-%2F%40wix%2Fl10n-1.58.0.tgz"
+"@wix/l10n@npm:1.67.0":
+  version: 1.67.0
+  resolution: "@wix/l10n@npm:1.67.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fl10n%2F-%2F%40wix%2Fl10n-1.67.0.tgz"
   dependencies:
-    "@wix/protos-common": ^1.0.279
-  checksum: b86785e57a78485c0d2d6237cfa56c178b946ded750d41a7864ad0ea8a3859fd835d7216f39c24d38a4ba1b73de6d9f7d769402c0eb8c3fe4d3cbb6ad588352f
+    "@wix/protos-common": ^1.0.280
+  checksum: eb329cb1b2c6b1cf223da5cffa65d52f28c66aa4116404c8302cc95688a8c78c9d97bf018534b5b370ce7d284a0c7e03eafffdc785cf555f9efd0b556cc936b9
   languageName: node
   linkType: hard
 
@@ -4465,42 +4508,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/native-components-infra@npm:^1.0.1028":
-  version: 1.0.1054
-  resolution: "@wix/native-components-infra@npm:1.0.1054::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fnative-components-infra%2F-%2F%40wix%2Fnative-components-infra-1.0.1054.tgz"
+"@wix/motion@npm:^1.0.23":
+  version: 1.0.23
+  resolution: "@wix/motion@npm:1.0.23::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fmotion%2F-%2Fmotion-1.0.23.tgz"
   dependencies:
-    "@wix/fe-essentials-viewer-platform": ^1.418.0
-    "@wix/web-bi-logger": ^2.1.5
+    "@wix/metro-runtime": ^1.0.0
+    "@wix/motion-edm-autogen-query-wrapper": ^1.0.0
+    "@wix/sdk-types": ^1.0.0
+  checksum: cbcdf76cb2e385b097d842876910b2a0ecaddccc097aa53c9f4e96bc4f70b6a5e3a74e90cf1ef4f3250b114711abe635a6a9fde638941b7fdfd1827dea3e1ff8
+  languageName: node
+  linkType: hard
+
+"@wix/native-components-infra@npm:^1.0.1089":
+  version: 1.0.1089
+  resolution: "@wix/native-components-infra@npm:1.0.1089::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fnative-components-infra%2F-%2F%40wix%2Fnative-components-infra-1.0.1089.tgz"
+  dependencies:
+    "@wix/blocks-velo-typings": ^1.0.4
+    "@wix/fe-essentials-viewer-platform": ^1.571.0
+    "@wix/web-bi-logger": ^2.1.10
     fontfaceobserver: 2.0.13
     lodash: 4.17.10
   peerDependencies:
     tpa-style-webpack-plugin: ^1.4.9
-  checksum: 5e252eb011c1b4c9ca0ad8eac9e33f8df18021a548950d730f55ec2c2af11283bf208e6e98c89351fb7d9c0b84617ca914ae935c51a22097d888e6515a88dbe5
+  checksum: d0592988a7b976e80610e9d37e21861abc1a400d33935349be592426d8e100a7c6777a351ebbdc5ee21a97379e4036c404c98c679bd38fc2bc5e5cd644b36607
   languageName: node
   linkType: hard
 
-"@wix/panorama-client-testkit@npm:1.70.0":
-  version: 1.70.0
-  resolution: "@wix/panorama-client-testkit@npm:1.70.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client-testkit%2F-%2F%40wix%2Fpanorama-client-testkit-1.70.0.tgz"
+"@wix/panorama-client-testkit@npm:1.113.0":
+  version: 1.113.0
+  resolution: "@wix/panorama-client-testkit@npm:1.113.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client-testkit%2F-%2F%40wix%2Fpanorama-client-testkit-1.113.0.tgz"
   dependencies:
-    "@babel/runtime": ^7.20.13
-    "@wix/panorama-common": 1.71.0
+    "@babel/runtime": ^7.21.0
+    "@wix/panorama-common": 1.113.0
     lodash: ^4.17.21
-  checksum: 6f1053a65cf0523580cecff5d0cfda57f256d35a2236b099af37644f00178b8841350e17f4451825695afce17f756ecdf6c207cf7cf45a8a6f753872d748eb67
-  languageName: node
-  linkType: hard
-
-"@wix/panorama-client-tracker@npm:1.25.0":
-  version: 1.25.0
-  resolution: "@wix/panorama-client-tracker@npm:1.25.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client-tracker%2F-%2F%40wix%2Fpanorama-client-tracker-1.25.0.tgz"
-  dependencies:
-    "@babel/runtime": ^7.0.0
-    "@wix/bi-logger-business-manager": ^1.10.0
-    "@wix/fedology-client": ^1.30.0
-    "@wix/wix-eventually": ^1.0.454
-    tslib: ^2.0.0
-    type-fest: ^1.0.2
-  checksum: a07316ccb2bbf65d0ee54e2d97b138d4756dd6fd128768fb20316e6fcf1203f93596ea608b646e6843fdc16d96dba9812599972fb9647e5acf339916b539e7b2
+  checksum: c43cb2cdca095fc4ec1f04aa08c83c3b4e5e57689e3f003af001e6f794625ced51d06a377aef2db50ffd6226153510a54b76ebbce1759048dad3f5df12221e25
   languageName: node
   linkType: hard
 
@@ -4517,66 +4558,68 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/panorama-client-web@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@wix/panorama-client-web@npm:1.14.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client-web%2F-%2F%40wix%2Fpanorama-client-web-1.14.0.tgz"
+"@wix/panorama-client-web@npm:1.60.0":
+  version: 1.60.0
+  resolution: "@wix/panorama-client-web@npm:1.60.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client-web%2F-%2F%40wix%2Fpanorama-client-web-1.60.0.tgz"
   dependencies:
-    "@babel/runtime": ^7.20.13
-    "@wix/panorama-client": 2.14.0
-    "@wix/panorama-common": 1.71.0
-  checksum: 75c09b655db3307f8f6ef0dede1cf73b567a99a34bd9b4f77d109a1b7894734e95a339235dad08e37fb022660567d529c22a128045e2fcfae71c8578513ee0fe
+    "@babel/runtime": ^7.21.0
+    "@wix/panorama-client": 2.60.0
+    "@wix/panorama-common": 1.113.0
+    lodash: ^4.17.21
+  checksum: 6dc79f01dac135d533a1b337ab0b92acf395307fe690ff648ef825e7558863e33c4f6bf49408bc3e59858bf4fdb81721df284615edfd70fe9bbd40820ee63b80
   languageName: node
   linkType: hard
 
-"@wix/panorama-client@npm:2.14.0":
-  version: 2.14.0
-  resolution: "@wix/panorama-client@npm:2.14.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client%2F-%2F%40wix%2Fpanorama-client-2.14.0.tgz"
+"@wix/panorama-client@npm:2.60.0":
+  version: 2.60.0
+  resolution: "@wix/panorama-client@npm:2.60.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-client%2F-%2F%40wix%2Fpanorama-client-2.60.0.tgz"
   dependencies:
-    "@babel/runtime": ^7.20.13
-    "@wix/panorama-common": 1.71.0
+    "@babel/runtime": ^7.21.0
+    "@wix/panorama-common": 1.113.0
     lodash: ^4.17.21
     uuid: ^8.3.2
-  checksum: 8579e64580422465feeb446b7ffc91214c9db33d0c3ac8f712f62d38c85db1871d8b6937a76cae0760d357aa0c426d9fd6a29294f9c70166d4a983de4ff0bba0
+  checksum: 2831edb2da94fd32517d12a73cf7159d291ec4d55b3f9f88a9926f70555286c0ed49a0a870fc3d94c291522c0276ef9087d183184b52970636c26406be7b57ef
   languageName: node
   linkType: hard
 
-"@wix/panorama-common@npm:1.71.0":
-  version: 1.71.0
-  resolution: "@wix/panorama-common@npm:1.71.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-common%2F-%2F%40wix%2Fpanorama-common-1.71.0.tgz"
+"@wix/panorama-common@npm:1.113.0":
+  version: 1.113.0
+  resolution: "@wix/panorama-common@npm:1.113.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fpanorama-common%2F-%2F%40wix%2Fpanorama-common-1.113.0.tgz"
   dependencies:
-    "@babel/runtime": ^7.20.13
+    "@babel/runtime": ^7.21.0
     "@types/chance": ^1.1.3
-    "@wix/http-client": ^1.526.0
-    "@wix/wix-bootstrap-greyhound": ^1.0.1328
-    "@wix/wix-errors": ^1.1.195
-    chance: ^1.1.10
+    "@wix/http-client": ^1.528.0
+    "@wix/wix-bootstrap-greyhound": ^1.0.1357
+    "@wix/wix-errors": ^1.1.202
+    "@wix/wix-log": ^1.0.165
+    chance: ^1.1.11
     knex: ^2.4.2
     lodash: ^4.17.21
     util: ^0.12.5
     uuid: ^9.0.0
-  checksum: 92d01204f92a1dfa1c3429dd603175187d6412e218d41f9737e7bdceb3d9df83e7db617bb99d54ab253edd42240e0a6a7159b169577c55662ffa56371e9d45af
+  checksum: 1653aaeb073035e8785874242d4052c3f4e55eaf44eb33a4108725986d03ddcbb386ebbd953315bcd4a0879c3a6d060fb9f0466980440f372203af6f7d12c37a
   languageName: node
   linkType: hard
 
-"@wix/platform-editor-sdk@npm:^1.2566.0":
-  version: 1.3098.0
-  resolution: "@wix/platform-editor-sdk@npm:1.3098.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fplatform-editor-sdk%2F-%2F%40wix%2Fplatform-editor-sdk-1.3098.0.tgz"
+"@wix/platform-editor-sdk@npm:^1.3352.0":
+  version: 1.3356.0
+  resolution: "@wix/platform-editor-sdk@npm:1.3356.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fplatform-editor-sdk%2F-%2F%40wix%2Fplatform-editor-sdk-1.3356.0.tgz"
   dependencies:
     "@babel/runtime": ^7.16.7
     "@ungap/event-target": ^0.2.3
-    "@wix/deeplink-core": 1.860.0
-    "@wix/document-services-types": ^1.632.0
-    "@wix/editor-platform-sdk-types": 1.893.0
+    "@wix/deeplink-core": 1.982.0
+    "@wix/document-services-types": ^1.851.0
+    "@wix/editor-platform-sdk-types": 1.1050.0
     lodash: ^4.17.21
     pm-rpc: ^3.0.3
-  checksum: 6b73e3af67d597cead3f4cbc61f8dbb9e15b5d400fab2d45d5f8cd1461eaf1f494068d012199564608a1d2c96c6c9ea0b28f7b486465ac9e9187ea27acc60eb2
+  checksum: 1ba9aa461f18e7560ba4d228626e0563de16bf84735cd15c00187a7c4ce32ed0d7d461d3db25c6e4bf17751940058e6fc41fc8c17d9ac3a7ec46588ce563d4f6
   languageName: node
   linkType: hard
 
-"@wix/protos-common@npm:^1.0.267, @wix/protos-common@npm:^1.0.279":
-  version: 1.0.279
-  resolution: "@wix/protos-common@npm:1.0.279::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fprotos-common%2F-%2F%40wix%2Fprotos-common-1.0.279.tgz"
-  checksum: 77eed7447dddb3f4d67f3dc31aa4ee79a4f7ee7c893b928cec286b8d62bf027870c2050e6a5b90ba50655b30427e422d0595df4224d42fa9fa8e6de96a78c18b
+"@wix/protos-common@npm:^1.0.267, @wix/protos-common@npm:^1.0.280":
+  version: 1.0.280
+  resolution: "@wix/protos-common@npm:1.0.280::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fprotos-common%2F-%2F%40wix%2Fprotos-common-1.0.280.tgz"
+  checksum: c69292b2942515349cd732fc18d7c2f87aadcccda0f9197d2ea34d59b4538a74879cb9e93023ffd8d4c1bd81c37a1e8c3626f38c94159847b1f26cdfadc4f4fb
   languageName: node
   linkType: hard
 
@@ -4591,11 +4634,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wix/public-sdk@workspace:."
   dependencies:
-    "@evilmartians/lefthook": ^1.3.3
-    lint-staged: ^13.1.2
-    syncpack: ^8.5.14
+    "@evilmartians/lefthook": ^1.0.4
+    lint-staged: ^13.0.3
+    syncpack: ^8.2.4
   languageName: unknown
   linkType: soft
+
+"@wix/redirects@npm:^1.0.13":
+  version: 1.0.13
+  resolution: "@wix/redirects@npm:1.0.13::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fredirects%2F-%2Fredirects-1.0.13.tgz"
+  dependencies:
+    "@wix/metro-runtime": ^1.0.0
+    "@wix/motion-edm-autogen-query-wrapper": ^1.0.0
+    "@wix/sdk-types": ^1.0.0
+  checksum: dbdb0071ada6cfebc4729c2f787bc5a580e9444aea89567adb57b0f00d0fdc78637a833d8171480afa92151ee5a4cbe24e2ff868f9367c30d0dd5fbc1532d4cb
+  languageName: node
+  linkType: hard
 
 "@wix/sdk-types@^1.0.0, @wix/sdk-types@workspace:packages/sdk-types":
   version: 0.0.0-use.local
@@ -4607,6 +4661,15 @@ __metadata:
     typescript: ~4.9.5
   languageName: unknown
   linkType: soft
+
+"@wix/sdk-types@npm:1.1.61":
+  version: 1.1.61
+  resolution: "@wix/sdk-types@npm:1.1.61::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fsdk-types%2F-%2Fsdk-types-1.1.61.tgz"
+  dependencies:
+    "@babel/runtime": ^7.21.5
+  checksum: eac8cd53ca47a44358552e4658fee34c10506eb8b6c16d710fd0885c97d0b7eb708584df35a78bb510f72542014cd20400ebabe9931a9e9d614ea49bacdd00a9
+  languageName: node
+  linkType: hard
 
 "@wix/settings-key-format@npm:^1.2.0":
   version: 1.2.0
@@ -4622,44 +4685,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/tpa-settings@npm:^2.2.13":
-  version: 2.2.13
-  resolution: "@wix/tpa-settings@npm:2.2.13::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ftpa-settings%2F-%2F%40wix%2Ftpa-settings-2.2.13.tgz"
+"@wix/tpa-settings@npm:^2.2.16":
+  version: 2.2.45
+  resolution: "@wix/tpa-settings@npm:2.2.45::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ftpa-settings%2F-%2F%40wix%2Ftpa-settings-2.2.45.tgz"
   dependencies:
-    "@wix/bi-logger-settings": ^1.17.0
-    "@wix/iframe-app-bi-logger": ^2.0.107
-    "@wix/native-components-infra": ^1.0.1028
-    "@wix/platform-editor-sdk": ^1.2566.0
+    "@wix/bi-logger-settings": ^1.29.0
+    "@wix/iframe-app-bi-logger": ^2.1.12
+    "@wix/native-components-infra": ^1.0.1089
+    "@wix/platform-editor-sdk": ^1.3352.0
     "@wix/settings-key-format": ^1.2.0
-    color: ^3.1.1
-    lodash: ^4.17.11
-    prop-types: ~15.6.0
-    tslib: ^2.0.0
+    color: ^3.2.1
+    lodash: ^4.17.21
+    prop-types: ~15.8.1
+    tslib: ^2.5.0
   peerDependencies:
-    "@wix/wix-base-ui": ^4.0.0
+    "@wix/wix-base-ui": ^4.44.0
     "@wix/wix-experiments": ^3.2.22
     i18next: ^11.6.0
     react: ^16.6.3
     react-dom: ^16.6.3
-  checksum: bc9e97d63483f8a782deca87c8e209eb0776385cb640073ce3ffd9010120014258a52aa181079a68e07467a9e66df7ad980e60fbb53f7931ff3f79eacd132934
+  checksum: 456854964a2c6c6b124af5967c6055204fd77062e6c1e956e3da8632ad910ddbb3bc8eaf84a8ed5e3c25648e3a06b23cf6801f9061c58402f88d3c9aa60e69de
   languageName: node
   linkType: hard
 
-"@wix/tpa-style-webpack-plugin@npm:^1.8.1":
-  version: 1.8.1
-  resolution: "@wix/tpa-style-webpack-plugin@npm:1.8.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ftpa-style-webpack-plugin%2F-%2F%40wix%2Ftpa-style-webpack-plugin-1.8.1.tgz"
+"@wix/tpa-style-webpack-plugin@npm:^1.9.5":
+  version: 1.9.6
+  resolution: "@wix/tpa-style-webpack-plugin@npm:1.9.6::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Ftpa-style-webpack-plugin%2F-%2F%40wix%2Ftpa-style-webpack-plugin-1.9.6.tgz"
   dependencies:
     "@ctrl/tinycolor": ^2.6.1
-    "@wix/tpa-settings": ^2.2.13
+    "@wix/tpa-settings": ^2.2.16
     parse-css-font: "^4.0.0 "
     postcss: ^8.0.0
     postcss-prefix-selector: ^1.13.0
     webpack-sources: ^1.4.3
-  checksum: fcc2f31be114b4ac6e9d25eedce1483920da0840d90952306ac94ab3d43c4e3d29566572ac282b95592d04ab70f5f92103d81fcc8e83fbb1398c5c39e381a92e
+  checksum: 30edc8f8086f256753b24c0903040872be0865eb24b9fea9b6955f927bcba878e3654c8d69a663014fec5e606fceb55b90e22526b07b38dfe853c3ca53a2862c
   languageName: node
   linkType: hard
 
-"@wix/web-bi-logger@npm:2.1.10, @wix/web-bi-logger@npm:^2.0.922, @wix/web-bi-logger@npm:^2.1.10, @wix/web-bi-logger@npm:^2.1.5":
+"@wix/web-bi-logger@npm:2.1.10, @wix/web-bi-logger@npm:^2.1.10":
   version: 2.1.10
   resolution: "@wix/web-bi-logger@npm:2.1.10::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fweb-bi-logger%2F-%2F%40wix%2Fweb-bi-logger-2.1.10.tgz"
   dependencies:
@@ -4669,23 +4732,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/web-bi-logger@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@wix/web-bi-logger@npm:2.1.5::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fweb-bi-logger%2F-%2F%40wix%2Fweb-bi-logger-2.1.5.tgz"
-  dependencies:
-    "@wix/consent-policy-client-accessor": ^1.7.0
-    "@wix/wix-bi-logger-client": ^1.0.0
-  checksum: 6ef25096a4ca66ac4b751e43fd977084fab68fb9c1fad8d33f6eabd53d96a0142c7f6f53c8d984f5e401eb59f52ae0a27222289e91d7bdb7f94799c2585658ff
-  languageName: node
-  linkType: hard
-
-"@wix/wix-app-info@npm:1.0.2662":
-  version: 1.0.2662
-  resolution: "@wix/wix-app-info@npm:1.0.2662::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-app-info%2F-%2F%40wix%2Fwix-app-info-1.0.2662.tgz"
+"@wix/wix-app-info@npm:1.0.2667":
+  version: 1.0.2667
+  resolution: "@wix/wix-app-info@npm:1.0.2667::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-app-info%2F-%2F%40wix%2Fwix-app-info-1.0.2667.tgz"
   dependencies:
     "@wix/wix-cluster-client": 0.1.1473
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     cookie-parser: 1.4.6
     dateformat: 4.5.1
     express: ">=4.18.1"
@@ -4699,17 +4752,17 @@ __metadata:
     shelljs: 0.8.5
     v8-profiler-node8: 6.4.0
     zip-stream: 4.1.0
-  checksum: 55fe67d7561f963ad5fd494aa5e8bf24e84459045d1b6e89e4f9a410e44c20fc337acffc8f286c5224139b475021fc746299e4b0b10c6a47a0ddb0def5b5a44f
+  checksum: 3e6b3c948942f2ba561d2e0681911474eaeec005c56233d3c08c3cd029f9822d75ecd7b082690307052dce59b79792e68c02758e5f4017cf70b23bc1580ee5f0
   languageName: node
   linkType: hard
 
-"@wix/wix-artifact-info@npm:1.0.1102":
-  version: 1.0.1102
-  resolution: "@wix/wix-artifact-info@npm:1.0.1102::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-artifact-info%2F-%2F%40wix%2Fwix-artifact-info-1.0.1102.tgz"
+"@wix/wix-artifact-info@npm:1.0.1105":
+  version: 1.0.1105
+  resolution: "@wix/wix-artifact-info@npm:1.0.1105::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-artifact-info%2F-%2F%40wix%2Fwix-artifact-info-1.0.1105.tgz"
   dependencies:
-    "@wix/artifact-description": ~1.0.371
-    "@wix/wix-errors": 1.1.200
-  checksum: dcae53b2a450ef889a69c61b53506a494bd9b848f38f59e1c6c694704fd7634428881366f1b2b85a8fa0e3faf09902883f5a5440d606c4442269ca6f21c12add
+    "@wix/artifact-description": ~1.0.372
+    "@wix/wix-errors": 1.1.202
+  checksum: df1cc4425be2b048b53eb675ffb54252ed1f8c998eb5d8ff83b3884a06d3efee4d25ad70a5202df79228899403f16aa86ab64cd61134c06a189fb37bed95eec8
   languageName: node
   linkType: hard
 
@@ -4723,57 +4776,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-bi-logger-client@npm:^1.0.0, @wix/wix-bi-logger-client@npm:^1.0.2":
+"@wix/wix-bi-logger-client@npm:^1.0.2":
   version: 1.0.2
   resolution: "@wix/wix-bi-logger-client@npm:1.0.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-bi-logger-client%2F-%2F%40wix%2Fwix-bi-logger-client-1.0.2.tgz"
   checksum: 9f64ba53ecafc95ee8a329b8fe201265763c3b25b75e1e27746408fd22e70e7b1b2a0a3051e4c3b19ee6d9cc6bda749f2ec653de74b2c35f10b3b86cf87f609c
   languageName: node
   linkType: hard
 
-"@wix/wix-bootstrap-greyhound-api@npm:1.0.121":
-  version: 1.0.121
-  resolution: "@wix/wix-bootstrap-greyhound-api@npm:1.0.121::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-bootstrap-greyhound-api%2F-%2F%40wix%2Fwix-bootstrap-greyhound-api-1.0.121.tgz"
+"@wix/wix-bootstrap-greyhound-api@npm:1.0.123":
+  version: 1.0.123
+  resolution: "@wix/wix-bootstrap-greyhound-api@npm:1.0.123::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-bootstrap-greyhound-api%2F-%2F%40wix%2Fwix-bootstrap-greyhound-api-1.0.123.tgz"
   dependencies:
     "@wix/wnp-errors-base": 1.0.71
     "@wix/wnp-proto-runtime-types": 1.0.60
-  checksum: b24ab16ab4243ecadf2ea08bb0e9a49ed06066b556c89cb26c055f70e89ef5d7ae420d27ab6525f77708fc8587516bfb000e9a32cdeb9a266095eccfb0d727d4
+  checksum: e39c2c5598b487f8f90af3f779b51fb0e49258d04ce5d35cb8eb6b5fe1f2d7dcb14430664af8ce7abb39c203a0413231aa6b04ac248b7007b819cc7337cbb3cd
   languageName: node
   linkType: hard
 
-"@wix/wix-bootstrap-greyhound@npm:^1.0.1328":
-  version: 1.0.1344
-  resolution: "@wix/wix-bootstrap-greyhound@npm:1.0.1344::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-bootstrap-greyhound%2F-%2F%40wix%2Fwix-bootstrap-greyhound-1.0.1344.tgz"
+"@wix/wix-bootstrap-greyhound@npm:^1.0.1357":
+  version: 1.0.1357
+  resolution: "@wix/wix-bootstrap-greyhound@npm:1.0.1357::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-bootstrap-greyhound%2F-%2F%40wix%2Fwix-bootstrap-greyhound-1.0.1357.tgz"
   dependencies:
-    "@wix/wix-app-info": 1.0.2662
+    "@wix/wix-app-info": 1.0.2667
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-bootstrap-greyhound-api": 1.0.121
+    "@wix/wix-bootstrap-greyhound-api": 1.0.123
     "@wix/wix-configurable": 1.0.904
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-grpc-client": 1.0.1365
-    "@wix/wix-grpc-server": 1.0.1766
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured-metering": 1.0.1252
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-grpc-client": 1.0.1373
+    "@wix/wix-grpc-server": 1.0.1774
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured-metering": 1.0.1255
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-rpc-metering": 0.1.1337
+    "@wix/wix-rpc-metering": 0.1.1343
     "@wix/wix-run-mode": 2.0.783
-    "@wix/wnp-app-resources": 1.0.1087
-    "@wix/wnp-bootstrap-express": 1.0.2733
-    "@wix/wnp-bootstrap-grpc": 1.0.1800
-    "@wix/wnp-bootstrap-rpc-server": 1.0.1557
-    "@wix/wnp-config": 1.0.1066
-    "@wix/wnp-greyhound-common": 1.0.188
-    "@wix/wnp-grpc-common": 1.0.1247
-    "@wix/wnp-newrelic-error-reporter": 1.0.186
+    "@wix/wnp-app-resources": 1.0.1092
+    "@wix/wnp-bootstrap-express": 1.0.2742
+    "@wix/wnp-bootstrap-grpc": 1.0.1808
+    "@wix/wnp-bootstrap-rpc-server": 1.0.1565
+    "@wix/wnp-config": 1.0.1067
+    "@wix/wnp-greyhound-common": 1.0.191
+    "@wix/wnp-grpc-common": 1.0.1253
+    "@wix/wnp-newrelic-error-reporter": 1.0.188
     "@wix/wnp-rpc-common": 1.0.547
-    "@wix/wnp-sla": 1.0.177
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-sla": 1.0.180
+    "@wix/wnp-visibility-attributes": 1.0.152
     axios: 0.26.0
     bluebird: 3.7.2
     lodash: 4.17.21
     long: 4.0.0
     object-hash: 2.2.0
     uuid: 8.3.2
-  checksum: c67735ba79fff8401341f04af9bc6ee5b3cde5a2f373bb236fcbac7c010247160d3be5488272127dc3d21b50648d54c3cc9b624b5d9bbfe2fc746f86f1fd3a28
+  checksum: d6420506416aa29426bd66bf7583743b03f0251c02845aa2c75b343c50460361a67c96f80f0b83f7b8a5581afcf32003195ec2a4bbea245612c7db600690da05
   languageName: node
   linkType: hard
 
@@ -4784,16 +4837,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-common-aspects@npm:1.771.39":
-  version: 1.771.39
-  resolution: "@wix/wix-common-aspects@npm:1.771.39::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-common-aspects%2F-%2F%40wix%2Fwix-common-aspects-1.771.39.tgz"
+"@wix/wix-common-aspects@npm:1.771.45":
+  version: 1.771.45
+  resolution: "@wix/wix-common-aspects@npm:1.771.45::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-common-aspects%2F-%2F%40wix%2Fwix-common-aspects-1.771.45.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
     "@wix/wix-instance": 1.1.78
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-proto-validation": 1.0.809
-    "@wix/wix-session-crypto": 2.0.1127
+    "@wix/wix-proto-validation": 1.0.812
+    "@wix/wix-session-crypto": 2.0.1129
     "@wix/wnp-petri-overrides": 1.0.555
     accept-language-parser: 1.5.0
     country-data: 0.0.31
@@ -4802,7 +4855,7 @@ __metadata:
     parse-domain: 3.0.3
     urijs: 1.19.7
     uuid: 8.3.2
-  checksum: 76c18e73ec2baa2d134a0b17667e137d05a8c511e1b3bf4b24c382a3ed694ea5812ed9d9106505b791a1b9cc1594b33aa0156083a6429e012d175a9cd5f8decc
+  checksum: e5424c4e2b02b9ed8e29a963119defb636e814e1893dedadb0e32243f6232e4b86c6a9a256fd70cdfdac7ac07cb0152a341d4a6c84d1f229d28a10ac149da95f
   languageName: node
   linkType: hard
 
@@ -4815,26 +4868,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-error-pages@npm:1.0.1595":
-  version: 1.0.1595
-  resolution: "@wix/wix-error-pages@npm:1.0.1595::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-error-pages%2F-%2F%40wix%2Fwix-error-pages-1.0.1595.tgz"
+"@wix/wix-error-pages@npm:1.0.1601":
+  version: 1.0.1601
+  resolution: "@wix/wix-error-pages@npm:1.0.1601::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-error-pages%2F-%2F%40wix%2Fwix-error-pages-1.0.1601.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
+    "@wix/wix-common-aspects": 1.771.45
     velocityjs: 2.0.6
-  checksum: 68aab819d18060a55cdbc357ca3a3faa61dbcd68cdd10c29438d95fabf9f598536e3f456a84d40d1bef3701f38cd4ada36e81dfff63118b646a60e3c0e28d11b
+  checksum: c603abc583ae43c56a00bdbce2731dfa0a3da21fd9d4bbea4db81c9fbe3204b2c2b914e523585b29818dca0c158842efe81e54d9a70d2f296101657c5ef0b9e1
   languageName: node
   linkType: hard
 
-"@wix/wix-errors@npm:1.1.200, @wix/wix-errors@npm:^1.1.195, @wix/wix-errors@npm:~1.1.180":
-  version: 1.1.200
-  resolution: "@wix/wix-errors@npm:1.1.200::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-errors%2F-%2F%40wix%2Fwix-errors-1.1.200.tgz"
+"@wix/wix-errors@npm:1.1.202, @wix/wix-errors@npm:^1.1.202, @wix/wix-errors@npm:~1.1.180":
+  version: 1.1.202
+  resolution: "@wix/wix-errors@npm:1.1.202::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-errors%2F-%2F%40wix%2Fwix-errors-1.1.202.tgz"
   dependencies:
     "@types/long": 4.0.1
     "@wix/wnp-errors-base": 1.0.71
     "@wix/wnp-proto-validation-fv": 1.0.93
     long: 4.0.0
-  checksum: 10591449d006e90716823bb2fb80cd84a3b0410b389938a46937c86e946dd1fce0ae044393be7a0258248c8b2457b43f88f6301197cf2e45e3d17f5aa9b57960
+  checksum: bb4093eed682260c29ecf914ee863f3f1a4b3bfcd3202bc6b5f66fa2411798e8e3b5df079f683cc8d293bbfb77b103b33cfc61c094a1069728e2de825769f80d
   languageName: node
   linkType: hard
 
@@ -4869,15 +4922,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-express-aspects@npm:1.0.2101":
-  version: 1.0.2101
-  resolution: "@wix/wix-express-aspects@npm:1.0.2101::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-aspects%2F-%2F%40wix%2Fwix-express-aspects-1.0.2101.tgz"
+"@wix/wix-express-aspects@npm:1.0.2102":
+  version: 1.0.2102
+  resolution: "@wix/wix-express-aspects@npm:1.0.2102::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-aspects%2F-%2F%40wix%2Fwix-express-aspects-1.0.2102.tgz"
   dependencies:
     "@types/express": 4.17.13
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     "@wix/wix-petri-aspect": 1.0.1562
-  checksum: dad89373f6fc0041b2b896965d0e77d1b6dd601003bbd0d76a1a051545237d87c2207e2f83f0d42718c59c8f1a2be1f59b93e3ee94def0d37402e4eb4bf05197
+  checksum: 5ecfca18c72bf099e96caef60d011de027321097365242f31c105e06dafce84e7e070a0a43d79ee1df2d9a9fdd9739c125144b214f76f2c7efd4f14d17a4292d
   languageName: node
   linkType: hard
 
@@ -4888,31 +4941,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-express-csrf@npm:1.0.1429":
-  version: 1.0.1429
-  resolution: "@wix/wix-express-csrf@npm:1.0.1429::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-csrf%2F-%2F%40wix%2Fwix-express-csrf-1.0.1429.tgz"
+"@wix/wix-express-csrf@npm:1.0.1435":
+  version: 1.0.1435
+  resolution: "@wix/wix-express-csrf@npm:1.0.1435::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-csrf%2F-%2F%40wix%2Fwix-express-csrf-1.0.1435.tgz"
   dependencies:
     "@types/express": 4.17.13
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-errors": 1.1.200
-    "@wix/wnp-event-bus": 1.0.943
-  checksum: 5eb35798663a3e4b2d85a5b2643ceb3a71227b3ecdf11de364d7d63274ac101b411bfe26c5af230a94c1140f8c0ded44f7bd954f236587ef2771964de90d17ce
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-errors": 1.1.202
+    "@wix/wnp-event-bus": 1.0.944
+  checksum: a790041c6f8ec1f5eb1c84b7e961c073fff7a0cd670c1a2dc34ee0cccc5ea89ec1a40cf72de3a981bcca3bb656b2ac800abe4ec7cd883107ccca81b5810ad63d
   languageName: node
   linkType: hard
 
-"@wix/wix-express-error-handler@npm:1.0.2605":
-  version: 1.0.2605
-  resolution: "@wix/wix-express-error-handler@npm:1.0.2605::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-error-handler%2F-%2F%40wix%2Fwix-express-error-handler-1.0.2605.tgz"
+"@wix/wix-express-error-handler@npm:1.0.2613":
+  version: 1.0.2613
+  resolution: "@wix/wix-express-error-handler@npm:1.0.2613::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-error-handler%2F-%2F%40wix%2Fwix-express-error-handler-1.0.2613.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-protobuf-converters": 1.0.124
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-protobuf-converters": 1.0.129
     "@wix/wnp-errors-base": 1.0.71
     xss: 1.0.10
-  checksum: ebab19cb9bba3a17695554e79c32fdab7a1f0a9bdff1770de9ee4f58cffd33aaa39ed29c5a6dbaa18325f9d70adbb888696f844b78dc33a81eda6cee369dcdc9
+  checksum: 42bbc6473d63cac8e4cb9651504a81d2f3ce05e3065ee0731bcdf05dba02f7bbb75569cf697d9b1ae898b1063f97e9fe4a11481d4f36f9c0a1b7ed0a66903269
   languageName: node
   linkType: hard
 
@@ -4923,20 +4976,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-express-metering@npm:0.1.1736":
-  version: 0.1.1736
-  resolution: "@wix/wix-express-metering@npm:0.1.1736::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-metering%2F-%2F%40wix%2Fwix-express-metering-0.1.1736.tgz"
+"@wix/wix-express-metering@npm:0.1.1742":
+  version: 0.1.1742
+  resolution: "@wix/wix-express-metering@npm:0.1.1742::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-metering%2F-%2F%40wix%2Fwix-express-metering-0.1.1742.tgz"
   dependencies:
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured-metering": 1.0.1252
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured-metering": 1.0.1255
     "@wix/wnp-serverless-common": 1.0.174
     cookie: 0.4.1
     lodash: 4.17.21
   peerDependencies:
     express: ">=4.17.0"
-  checksum: 72b3169d3f7346a220360eae16e19ea2315f688868b25fd7b12c944f981531a7d739295aa73522a1bb19c27c14cc5aff4be112181cbedf37237599018bfeb197
+  checksum: 0ada11559e7c49e974ffec0c59c2060a1e92aab4de1760bdc84940699f37acd7df9b616bac215af02b8059db3d531c8da614f435d17106f79ac2d003f104d056
   languageName: node
   linkType: hard
 
@@ -4947,13 +5000,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-express-timeout@npm:1.1.1453":
-  version: 1.1.1453
-  resolution: "@wix/wix-express-timeout@npm:1.1.1453::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-timeout%2F-%2F%40wix%2Fwix-express-timeout-1.1.1453.tgz"
+"@wix/wix-express-timeout@npm:1.1.1456":
+  version: 1.1.1456
+  resolution: "@wix/wix-express-timeout@npm:1.1.1456::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-express-timeout%2F-%2F%40wix%2Fwix-express-timeout-1.1.1456.tgz"
   dependencies:
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
-  checksum: 1cd18820e955166f104d021b5ea1df426268a70345acdc826b103182f214275eb0c6eb87c944c89ab66aa0dfa7a7229ae41b52078ec06ca1a1a8b2b82aeddb39
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
+  checksum: b1d47452282ec1657899f7ae5f3d083d64b28ff6d4e09b6be3b70640990e6019f02f016a8a6c2f754a045798c0129f0cc8555ec98c50fa4fc3b3729f5276f62b
   languageName: node
   linkType: hard
 
@@ -4967,51 +5020,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-grpc-client@npm:1.0.1365":
-  version: 1.0.1365
-  resolution: "@wix/wix-grpc-client@npm:1.0.1365::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-client%2F-%2F%40wix%2Fwix-grpc-client-1.0.1365.tgz"
+"@wix/wix-grpc-client@npm:1.0.1373":
+  version: 1.0.1373
+  resolution: "@wix/wix-grpc-client@npm:1.0.1373::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-client%2F-%2F%40wix%2Fwix-grpc-client-1.0.1373.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured": 1.0.1721
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured": 1.0.1722
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-proto-validation": 1.0.809
-    "@wix/wix-protobuf-converters": 1.0.124
+    "@wix/wix-proto-validation": 1.0.812
+    "@wix/wix-protobuf-converters": 1.0.129
     "@wix/wnp-errors-base": 1.0.71
-    "@wix/wnp-failure-injection": 1.0.109
-    "@wix/wnp-grpc-common": 1.0.1247
-    "@wix/wnp-sla": 1.0.177
+    "@wix/wnp-failure-injection": 1.0.115
+    "@wix/wnp-grpc-common": 1.0.1253
+    "@wix/wnp-sla": 1.0.180
     bluebird: 3.7.2
-  checksum: 1ed8fd4ea0fdf0d90dd467a7cd3765bffa6d0d2ccf1346ed55390da86a1c30d3756b72938ef7d429fc7eac03b6bfee8ca3ca031a633651862adcef130736121f
+  checksum: c4409cc2cd6ec05105e79c4a886c7c3d327a4f1787cb2ee5450ef71a8bec05b69d4af9ef202bdbdbeeff32a2eabf4e1d6240f094d9fa5b92da07e2f119415a64
   languageName: node
   linkType: hard
 
-"@wix/wix-grpc-health-proto@npm:1.0.1942":
-  version: 1.0.1942
-  resolution: "@wix/wix-grpc-health-proto@npm:1.0.1942::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-health-proto%2F-%2F%40wix%2Fwix-grpc-health-proto-1.0.1942.tgz"
-  checksum: 36babaa072f4d3333dc7edddca199ad08ae730ecae252a091076cf9bdcbe8ee441d0267bde625e78eff29e39de27119ffc5cf56956b9952cb37028d7351e961c
+"@wix/wix-grpc-health-proto@npm:1.0.1966":
+  version: 1.0.1966
+  resolution: "@wix/wix-grpc-health-proto@npm:1.0.1966::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-health-proto%2F-%2F%40wix%2Fwix-grpc-health-proto-1.0.1966.tgz"
+  checksum: bb4ab3fd67b11ac1d84f6b3d1cd3a3bd7ae4d1fe6f7e77b5080da1424e1381c858bbf90e9e1e3bc97e90e5cc7c85b63cfabec8f26093fc1d2bd11cd244461710
   languageName: node
   linkType: hard
 
-"@wix/wix-grpc-server@npm:1.0.1766":
-  version: 1.0.1766
-  resolution: "@wix/wix-grpc-server@npm:1.0.1766::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-server%2F-%2F%40wix%2Fwix-grpc-server-1.0.1766.tgz"
+"@wix/wix-grpc-server@npm:1.0.1774":
+  version: 1.0.1774
+  resolution: "@wix/wix-grpc-server@npm:1.0.1774::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-grpc-server%2F-%2F%40wix%2Fwix-grpc-server-1.0.1774.tgz"
   dependencies:
     "@grpc/proto-loader": 0.6.9
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-grpc-health-proto": 1.0.1942
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured": 1.0.1721
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-grpc-health-proto": 1.0.1966
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured": 1.0.1722
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-proto-validation": 1.0.809
-    "@wix/wix-protobuf-converters": 1.0.124
-    "@wix/wnp-grpc-common": 1.0.1247
+    "@wix/wix-proto-validation": 1.0.812
+    "@wix/wix-protobuf-converters": 1.0.129
+    "@wix/wnp-grpc-common": 1.0.1253
     "@wix/wnp-protobufjs": 1.0.317
     bluebird: 3.7.2
     lodash: 4.17.21
-  checksum: 018666a90d1520289144642d9bf84fb730d001eef08980de8bfc5c8fa8f8f6773b3a567184c6f85f3589f895b5d4ac28403832c79f97b48370ff8567de2de8d1
+  checksum: b4b35f01ff23d23f41722902ae2d77d668ffcf227827197cf7a4f746cb0a4b238098f1bde81bb617d3f42fc6270688746ee7997bda19fb6d6243da6547c5952a
   languageName: node
   linkType: hard
 
@@ -5067,21 +5120,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-json-rpc-server@npm:1.0.1247":
-  version: 1.0.1247
-  resolution: "@wix/wix-json-rpc-server@npm:1.0.1247::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-json-rpc-server%2F-%2F%40wix%2Fwix-json-rpc-server-1.0.1247.tgz"
+"@wix/wix-json-rpc-server@npm:1.0.1252":
+  version: 1.0.1252
+  resolution: "@wix/wix-json-rpc-server@npm:1.0.1252::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-json-rpc-server%2F-%2F%40wix%2Fwix-json-rpc-server-1.0.1252.tgz"
   dependencies:
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-proto-validation": 1.0.809
-    "@wix/wix-protobuf-converters": 1.0.124
-    "@wix/wnp-json-rpc-common": 1.0.1084
+    "@wix/wix-proto-validation": 1.0.812
+    "@wix/wix-protobuf-converters": 1.0.129
+    "@wix/wnp-json-rpc-common": 1.0.1087
     bluebird: 3.7.2
     body-parser: 1.19.1
     jayson: 3.6.6
     lodash: 4.17.21
-  checksum: bbbd11af16d073cdd3d9d0070028e3c9b2ca155e896b00269ad8c2df3cfbc87a5065cf977f24a80b191e117b88f717122e49f2d98539f2c2547b7a75879f3690
+  checksum: efc990fe29a445754845e3a9c148293091e0f393e6c5eafac544c60db2e1d5bc5979df82ebec80aea0fcc9cd7fb2868898e685fe959cdadc89fad8de3f979155
   languageName: node
   linkType: hard
 
@@ -5098,39 +5151,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-log@npm:1.0.164, @wix/wix-log@npm:^1.0.163":
-  version: 1.0.164
-  resolution: "@wix/wix-log@npm:1.0.164::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-log%2F-%2F%40wix%2Fwix-log-1.0.164.tgz"
+"@wix/wix-log@npm:1.0.165, @wix/wix-log@npm:^1.0.163, @wix/wix-log@npm:^1.0.165":
+  version: 1.0.165
+  resolution: "@wix/wix-log@npm:1.0.165::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-log%2F-%2F%40wix%2Fwix-log-1.0.165.tgz"
   dependencies:
     "@wix/debug-no-namespace": 1.0.491
     "@wix/wix-aspects": 1.0.1439
     "@wix/wnp-log-sanitizer": 1.0.0
-    json-stringify-safe: 5.0.1
     lodash: 4.17.21
     lru-cache: 6.0.0
-  checksum: a5b4c3484f49987b53d831c22ecd2c899f8c2d5e11875d384a81f77029098a648d4248024edc2a9cc1f38122f8ff3a0462ae0aa86ddda75f54f5eae7380b3b98
+  checksum: 93f814453825be4923a7454a60ab2a1a7a38ed3a6b96747d9b131fd8494e83455bb1aeff7d803d3a588d82b6139abb81ba7d45e9adebcfa57f9e78b2b9f06759
   languageName: node
   linkType: hard
 
-"@wix/wix-measured-metering@npm:1.0.1252":
-  version: 1.0.1252
-  resolution: "@wix/wix-measured-metering@npm:1.0.1252::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-measured-metering%2F-%2F%40wix%2Fwix-measured-metering-1.0.1252.tgz"
+"@wix/wix-measured-metering@npm:1.0.1255":
+  version: 1.0.1255
+  resolution: "@wix/wix-measured-metering@npm:1.0.1255::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-measured-metering%2F-%2F%40wix%2Fwix-measured-metering-1.0.1255.tgz"
   dependencies:
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-measured": 1.0.1721
-  checksum: da354535a79bf8edaa493b83acf63b0a624b1dd4bf5c4c2d688fb1ec9f39b61bc6b6ebbe6ebce7c8d35e4c8ee13fb66381ff38e9caf65d3216a22b701953a3a6
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-measured": 1.0.1722
+  checksum: d61841a10335657d67120931fc73559c6151e577c7a2e83d2d58403e7afc3cf26c97cbeaa6421b87cda2eea710671cbf60daa93a2b24d8210f279f669354bba5
   languageName: node
   linkType: hard
 
-"@wix/wix-measured@npm:1.0.1721":
-  version: 1.0.1721
-  resolution: "@wix/wix-measured@npm:1.0.1721::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-measured%2F-%2F%40wix%2Fwix-measured-1.0.1721.tgz"
+"@wix/wix-measured@npm:1.0.1722":
+  version: 1.0.1722
+  resolution: "@wix/wix-measured@npm:1.0.1722::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-measured%2F-%2F%40wix%2Fwix-measured-1.0.1722.tgz"
   dependencies:
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     circular-buffer: 1.0.3
     lodash: 4.17.21
     measured-core: 2.0.0
-  checksum: 5b7ac1c628be1aa88750cebd977ea60c50d68e29f56989cfb8f5b4287a0b34f5f1b55449325469c13d730689df350e8956f654611989a26fc0bfbb6669679004
+  checksum: 1f0a613fd94a557ade27c11fe3fd857b8f367922cf61cd57a9fde5fc924670036817d8a9eb588e063d5be814dfe6dd3af89a041f195cd14292665fc31684290c
   languageName: node
   linkType: hard
 
@@ -5207,35 +5259,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-proto-validation@npm:1.0.809":
-  version: 1.0.809
-  resolution: "@wix/wix-proto-validation@npm:1.0.809::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-proto-validation%2F-%2F%40wix%2Fwix-proto-validation-1.0.809.tgz"
+"@wix/wix-proto-validation@npm:1.0.812":
+  version: 1.0.812
+  resolution: "@wix/wix-proto-validation@npm:1.0.812::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-proto-validation%2F-%2F%40wix%2Fwix-proto-validation-1.0.812.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     "@wix/wnp-proto-runtime-types": 1.0.60
     "@wix/wnp-proto-validation-fv": 1.0.93
     joi: 17.5.0
     lodash: 4.17.21
     object-hash: 2.2.0
-  checksum: 2b220706c15753a29f42c32b81eda355750ef11019670f464f500626583c3ac500833047b300092fb7319e7da97bfb44c89d15e403e4a5c6af5f3ea371d8f418
+  checksum: e027ff30fe3fa4e9793a263cf87a5260ca2d357140276d3b96c3a95bd4ea7205bbae3d0de18007a064bf165fc0b2fe6db30ecbb0522c25adc32529d04b71718b
   languageName: node
   linkType: hard
 
-"@wix/wix-protobuf-converters@npm:1.0.124":
-  version: 1.0.124
-  resolution: "@wix/wix-protobuf-converters@npm:1.0.124::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-protobuf-converters%2F-%2F%40wix%2Fwix-protobuf-converters-1.0.124.tgz"
+"@wix/wix-protobuf-converters@npm:1.0.129":
+  version: 1.0.129
+  resolution: "@wix/wix-protobuf-converters@npm:1.0.129::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-protobuf-converters%2F-%2F%40wix%2Fwix-protobuf-converters-1.0.129.tgz"
   dependencies:
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured": 1.0.1721
-    "@wix/wix-measured-metering": 1.0.1252
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured": 1.0.1722
+    "@wix/wix-measured-metering": 1.0.1255
     "@wix/wix-proto-runtime-toolkit": 1.0.650
     "@wix/wnp-proto-runtime-types": 1.0.60
     "@wix/wnp-protobufjs": 1.0.317
     lodash: 4.17.21
     long: 4.0.0
-  checksum: 8c0e57761c522a31555a0dbba30d6953b71e730929cb27b2447882cb109bf73a6d41637054cc1032ceb28279484420ac24e77d841db81eb4426fdcd2f230fba2
+  checksum: afa3c969a3cf47ffb3bd4caa9de30dd742d3c5a370d2aa12d91425e9ff750faf784f74a52171570be16fe25ee1a568aa0f3eaadba24ef1ca6ac8c3ba214f15b9
   languageName: node
   linkType: hard
 
@@ -5250,46 +5302,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-rpc-client-support@npm:3.1.2429":
-  version: 3.1.2429
-  resolution: "@wix/wix-rpc-client-support@npm:3.1.2429::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-client-support%2F-%2F%40wix%2Fwix-rpc-client-support-3.1.2429.tgz"
+"@wix/wix-rpc-client-support@npm:3.1.2435":
+  version: 3.1.2435
+  resolution: "@wix/wix-rpc-client-support@npm:3.1.2435::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-client-support%2F-%2F%40wix%2Fwix-rpc-client-support-3.1.2435.tgz"
   dependencies:
     "@wix/cookie-utils": 1.1.1361
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-rpc-signature-toolkit": 1.0.818
-    "@wix/wnp-failure-injection": 1.0.109
-    "@wix/wnp-json-rpc-common": 1.0.1084
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-rpc-signature-toolkit": 1.0.820
+    "@wix/wnp-failure-injection": 1.0.115
+    "@wix/wnp-json-rpc-common": 1.0.1087
     "@wix/wnp-rpc-common": 1.0.547
-    "@wix/wnp-sla": 1.0.177
+    "@wix/wnp-sla": 1.0.180
     lodash: 4.17.21
-  checksum: bcb2a0b6b37b643a95333aa99e2b536cdf3b6b9b633fcdd3b00049ad2e290590f46e64fdfe60b25b6f6924e1ca75b1c8301baf91e57889bf4789dc3ad7b62ad4
+  checksum: 570ac660de453b475f910f07162b6e53e0493942a45d87e67632d15a2b1ad9cd6f0ccfa4bd2e90735ae2d0a8e54ee245d29af2d25bb8d782d1646ac8ee86f099
   languageName: node
   linkType: hard
 
-"@wix/wix-rpc-metering@npm:0.1.1337":
-  version: 0.1.1337
-  resolution: "@wix/wix-rpc-metering@npm:0.1.1337::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-metering%2F-%2F%40wix%2Fwix-rpc-metering-0.1.1337.tgz"
+"@wix/wix-rpc-metering@npm:0.1.1343":
+  version: 0.1.1343
+  resolution: "@wix/wix-rpc-metering@npm:0.1.1343::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-metering%2F-%2F%40wix%2Fwix-rpc-metering-0.1.1343.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured-metering": 1.0.1252
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured-metering": 1.0.1255
     "@wix/wnp-serverless-common": 1.0.174
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-visibility-attributes": 1.0.152
   peerDependencies:
     "@wix/wix-json-rpc-client": ">=0.1.564"
-  checksum: ab437c678fa9e4612f394e1b21b3fa33ca2291e68cd761decb1f40e1a128304a2d2dd1fa00ce3020b7b7826347a2b4156e23b1d02954b4d0591d86af2cacf613
+  checksum: 12b6b8043e32b9a1900e30de9569e4a48f3935cb0a65749aec17ee04fac2ad13418b43df33b17f80141a6edda61a9b87fe5022b7a00c0d70fcae046f084784c2
   languageName: node
   linkType: hard
 
-"@wix/wix-rpc-signature-toolkit@npm:1.0.818":
-  version: 1.0.818
-  resolution: "@wix/wix-rpc-signature-toolkit@npm:1.0.818::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-signature-toolkit%2F-%2F%40wix%2Fwix-rpc-signature-toolkit-1.0.818.tgz"
+"@wix/wix-rpc-signature-toolkit@npm:1.0.820":
+  version: 1.0.820
+  resolution: "@wix/wix-rpc-signature-toolkit@npm:1.0.820::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-rpc-signature-toolkit%2F-%2F%40wix%2Fwix-rpc-signature-toolkit-1.0.820.tgz"
   dependencies:
-    "@wix/wix-errors": 1.1.200
+    "@wix/wix-errors": 1.1.202
     "@wix/wix-hmac-signer": 1.0.1451
-  checksum: 3f6067d3a188a5c26f65c6a2ff74bbff7af0e76e818e7152cfd3d4765fb142d2d4ea6ebc85e3c58effdf56cf711a79980a340ccf936ef4dc461f6b1aac387a95
+  checksum: 5491118113f98469ef0141e9a8607b6f70539ab0385b47f2009a40ffeebc0f0cf127351e8e6ceb0b4b7a5a98fcfbf09d5f7a7c2d422c13721854d1beb35fa539
   languageName: node
   linkType: hard
 
@@ -5310,13 +5362,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-session-crypto@npm:2.0.1127":
-  version: 2.0.1127
-  resolution: "@wix/wix-session-crypto@npm:2.0.1127::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-session-crypto%2F-%2F%40wix%2Fwix-session-crypto-2.0.1127.tgz"
+"@wix/wix-session-crypto@npm:2.0.1129":
+  version: 2.0.1129
+  resolution: "@wix/wix-session-crypto@npm:2.0.1129::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-session-crypto%2F-%2F%40wix%2Fwix-session-crypto-2.0.1129.tgz"
   dependencies:
-    "@wix/wix-errors": 1.1.200
+    "@wix/wix-errors": 1.1.202
     "@wix/wnp-jwt-crypto": 0.1.1143
-  checksum: 743517dc78923ef9987a48b3d67607240f12b08c1d72c37731525a92e16cd43c3950f98b617ed6906d829424c4f4a828507d61cfcf8a9be048f7282ec6568f6a
+  checksum: 3019d4da585228e5a04c036f1944faa35be79dfb1ada391c9bca1cb915e533195483a676870b0838e96c274214423aee667dcf94c676959edae6859097490de0
   languageName: node
   linkType: hard
 
@@ -5341,17 +5393,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wix-testkit-base@npm:^1.0.1398, @wix/wix-testkit-base@npm:^1.0.1407":
-  version: 1.0.1408
-  resolution: "@wix/wix-testkit-base@npm:1.0.1408::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-testkit-base%2F-%2F%40wix%2Fwix-testkit-base-1.0.1408.tgz"
+"@wix/wix-testkit-base@npm:^1.0.1398, @wix/wix-testkit-base@npm:^1.0.1410":
+  version: 1.0.1410
+  resolution: "@wix/wix-testkit-base@npm:1.0.1410::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwix-testkit-base%2F-%2F%40wix%2Fwix-testkit-base-1.0.1410.tgz"
   dependencies:
-    "@wix/wnp-proto-validation-fv": 1.0.91
+    "@wix/wnp-proto-validation-fv": 1.0.93
     "@wix/wnp-test-env-config": 1.0.167
     find-root: 1.1.0
     lodash: 4.17.21
     shelljs: 0.8.5
     stack-trace: 0.0.10
-  checksum: 7e3671dac15e0288c4096e9b2c45fe10d13e05633353b7e64092bd804a9287519a3898eeeba992de1e047366c12c311b54374c01b0b9c476c07441cd1bd06f5d
+  checksum: cdd27495dcf5ff788197c9ae01ef139c9c43dd287d15156fed41b92e1ac90a00482a9aaaa7012757848671a913af65900cda5f6c2830b21752b778b6f15154e5
   languageName: node
   linkType: hard
 
@@ -5365,19 +5417,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-app-resources@npm:1.0.1087":
-  version: 1.0.1087
-  resolution: "@wix/wnp-app-resources@npm:1.0.1087::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-app-resources%2F-%2F%40wix%2Fwnp-app-resources-1.0.1087.tgz"
+"@wix/wnp-app-resources@npm:1.0.1092":
+  version: 1.0.1092
+  resolution: "@wix/wnp-app-resources@npm:1.0.1092::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-app-resources%2F-%2F%40wix%2Fwnp-app-resources-1.0.1092.tgz"
   dependencies:
-    "@wix/wix-app-info": 1.0.2662
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-app-info": 1.0.2667
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     bluebird: 3.7.2
     lodash: 4.17.21
     long: 4.0.0
     shelljs: 0.8.5
     uuid: 8.3.2
-  checksum: f96993cecab5b7a2662f70e22cf4735d6cb54b2438637d5844a7496d12e85218316ba650ee7028a6cafe4ed4d141eb4357edc9ee4b60e393e36a06e46016371e
+  checksum: 9c26f1cb68e735c24477529cebbf9cb1838ca286fa4f9ee557df3b6f22edc2fba74035a60d80e712eae8cdae5dd309ff45ae0bd8f9bafc2df536e90ecf6332d0
   languageName: node
   linkType: hard
 
@@ -5388,30 +5440,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-bootstrap-express@npm:1.0.2733":
-  version: 1.0.2733
-  resolution: "@wix/wnp-bootstrap-express@npm:1.0.2733::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-express%2F-%2F%40wix%2Fwnp-bootstrap-express-1.0.2733.tgz"
+"@wix/wnp-bootstrap-express@npm:1.0.2742":
+  version: 1.0.2742
+  resolution: "@wix/wnp-bootstrap-express@npm:1.0.2742::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-express%2F-%2F%40wix%2Fwnp-bootstrap-express-1.0.2742.tgz"
   dependencies:
-    "@wix/wix-artifact-info": 1.0.1102
-    "@wix/wix-common-aspects": 1.771.39
+    "@wix/wix-artifact-info": 1.0.1105
+    "@wix/wix-common-aspects": 1.771.45
     "@wix/wix-configurable": 1.0.904
-    "@wix/wix-error-pages": 1.0.1595
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-express-aspects": 1.0.2101
+    "@wix/wix-error-pages": 1.0.1601
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-express-aspects": 1.0.2102
     "@wix/wix-express-caching-policy": 1.2.1123
-    "@wix/wix-express-csrf": 1.0.1429
-    "@wix/wix-express-error-handler": 1.0.2605
+    "@wix/wix-express-csrf": 1.0.1435
+    "@wix/wix-express-error-handler": 1.0.2613
     "@wix/wix-express-error-logger": 1.0.1563
-    "@wix/wix-express-metering": 0.1.1736
+    "@wix/wix-express-metering": 0.1.1742
     "@wix/wix-express-newrelic-parameters": 1.0.1008
-    "@wix/wix-express-timeout": 1.1.1453
+    "@wix/wix-express-timeout": 1.1.1456
     "@wix/wix-express-tracing": 1.0.580
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     "@wix/wix-opentracing": 1.0.540
-    "@wix/wnp-config": 1.0.1066
-    "@wix/wnp-newrelic-error-reporter": 1.0.186
-    "@wix/wnp-sla": 1.0.177
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-config": 1.0.1067
+    "@wix/wnp-newrelic-error-reporter": 1.0.188
+    "@wix/wnp-sla": 1.0.180
+    "@wix/wnp-visibility-attributes": 1.0.152
     cookie-parser: 1.4.6
     express-async-errors: 3.1.1
     lodash: 4.17.21
@@ -5419,76 +5471,76 @@ __metadata:
     set-cookie-parser: 2.4.8
   peerDependencies:
     express: ">=4.17.0"
-  checksum: fae809cafed243ec15ade5a1e9604fc09847e03ed294066eab925cd6c528f0517608f02936d20b5fe449cfafa10ea26836bed039e9f94ea5ef6eb3b306537bd6
+  checksum: 11639bf789a5204250633163726017bf2239d9d43725a5a1c463c308c6c854b05e3118fa201b7f6df72098ebd8cc0273a6e40a0368157d929b9f2e0482fc372c
   languageName: node
   linkType: hard
 
-"@wix/wnp-bootstrap-grpc@npm:1.0.1800":
-  version: 1.0.1800
-  resolution: "@wix/wnp-bootstrap-grpc@npm:1.0.1800::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-grpc%2F-%2F%40wix%2Fwnp-bootstrap-grpc-1.0.1800.tgz"
+"@wix/wnp-bootstrap-grpc@npm:1.0.1808":
+  version: 1.0.1808
+  resolution: "@wix/wnp-bootstrap-grpc@npm:1.0.1808::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-grpc%2F-%2F%40wix%2Fwnp-bootstrap-grpc-1.0.1808.tgz"
   dependencies:
-    "@wix/wix-common-aspects": 1.771.39
+    "@wix/wix-common-aspects": 1.771.45
     "@wix/wix-configurable": 1.0.904
-    "@wix/wix-grpc-client": 1.0.1365
-    "@wix/wix-grpc-server": 1.0.1766
-    "@wix/wix-log": 1.0.164
-    "@wix/wix-measured-metering": 1.0.1252
-    "@wix/wix-rpc-metering": 0.1.1337
+    "@wix/wix-grpc-client": 1.0.1373
+    "@wix/wix-grpc-server": 1.0.1774
+    "@wix/wix-log": 1.0.165
+    "@wix/wix-measured-metering": 1.0.1255
+    "@wix/wix-rpc-metering": 0.1.1343
     "@wix/wix-test-ports": 1.0.715
     "@wix/wnp-bootstrap-api": 1.0.3
-    "@wix/wnp-config": 1.0.1066
-    "@wix/wnp-grpc-common": 1.0.1247
-    "@wix/wnp-newrelic-error-reporter": 1.0.186
+    "@wix/wnp-config": 1.0.1067
+    "@wix/wnp-grpc-common": 1.0.1253
+    "@wix/wnp-newrelic-error-reporter": 1.0.188
     "@wix/wnp-rpc-common": 1.0.547
     "@wix/wnp-serverless-common": 1.0.174
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-visibility-attributes": 1.0.152
     lodash: 4.17.21
     object-hash: 2.2.0
-  checksum: 9bd49857f2045888ecf984556350959297887bb96ddd398ac2b2fdc46874d05bab400bcd24f9398c678efc32f4bb93befb81328ee175861d819727030a294a20
+  checksum: b2ac15d0960f63c08ff95ade9a0bc94a1403a427698c596ce4c8e2eb71aee1a74c33995b974938c9be160d4e385df63bc8fcd38daa2589b6ebab52290793bd3b
   languageName: node
   linkType: hard
 
-"@wix/wnp-bootstrap-rpc-server@npm:1.0.1557":
-  version: 1.0.1557
-  resolution: "@wix/wnp-bootstrap-rpc-server@npm:1.0.1557::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-rpc-server%2F-%2F%40wix%2Fwnp-bootstrap-rpc-server-1.0.1557.tgz"
+"@wix/wnp-bootstrap-rpc-server@npm:1.0.1565":
+  version: 1.0.1565
+  resolution: "@wix/wnp-bootstrap-rpc-server@npm:1.0.1565::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-rpc-server%2F-%2F%40wix%2Fwnp-bootstrap-rpc-server-1.0.1565.tgz"
   dependencies:
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-express-timeout": 1.1.1453
-    "@wix/wix-json-rpc-server": 1.0.1247
-    "@wix/wix-measured-metering": 1.0.1252
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-express-timeout": 1.1.1456
+    "@wix/wix-json-rpc-server": 1.0.1252
+    "@wix/wix-measured-metering": 1.0.1255
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-rpc-metering": 0.1.1337
-    "@wix/wix-rpc-signature-toolkit": 1.0.818
+    "@wix/wix-rpc-metering": 0.1.1343
+    "@wix/wix-rpc-signature-toolkit": 1.0.820
     "@wix/wix-rpc-tracing": 1.0.603
     "@wix/wnp-bootstrap-api": 1.0.3
-    "@wix/wnp-bootstrap-rpc-signing": 1.0.1275
-    "@wix/wnp-json-rpc-common": 1.0.1084
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-bootstrap-rpc-signing": 1.0.1281
+    "@wix/wnp-json-rpc-common": 1.0.1087
+    "@wix/wnp-visibility-attributes": 1.0.152
     lodash: 4.17.21
   peerDependencies:
     express: ">=4.17.0"
-  checksum: ff9f9e12f05cc9d625403f80168da64fcd480f3be3701d1a9e694b4108b657d70fdbb5842846236ae1f8a3113cf07cb25e8d1e90946c0dbac675f60b3a8aebb3
+  checksum: 18cab21b4b29c5926615ffdd483d8438525409460c3d1849585681790baabb0279e214cfe934f8ea354ab088e220ea1456e16a2c763a805f5819d214b8b32b5a
   languageName: node
   linkType: hard
 
-"@wix/wnp-bootstrap-rpc-signing@npm:1.0.1275":
-  version: 1.0.1275
-  resolution: "@wix/wnp-bootstrap-rpc-signing@npm:1.0.1275::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-rpc-signing%2F-%2F%40wix%2Fwnp-bootstrap-rpc-signing-1.0.1275.tgz"
+"@wix/wnp-bootstrap-rpc-signing@npm:1.0.1281":
+  version: 1.0.1281
+  resolution: "@wix/wnp-bootstrap-rpc-signing@npm:1.0.1281::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-bootstrap-rpc-signing%2F-%2F%40wix%2Fwnp-bootstrap-rpc-signing-1.0.1281.tgz"
   dependencies:
     "@wix/wix-configurable": 1.0.904
-    "@wix/wix-rpc-client-support": 3.1.2429
-    "@wix/wnp-config": 1.0.1066
-  checksum: 1fbf2b38ddefb600bb21498b628b9406da00dcad6b0603690c117c3a79cb6cd108a39156517c95ea62327390840c82c9d8dc8ddd7b0959224deaadc789c9491d
+    "@wix/wix-rpc-client-support": 3.1.2435
+    "@wix/wnp-config": 1.0.1067
+  checksum: 487dfc57db8f2564cfb62f372f807ac34d411b30c82e4082cc2501659d63497155c092269be9b23cd42c4d6c595828e3ca0575851fc058c9a948eef3017e14ff
   languageName: node
   linkType: hard
 
-"@wix/wnp-config@npm:1.0.1066":
-  version: 1.0.1066
-  resolution: "@wix/wnp-config@npm:1.0.1066::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-config%2F-%2F%40wix%2Fwnp-config-1.0.1066.tgz"
+"@wix/wnp-config@npm:1.0.1067":
+  version: 1.0.1067
+  resolution: "@wix/wnp-config@npm:1.0.1067::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-config%2F-%2F%40wix%2Fwnp-config-1.0.1067.tgz"
   dependencies:
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     jsonpath-plus: 5.1.0
-  checksum: 8ab4bca1adee4a8b40a63c9ca7c82c995c6f751be201132de9f05ca55ee353dc29ca0450235b1b86b4078ffb71f3e75ce120c3cc63f112786cfda603f9963bb2
+  checksum: e75c57ea0f7c2bd6f1a4755f206e2544d92eaed2d42a42d109ffa025b19b79101ea0b12427428bbfe0be2851f7d566a055148d63410d27b2ded29e9b6e219afb
   languageName: node
   linkType: hard
 
@@ -5501,72 +5553,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-event-bus@npm:1.0.943":
-  version: 1.0.943
-  resolution: "@wix/wnp-event-bus@npm:1.0.943::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-event-bus%2F-%2F%40wix%2Fwnp-event-bus-1.0.943.tgz"
+"@wix/wnp-event-bus@npm:1.0.944":
+  version: 1.0.944
+  resolution: "@wix/wnp-event-bus@npm:1.0.944::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-event-bus%2F-%2F%40wix%2Fwnp-event-bus-1.0.944.tgz"
   dependencies:
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     eventemitter2: 6.4.5
-  checksum: e89e703f99576e613247594a4dd7ee33bf055c60adef83cdad3de0928d1e2e5d952e70972cdfd8b732cd714426ac1d26e86956e71e630ad4fb4dda818c7415a5
+  checksum: 6817972c3fb6b465f0a60419844391fc4c4c060c74c1761d793df604974faeff668f8798bd15bcb7c85b342b3fc1b299832257452556812f48439d64796650e8
   languageName: node
   linkType: hard
 
-"@wix/wnp-failure-injection@npm:1.0.109":
-  version: 1.0.109
-  resolution: "@wix/wnp-failure-injection@npm:1.0.109::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-failure-injection%2F-%2F%40wix%2Fwnp-failure-injection-1.0.109.tgz"
+"@wix/wnp-failure-injection@npm:1.0.115":
+  version: 1.0.115
+  resolution: "@wix/wnp-failure-injection@npm:1.0.115::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-failure-injection%2F-%2F%40wix%2Fwnp-failure-injection-1.0.115.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
+    "@wix/wix-common-aspects": 1.771.45
   peerDependencies:
     "@grpc/grpc-js": 1.3.4
     "@wix/wix-aspects": ">=1.0.640"
-  checksum: 951b0f332d1e99b794df222556a9f3254d855f63ed080deeb0f4ac96b789d6a44b024db28426b1ca957b084eac7169220a189a74c2a60d24f3195f8e9c90afc3
+  checksum: 032db4b2f0c9cc7eede2526db8ac9d4bca857b5d01cb795a655fbf9a97ffba4bfc2ec4dbb36e3abed119a3ba7ff024fc24b793cc7601ef1ed71995f37bfebfaf
   languageName: node
   linkType: hard
 
-"@wix/wnp-greyhound-common@npm:1.0.188":
-  version: 1.0.188
-  resolution: "@wix/wnp-greyhound-common@npm:1.0.188::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-greyhound-common%2F-%2F%40wix%2Fwnp-greyhound-common-1.0.188.tgz"
+"@wix/wnp-greyhound-common@npm:1.0.191":
+  version: 1.0.191
+  resolution: "@wix/wnp-greyhound-common@npm:1.0.191::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-greyhound-common%2F-%2F%40wix%2Fwnp-greyhound-common-1.0.191.tgz"
   dependencies:
-    "@wix/wix-bootstrap-greyhound-api": 1.0.121
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-bootstrap-greyhound-api": 1.0.123
+    "@wix/wix-log": 1.0.165
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wix-proto-validation": 1.0.809
+    "@wix/wix-proto-validation": 1.0.812
     "@wix/wnp-proto-runtime-types": 1.0.60
-  checksum: b8600c9b294e6e2deb4e039fc7fd785db32ab590f52f90e8b23d369b24ccfb31a2365ba6bc3df6b36a3d38ae4ef09e05e03d4d1889831d46c91a8474a8673bf5
+  checksum: 796e8397b1c1029d0873e52c3e5d69962c8e6f316a49d46815face0d0e2c4352a83220085bc83afa3499508b8ee10d8dfdbcd007c46ea8553b0e71042b924650
   languageName: node
   linkType: hard
 
-"@wix/wnp-grpc-common@npm:1.0.1247":
-  version: 1.0.1247
-  resolution: "@wix/wnp-grpc-common@npm:1.0.1247::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-grpc-common%2F-%2F%40wix%2Fwnp-grpc-common-1.0.1247.tgz"
+"@wix/wnp-grpc-common@npm:1.0.1253":
+  version: 1.0.1253
+  resolution: "@wix/wnp-grpc-common@npm:1.0.1253::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-grpc-common%2F-%2F%40wix%2Fwnp-grpc-common-1.0.1253.tgz"
   dependencies:
     "@grpc/proto-loader": 0.6.9
-    "@wix/extensions": ~1.0.707
+    "@wix/extensions": ~1.0.709
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-common-aspects": 1.771.45
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wnp-grpc-js": 1.0.87
+    "@wix/wnp-grpc-js": 1.0.88
     "@wix/wnp-grpcurl": 1.0.244
-    "@wix/wnp-newrelic": 1.0.911
+    "@wix/wnp-newrelic": 1.0.912
     "@wix/wnp-protobufjs": 1.0.317
-    "@wix/wnp-sla": 1.0.177
-    "@wix/wnp-visibility-attributes": 1.0.146
+    "@wix/wnp-sla": 1.0.180
+    "@wix/wnp-visibility-attributes": 1.0.152
     lodash: 4.17.21
     tmp: 0.2.1
-  checksum: 3493311239452aee6fb1134001bc4a80b4652a16883c79e0a613965828c99c6212ba4e365059b73594ebd1264f04c9ebf01d09e5ced6d89c89123442232bace2
+  checksum: 87150cb0bfc4b0b1d776a3bf3d6f0d1c0a1e760ffa99c015292d1e5f6331d8862031e66a1012b1e0ff87d9f5c29f7351038edc5aa274e79033891733817c7a06
   languageName: node
   linkType: hard
 
-"@wix/wnp-grpc-js@npm:1.0.87":
-  version: 1.0.87
-  resolution: "@wix/wnp-grpc-js@npm:1.0.87::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-grpc-js%2F-%2F%40wix%2Fwnp-grpc-js-1.0.87.tgz"
+"@wix/wnp-grpc-js@npm:1.0.88":
+  version: 1.0.88
+  resolution: "@wix/wnp-grpc-js@npm:1.0.88::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-grpc-js%2F-%2F%40wix%2Fwnp-grpc-js-1.0.88.tgz"
   dependencies:
     "@grpc/grpc-js": 1.5.3
-    "@wix/wix-log": 1.0.164
-  checksum: d91c3964122ceeb6b84f860cca5dccf27ac7a7eaa5cc800f26dfc5afbdea4406a76198c46e7d780ac218c3d018ca9021310bc36a82e57bec9f3912efa1650546
+    "@wix/wix-log": 1.0.165
+  checksum: 6fa940c19b6b1dd6888a82c51b7beea3d2fb572f77086a7f8e42a3802d727f92141973898f436b917e1febbb1181fe5ac1fbd173cdba5756bac7580aa60d3953
   languageName: node
   linkType: hard
 
@@ -5579,16 +5631,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-json-rpc-common@npm:1.0.1084":
-  version: 1.0.1084
-  resolution: "@wix/wnp-json-rpc-common@npm:1.0.1084::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-json-rpc-common%2F-%2F%40wix%2Fwnp-json-rpc-common-1.0.1084.tgz"
+"@wix/wnp-json-rpc-common@npm:1.0.1087":
+  version: 1.0.1087
+  resolution: "@wix/wnp-json-rpc-common@npm:1.0.1087::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-json-rpc-common%2F-%2F%40wix%2Fwnp-json-rpc-common-1.0.1087.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
     "@wix/wix-proto-runtime-toolkit": 1.0.650
     "@wix/wnp-rpc-common": 1.0.547
-  checksum: 467b58d4f814f4b6b9ae7daa066dad0e21c0dec89b996ff7f348a72400e3fff4c6885f435ad7aff77be18738628e75bb9dc8495829a4f92b20cf05f59ea6fb64
+  checksum: 3d028825f0d83e1c054f93ce4a876ce5a2599b226c7bac2ff7c6379ccd2b220e82addc6d2d6996236e4393720d15cfc9cdb11ef80d27697af97b69df1780e274
   languageName: node
   linkType: hard
 
@@ -5608,14 +5660,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-newrelic-error-reporter@npm:1.0.186":
-  version: 1.0.186
-  resolution: "@wix/wnp-newrelic-error-reporter@npm:1.0.186::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-newrelic-error-reporter%2F-%2F%40wix%2Fwnp-newrelic-error-reporter-1.0.186.tgz"
+"@wix/wnp-newrelic-error-reporter@npm:1.0.188":
+  version: 1.0.188
+  resolution: "@wix/wnp-newrelic-error-reporter@npm:1.0.188::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-newrelic-error-reporter%2F-%2F%40wix%2Fwnp-newrelic-error-reporter-1.0.188.tgz"
   dependencies:
     "@types/newrelic": 7.0.3
-    "@wix/wix-errors": 1.1.200
+    "@wix/wix-errors": 1.1.202
     flat: 5.0.2
-  checksum: a02b315dc83db11c17ecea578f0de8107f73a7aa63942d6fe66099f4e2b3309fafce97afa66d034b40ecf0a2915a2e22f4fdab351e632d1844eca01d83843da6
+  checksum: 3307a932a63e7d284dc793ecb2d8e33149fcf7e6ad1ba23a5f236569fe86559ef129281d75f9b744d8e7a95f4c70c52b374981c04799fc3f54ae5273d28cc996
   languageName: node
   linkType: hard
 
@@ -5628,13 +5680,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-newrelic@npm:1.0.911":
-  version: 1.0.911
-  resolution: "@wix/wnp-newrelic@npm:1.0.911::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-newrelic%2F-%2F%40wix%2Fwnp-newrelic-1.0.911.tgz"
+"@wix/wnp-newrelic@npm:1.0.912":
+  version: 1.0.912
+  resolution: "@wix/wnp-newrelic@npm:1.0.912::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-newrelic%2F-%2F%40wix%2Fwnp-newrelic-1.0.912.tgz"
   dependencies:
-    "@wix/wix-log": 1.0.164
+    "@wix/wix-log": 1.0.165
     "@wix/wnp-newrelic-version-5": 1.0.537
-  checksum: 50332bee0c8451b7e4272429b418501a37f6b03691be125a81be345cdc29c4148405bbf3d8d379e03f155055e2e7c852d5da1ebdf1c71ed712c3f597bbedc486
+  checksum: caadaa248f6fbaeac4ec778e626139346e5e980c06c1de4cd3a6481f38006b18bb7347d91f2d897e322ac25071b3c85a343dbb9e63df97a5fc7a9e20323ece22
   languageName: node
   linkType: hard
 
@@ -5672,29 +5724,6 @@ __metadata:
     long: 4.0.0
     node-uri: 1.1.1
   checksum: 5a299a6656b4a265e8622197fb8dcb049d3d7165e7b610a0accf575da1bb8ee7774479fe6f74d2ecdf9148228507a34df962391a269c9c24a53cad1e63886110
-  languageName: node
-  linkType: hard
-
-"@wix/wnp-proto-validation-fv@npm:1.0.91":
-  version: 1.0.91
-  resolution: "@wix/wnp-proto-validation-fv@npm:1.0.91::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-proto-validation-fv%2F-%2F%40wix%2Fwnp-proto-validation-fv-1.0.91.tgz"
-  dependencies:
-    "@wix/locale-dataset-javascript": 1.0.3026
-    "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-js-validations": 1.8.0
-    "@wix/wix-proto-runtime-toolkit": 1.0.650
-    "@wix/wnp-proto-runtime-types": 1.0.60
-    "@wix/wnp-protobufjs": 1.0.317
-    "@wix/wnp-rpc-common": 1.0.547
-    bcp-47: 1.0.8
-    bignumber.js: 9.0.0
-    country-data: 0.0.31
-    fastest-validator: 1.12.0
-    immutable: 4.0.0-rc.12
-    lodash: 4.17.21
-    long: 4.0.0
-    node-uri: 1.1.1
-  checksum: af8134cff6e1c58cec4c58c8be22b09a6a9a18757e43894c8efc36f71e7fa10a1475e7b824e6b1934364a43ced69bb5cccebb4855f7002f33792e4ddc444c5e6
   languageName: node
   linkType: hard
 
@@ -5764,14 +5793,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-sla@npm:1.0.177":
-  version: 1.0.177
-  resolution: "@wix/wnp-sla@npm:1.0.177::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-sla%2F-%2F%40wix%2Fwnp-sla-1.0.177.tgz"
+"@wix/wnp-sla@npm:1.0.180":
+  version: 1.0.180
+  resolution: "@wix/wnp-sla@npm:1.0.180::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-sla%2F-%2F%40wix%2Fwnp-sla-1.0.180.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-errors": 1.1.200
-    "@wix/wix-log": 1.0.164
-  checksum: d240c235fbf1cd628d794c13dea6b081f4ebf4429f688272eaf0eceb7e211ecce52c3b8b980602539ebcb2d368589dc399c6bb284bb80c13d31fbc3d047d0352
+    "@wix/wix-errors": 1.1.202
+    "@wix/wix-log": 1.0.165
+  checksum: fe63327f83b5a366fccb5f549d3df36f5869a565c2a8e067ebfaafae2c9808f334c359be34d579966c26e3ea812e298cdca847c91784fedb7de31c2bf316ff9c
   languageName: node
   linkType: hard
 
@@ -5782,35 +5811,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix/wnp-visibility-attributes@npm:1.0.146":
-  version: 1.0.146
-  resolution: "@wix/wnp-visibility-attributes@npm:1.0.146::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-visibility-attributes%2F-%2F%40wix%2Fwnp-visibility-attributes-1.0.146.tgz"
+"@wix/wnp-visibility-attributes@npm:1.0.152":
+  version: 1.0.152
+  resolution: "@wix/wnp-visibility-attributes@npm:1.0.152::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fwnp-visibility-attributes%2F-%2F%40wix%2Fwnp-visibility-attributes-1.0.152.tgz"
   dependencies:
     "@wix/wix-aspects": 1.0.1439
-    "@wix/wix-common-aspects": 1.771.39
-  checksum: c3826966ce8ffcb72869a986a550880f3356f5d26f281781c67e2340f61918ede8615567b7d1e9518b95808189cc224612e9048cdf6290771e4ba5f4c87e743c
+    "@wix/wix-common-aspects": 1.771.45
+  checksum: 8ac2fd20c4dce7a5cf690a3d7773f4bebf97788e207af85f1d47762916ff91ff542b80215a5894cfe2acaf4277fc1d89a8374b0443210f6e7cecac9dda55b16a
   languageName: node
   linkType: hard
 
-"@wix/yoshi-command-lint@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-command-lint@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-command-lint%2F-%2F%40wix%2Fyoshi-command-lint-6.51.2.tgz"
+"@wix/yoshi-command-lint@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-command-lint@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-command-lint%2F-%2F%40wix%2Fyoshi-command-lint-6.54.2.tgz"
   dependencies:
-    "@wix/eslint-config-yoshi": 6.51.2
-    "@wix/eslint-config-yoshi-base": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
-    "@wix/yoshi-monorepo-tools": 6.51.2
+    "@wix/eslint-config-yoshi": 6.54.2
+    "@wix/eslint-config-yoshi-base": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
+    "@wix/yoshi-monorepo-tools": 6.54.2
     arg: ^5.0.2
     chalk: ^4.1.2
     eslint: ^7.32.0
     globby: ^11.1.0
-  checksum: 26a4060c2c802af3f1bff95bdd45de1398dcb88cc514e033b7385415f1a7193acff50c5157de731e2f9fb8b456baae857234dc791e867e0b28dfed6e532ba547
+  checksum: c1b4acef085fefa134e1b245e14c972917470e208c5462483a7dc33d01044a35424dd068c42dfe7b686280209e5b1ddff4c125642c3704111fce43604ba37383
   languageName: node
   linkType: hard
 
-"@wix/yoshi-common@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-common@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-common%2F-%2F%40wix%2Fyoshi-common-6.51.2.tgz"
+"@wix/yoshi-common@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-common@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-common%2F-%2F%40wix%2Fyoshi-common-6.54.2.tgz"
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/register": ^7.18.9
@@ -5818,14 +5847,14 @@ __metadata:
     "@stylable/node": ^4.15.1
     "@stylable/runtime": ^4.15.1
     "@wix/assert-node-version": ^1.12.0
-    "@wix/babel-preset-yoshi": 6.51.2
+    "@wix/babel-preset-yoshi": 6.54.2
     "@wix/bi-logger-yoshi": ^1.36.0
     "@wix/ci-build-info": ^1.0.314
     "@wix/wix-bi-logger-client": ^1.0.2
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
-    "@wix/yoshi-tsconfig": 6.51.2
-    "@wix/yoshi-webpack-utils": 6.51.2
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
+    "@wix/yoshi-tsconfig": 6.54.2
+    "@wix/yoshi-webpack-utils": 6.54.2
     arg: ^5.0.2
     boxen: ^5.1.2
     chalk: ^4.1.2
@@ -5862,24 +5891,24 @@ __metadata:
     babel-loader: ^8.2.2
     react: ">=16"
     react-dom: ">=16"
-  checksum: 3caf84c0d04e069e60cd7f1ab2f50ef2da0bd8b7d1dee92c5f1e2d5dfaa9fe913ff1ae7e1c96e9f4131be43bae98337992387bd6767a9ab146625811b7d586c0
+  checksum: 1ffdb4cfe8393a85fc0c2ecc836c1496b57dcd0e338f73a47c5c32e5174e9fcb36455455be9f1072836115a955bcb1ece129e152f1433067976338808b0bd822
   languageName: node
   linkType: hard
 
-"@wix/yoshi-config-compat@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-config-compat@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-config-compat%2F-%2F%40wix%2Fyoshi-config-compat-6.51.2.tgz"
+"@wix/yoshi-config-compat@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-config-compat@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-config-compat%2F-%2F%40wix%2Fyoshi-config-compat-6.54.2.tgz"
   dependencies:
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
     fs-extra: ^9.1.0
-  checksum: d02726fb1a5361d2c709cfebf79fab8d9fa371b827a639df0a47faf1a40427dccd6eb31a6e2ae34ffc8efb0912c572874e2456c1a3263ecceb2b84adab2c1ed3
+  checksum: a9ebada082004870a9ebc0a44a2835ed957f89401b93fd90df61405751745a3abd4a8c2c2ac2961a18438085a7e790892cff4387da2304738ddb6fddca2e4003
   languageName: node
   linkType: hard
 
-"@wix/yoshi-config@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-config@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-config%2F-%2F%40wix%2Fyoshi-config-6.51.2.tgz"
+"@wix/yoshi-config@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-config@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-config%2F-%2F%40wix%2Fyoshi-config-6.54.2.tgz"
   dependencies:
     chalk: ^4.1.2
     cosmiconfig: ^7.1.0
@@ -5888,21 +5917,21 @@ __metadata:
     jest-validate: ^27.5.1
     lodash: ^4.17.21
     read-pkg: ^5.2.0
-  checksum: 5b823907801834c4070871542ffdd905d2ff92309c1896e81f48909568eb0305519e59e66c6516f65f64749d19a89c501faf81086b436b2e2736b0c233471323
+  checksum: 0c15b128032e3d79eb3babdd2e9206e2600e5cbacaae6c8f3ad4f7244cc0c92331a0f3164fae877ab3cdfc15170a359895e8987af7abba6cebdbe81020246002
   languageName: node
   linkType: hard
 
-"@wix/yoshi-flow-library@npm:^6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-flow-library@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-flow-library%2F-%2F%40wix%2Fyoshi-flow-library-6.51.2.tgz"
+"@wix/yoshi-flow-library@npm:^6.51.2, @wix/yoshi-flow-library@npm:^6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-flow-library@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-flow-library%2F-%2F%40wix%2Fyoshi-flow-library-6.54.2.tgz"
   dependencies:
-    "@wix/yoshi-command-lint": 6.51.2
-    "@wix/yoshi-common": 6.51.2
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
-    "@wix/yoshi-style-dependencies": 6.51.2
-    "@wix/yoshi-tsconfig": 6.51.2
-    "@wix/yoshi-webpack-utils": 6.51.2
+    "@wix/yoshi-command-lint": 6.54.2
+    "@wix/yoshi-common": 6.54.2
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
+    "@wix/yoshi-style-dependencies": 6.54.2
+    "@wix/yoshi-tsconfig": 6.54.2
+    "@wix/yoshi-webpack-utils": 6.54.2
     arg: ^5.0.2
     boxen: ^5.1.2
     chalk: ^4.1.2
@@ -5918,17 +5947,17 @@ __metadata:
     read-pkg: ^5.2.0
   bin:
     yoshi-library: ./bin/yoshi-library.js
-  checksum: ec25708d978bcc39472137f3b968eb058edd9cd1620ea53bf366e29391192b37505633d3dceedab25236f7956b749d9675df82961c47f327b0de96e90df2d911
+  checksum: 30eb45a24166f37a52563af011ebc7c6ec460cf385ce196722d8732aabbe5bc410a543fcbb915e0ac9035a80112d27c0e9378d7ffcdf115e549181a081d5562d
   languageName: node
   linkType: hard
 
-"@wix/yoshi-helpers@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-helpers@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-helpers%2F-%2F%40wix%2Fyoshi-helpers-6.51.2.tgz"
+"@wix/yoshi-helpers@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-helpers@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-helpers%2F-%2F%40wix%2Fyoshi-helpers-6.54.2.tgz"
   dependencies:
-    "@wix/artifact-description": ^1.0.371
+    "@wix/artifact-description": ^1.0.372
     "@wix/ci-build-info": ^1.0.314
-    "@wix/yoshi-config": 6.51.2
+    "@wix/yoshi-config": 6.54.2
     arg: ^5.0.2
     boxen: ^5.1.2
     chalk: ^4.1.2
@@ -5949,30 +5978,30 @@ __metadata:
     read-pkg: ^5.2.0
     semver: ^7.3.8
     server-destroy: ^1.0.1
-  checksum: 111e8a7aa5ed3fca2be6b17dcea531dc1d5071decdaf0bdcbf2e9d6b089a316e4550e1071c0e23ff8723f92a2d66177c5ae6028885f790571e249332b9b2a33c
+  checksum: 1cb38db5f43b5087c3a12d9e2f0430b9392286b5573e187b535e27ac2146240ac74adc01121ccfa3eaf62f418130da7059423e9064f0cdce65cd9f0b17e8577e
   languageName: node
   linkType: hard
 
-"@wix/yoshi-monorepo-tools@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-monorepo-tools@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-monorepo-tools%2F-%2F%40wix%2Fyoshi-monorepo-tools-6.51.2.tgz"
+"@wix/yoshi-monorepo-tools@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-monorepo-tools@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-monorepo-tools%2F-%2F%40wix%2Fyoshi-monorepo-tools-6.54.2.tgz"
   dependencies:
     "@wix/monorepo-tools": ^1.1.0
     execa: ^5.1.1
-  checksum: f8075fc04f56cbd702af789dbfc031d54f3528558c5ad4b4c4593b144c3ff7aa4a80cc67bdaa27ef0b0a340e59b0a61b9aa246dd57e54b82db917f02e7dfd73e
+  checksum: e5f730104697a7c1252680d42d66932d1cbd2a8ed1ad102d149f773041c16886f4626757957d2df41243f58ab97cac603e76243a51bdc0dd918090d0a668bafb
   languageName: node
   linkType: hard
 
-"@wix/yoshi-server-tools@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-server-tools@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-server-tools%2F-%2F%40wix%2Fyoshi-server-tools-6.51.2.tgz"
+"@wix/yoshi-server-tools@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-server-tools@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-server-tools%2F-%2F%40wix%2Fyoshi-server-tools-6.54.2.tgz"
   dependencies:
     "@babel/parser": ^7.20.15
     "@babel/traverse": ^7.20.13
     "@wix/ci-build-info": ^1.0.314
-    "@wix/fe-essentials": ^1.357.0
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
+    "@wix/fe-essentials": ^1.378.0
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
     async-retry: ^1.3.3
     chalk: ^4.1.2
     form-data: ^4.0.0
@@ -5982,13 +6011,13 @@ __metadata:
     node-fetch: ^2.6.9
     ora: ^5.4.1
     uuid: ^8.3.2
-  checksum: 0a8b7cf5416e450c5ba121de537defead3ecf2927836c4dc2cca15c64547390e376500e279e5ee0a2d170039aae9182b4aaf9f849052f15002ab88d8421447e7
+  checksum: 812aa330d590048a793443798c69192934b5982cc693291e97a0c0301137bc045305fb935da76710c105cec731ae20403153110a4d45cba920e3655b5691fea9
   languageName: node
   linkType: hard
 
-"@wix/yoshi-style-dependencies@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-style-dependencies@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-style-dependencies%2F-%2F%40wix%2Fyoshi-style-dependencies-6.51.2.tgz"
+"@wix/yoshi-style-dependencies@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-style-dependencies@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-style-dependencies%2F-%2F%40wix%2Fyoshi-style-dependencies-6.54.2.tgz"
   dependencies:
     css-hot-loader: ^1.4.4
     css-loader: ^6.7.3
@@ -5997,15 +6026,15 @@ __metadata:
     sass: ^1.58.1
     sass-loader: ^12.6.0
     style-loader: ^2.0.0
-  checksum: d2d051166fa91212fcd0d74310d8d7832f8cd9aa022b96ff4f031b3808343959db4be538375c81be878ffd4aa227c049978ad43afd2031a1ac31abe36a2eee6c
+  checksum: a4e1c082b3c840ec115387731a14e8d6197074f5c9c78aa0a3611479dc3a0a8eed5cc3486db738ec23680f5be1cf13c460aea03088d3dbce41d4dd65b2926b0f
   languageName: node
   linkType: hard
 
-"@wix/yoshi-tsconfig@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-tsconfig@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-tsconfig%2F-%2F%40wix%2Fyoshi-tsconfig-6.51.2.tgz"
+"@wix/yoshi-tsconfig@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-tsconfig@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-tsconfig%2F-%2F%40wix%2Fyoshi-tsconfig-6.54.2.tgz"
   dependencies:
-    "@wix/yoshi-config": 6.51.2
+    "@wix/yoshi-config": 6.54.2
     boxen: ^5.1.2
     chalk: ^4.1.2
     fs-extra: ^9.1.0
@@ -6013,13 +6042,13 @@ __metadata:
     resolve-cwd: ^3.0.0
   peerDependencies:
     typescript: ^4.5.0
-  checksum: 734297e5a04fda7974468f813db35daa1bf827a4cd1863dd00f1dc072bb43eee8d1cf0627980ecbc06a1f59f806890f5b6dee90698c41335ce6185935c94aba5
+  checksum: d438e371672cf736258ac349a8c96ecd52afee065281f3a442128a54cbdda8e7fe50cdb7e1a016bf9b57229b693eeff2645e76780d1730de7d653e622b68a26e
   languageName: node
   linkType: hard
 
-"@wix/yoshi-webpack-utils@npm:6.51.2":
-  version: 6.51.2
-  resolution: "@wix/yoshi-webpack-utils@npm:6.51.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-webpack-utils%2F-%2F%40wix%2Fyoshi-webpack-utils-6.51.2.tgz"
+"@wix/yoshi-webpack-utils@npm:6.54.2":
+  version: 6.54.2
+  resolution: "@wix/yoshi-webpack-utils@npm:6.54.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2F%40wix%2Fyoshi-webpack-utils%2F-%2F%40wix%2Fyoshi-webpack-utils-6.54.2.tgz"
   dependencies:
     "@babel/code-frame": ^7.18.6
     "@babel/core": ^7.20.12
@@ -6029,13 +6058,13 @@ __metadata:
     "@stylable/optimizer": ^4.15.1
     "@stylable/webpack-plugin": ^4.15.1
     "@svgr/webpack": ^6.5.1
-    "@wix/babel-preset-yoshi": 6.51.2
+    "@wix/babel-preset-yoshi": 6.54.2
     "@wix/federated-stylable": ^1.0.4
-    "@wix/tpa-style-webpack-plugin": ^1.8.1
-    "@wix/yoshi-config": 6.51.2
-    "@wix/yoshi-helpers": 6.51.2
-    "@wix/yoshi-server-tools": 6.51.2
-    "@wix/yoshi-tsconfig": 6.51.2
+    "@wix/tpa-style-webpack-plugin": ^1.9.5
+    "@wix/yoshi-config": 6.54.2
+    "@wix/yoshi-helpers": 6.54.2
+    "@wix/yoshi-server-tools": 6.54.2
+    "@wix/yoshi-tsconfig": 6.54.2
     archiver: ^5.3.1
     autoprefixer: ^10.4.13
     babel-loader: ^8.3.0
@@ -6084,7 +6113,7 @@ __metadata:
     wix-tpa-style-loader: ^1.0.14
     wix-webpack-bundle-analyzer: ^4.5.7
     xmldoc: ^1.2.0
-  checksum: 1ff06ba8fce928c59732389e6cc13a3715b3c8c252cc7e45e9c1b5a68f67ec9d3037553e1c738d0518af67bf19e5ce28446c25936c29d922b32918301912fc8c
+  checksum: 84f9af54160709f7b8bc7d9683d266056a55b18437391cbc223170f5911fb637134cb268cde1d9633534e9852c4e45247408113c86c5b51ab6688e7ad3f07f5a
   languageName: node
   linkType: hard
 
@@ -6403,15 +6432,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-colors@npm:^1.0.1":
-  version: 1.1.0
-  resolution: "ansi-colors@npm:1.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fansi-colors%2F-%2Fansi-colors-1.1.0.tgz"
-  dependencies:
-    ansi-wrap: ^0.1.0
-  checksum: c5f3ae4710ed564ca173cd2cf3e85a3bf8dabb7b20688f84299caaf0a4af01e6b7825b32739336c9437492058d3b07d90ef42e3e6223fbba3dc9d52f63e29056
-  languageName: node
-  linkType: hard
-
 "ansi-colors@npm:^4.1.1":
   version: 4.1.3
   resolution: "ansi-colors@npm:4.1.3::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fansi-colors%2F-%2Fansi-colors-4.1.3.tgz"
@@ -6501,13 +6521,6 @@ __metadata:
   version: 6.1.0
   resolution: "ansi-styles@npm:6.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fansi-styles%2F-%2Fansi-styles-6.1.0.tgz"
   checksum: 39d4ffae6559b24716db7c84b5e750aef6b0b433651f7b4a789f40b41be24ee7ea532afe540cea9cedb518baf334f9d9029af47d851ae5dcbdb2ca5a4862b8b8
-  languageName: node
-  linkType: hard
-
-"ansi-wrap@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "ansi-wrap@npm:0.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fansi-wrap%2F-%2Fansi-wrap-0.1.0.tgz"
-  checksum: 1e0a53ae0d1a3fc5ceeb5d1868cb5b0a61543a1ff11f3efc51bab7923cc01fe8180db1f9250ce5003b425c53f568bcf3c2dea9d90b5c1cd0a1dae13f76c601dd
   languageName: node
   linkType: hard
 
@@ -8074,6 +8087,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:5.2.0":
+  version: 5.2.0
+  resolution: "chalk@npm:5.2.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fchalk%2F-%2Fchalk-5.2.0.tgz"
+  checksum: 8a519b35c239f96e041b7f1ed8fdd79d3ca2332a8366cb957378b8a1b8a4cdfb740d19628e8bf74654d4c0917aa10cf39c20752e177a1304eac29a1168a740e9
+  languageName: node
+  linkType: hard
+
 "chalk@npm:^1.1.3":
   version: 1.1.3
   resolution: "chalk@npm:1.1.3::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fchalk%2F-%2Fchalk-1.1.3.tgz"
@@ -8097,12 +8117,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chance@npm:^1.1.10":
-  version: 1.1.10
-  resolution: "chance@npm:1.1.10::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fchance%2F-%2Fchance-1.1.10.tgz"
-  dependencies:
-    gulp-uglify-es: ^3.0.0
-  checksum: 4554b4a61f410f280fbcfb3c1afc641ad837dcb48c1b94b6f4d74e98c8deba8be176e5977289218c50b131aa657bbff95f37835e8e20530c42af19c85244b860
+"chance@npm:^1.1.11":
+  version: 1.1.11
+  resolution: "chance@npm:1.1.11::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fchance%2F-%2Fchance-1.1.11.tgz"
+  checksum: d17cadeda91f16ab3b2459d39980712428cacf825e3262f923a2bd896ccf40ff6b97967c816d5152e9841af376bc1dbdc1acd9b792d5828b021753fbe334f086
   languageName: node
   linkType: hard
 
@@ -8300,13 +8318,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clone-buffer@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "clone-buffer@npm:1.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fclone-buffer%2F-%2Fclone-buffer-1.0.0.tgz"
-  checksum: d813f4d12651bc4951d5e4869e2076d34ccfc3b23d0aae4e2e20e5a5e97bc7edbba84038356d222c54b25e3a83b5f45e8b637c18c6bd1794b2f1b49114122c50
-  languageName: node
-  linkType: hard
-
 "clone-deep@npm:^4.0.1":
   version: 4.0.1
   resolution: "clone-deep@npm:4.0.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fclone-deep%2F-%2Fclone-deep-4.0.1.tgz"
@@ -8318,35 +8329,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clone-stats@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "clone-stats@npm:1.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fclone-stats%2F-%2Fclone-stats-1.0.0.tgz"
-  checksum: bb1e05991e034e1eb104173c25bb652ea5b2b4dad5a49057a857e00f8d1da39de3bd689128a25bab8cbdfbea8ae8f6066030d106ed5c299a7d92be7967c50217
-  languageName: node
-  linkType: hard
-
 "clone@npm:^1.0.2":
   version: 1.0.4
   resolution: "clone@npm:1.0.4::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fclone%2F-%2Fclone-1.0.4.tgz"
   checksum: 2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
-  languageName: node
-  linkType: hard
-
-"clone@npm:^2.1.1":
-  version: 2.1.2
-  resolution: "clone@npm:2.1.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fclone%2F-%2Fclone-2.1.2.tgz"
-  checksum: ed0601cd0b1606bc7d82ee7175b97e68d1dd9b91fd1250a3617b38d34a095f8ee0431d40a1a611122dcccb4f93295b4fdb94942aa763392b5fe44effa50c2d5e
-  languageName: node
-  linkType: hard
-
-"cloneable-readable@npm:^1.0.0":
-  version: 1.1.3
-  resolution: "cloneable-readable@npm:1.1.3::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcloneable-readable%2F-%2Fcloneable-readable-1.1.3.tgz"
-  dependencies:
-    inherits: ^2.0.1
-    process-nextick-args: ^2.0.0
-    readable-stream: ^2.3.5
-  checksum: 52db2904dcfcd117e4e9605b69607167096c954352eff0fcded0a16132c9cfc187b36b5db020bee2dc1b3a968ca354f8b30aef3d8b4ea74e3ea83a81d43e47bb
   languageName: node
   linkType: hard
 
@@ -8432,7 +8418,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^3.1.1":
+"color@npm:^3.2.1":
   version: 3.2.1
   resolution: "color@npm:3.2.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcolor%2F-%2Fcolor-3.2.1.tgz"
   dependencies:
@@ -8479,7 +8465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:10.0.0":
+"commander@npm:10.0.0, commander@npm:^10.0.0":
   version: 10.0.0
   resolution: "commander@npm:10.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcommander%2F-%2Fcommander-10.0.0.tgz"
   checksum: f1824812019664598ba7409c489cb5c15d33f65b43b08952a84e87e0023144c08d101e2f43af968cf2d464c0d667b50a2a9780f4a6c52915324f54fe9b451a31
@@ -8507,7 +8493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.1.0, commander@npm:^9.3.0, commander@npm:^9.4.1":
+"commander@npm:^9.1.0, commander@npm:^9.3.0":
   version: 9.5.0
   resolution: "commander@npm:9.5.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcommander%2F-%2Fcommander-9.5.0.tgz"
   checksum: 5f7784fbda2aaec39e89eb46f06a999e00224b3763dc65976e05929ec486e174fe9aac2655f03ba6a5e83875bd173be5283dc19309b7c65954701c02025b3c1d
@@ -8871,6 +8857,13 @@ __metadata:
   version: 0.0.2
   resolution: "crypt@npm:0.0.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcrypt%2F-%2Fcrypt-0.0.2.tgz"
   checksum: adbf263441dd801665d5425f044647533f39f4612544071b1471962209d235042fb703c27eea2795c7c53e1dfc242405173003f83cf4f4761a633d11f9653f18
+  languageName: node
+  linkType: hard
+
+"crypto-js@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "crypto-js@npm:4.1.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fcrypto-js%2F-%2Fcrypto-js-4.1.1.tgz"
+  checksum: 50cc66a35f2738171d9a6d80c85ba7d00cb6440b756db035ba9ccd03032c0a803029a62969ecd4c844106c980af87687c64b204dd967989379c4f354fb482d37
   languageName: node
   linkType: hard
 
@@ -10396,20 +10389,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "execa@npm:6.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fexeca%2F-%2Fexeca-6.1.0.tgz"
+"execa@npm:^7.0.0":
+  version: 7.1.1
+  resolution: "execa@npm:7.1.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fexeca%2F-%2Fexeca-7.1.1.tgz"
   dependencies:
     cross-spawn: ^7.0.3
     get-stream: ^6.0.1
-    human-signals: ^3.0.1
+    human-signals: ^4.3.0
     is-stream: ^3.0.0
     merge-stream: ^2.0.0
     npm-run-path: ^5.1.0
     onetime: ^6.0.0
     signal-exit: ^3.0.7
     strip-final-newline: ^3.0.0
-  checksum: 004ee32092af745766a1b0352fdba8701a4001bc3fe08e63101c04276d4c860bbe11bb8ab85f37acdff13d3da83d60e044041dcf24bd7e25e645a543828d9c41
+  checksum: 0da5ee1c895b62142bc3d1567d1974711c28c2cfa6bae96e1923379bd597e476d762a13f282f92815d8ebfa33407949634fa32a0d6db8334a20e625fe11d4351
   languageName: node
   linkType: hard
 
@@ -11464,19 +11457,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gulp-uglify-es@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "gulp-uglify-es@npm:3.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fgulp-uglify-es%2F-%2Fgulp-uglify-es-3.0.0.tgz"
-  dependencies:
-    o-stream: ^0.3.0
-    plugin-error: ^1.0.1
-    terser: ^5.7.1
-    vinyl: ^2.2.1
-    vinyl-sourcemaps-apply: ^0.2.1
-  checksum: 6441eed7147f1d25c6f2f99485b59396c56d0532fb3f94af10b3f8ba1aed531b9eaa978d89e0d06464662fdac9be3c6a35e88b08058ca37dd38ea08c39be7b0b
-  languageName: node
-  linkType: hard
-
 "gzip-size@npm:5.1.1":
   version: 5.1.1
   resolution: "gzip-size@npm:5.1.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fgzip-size%2F-%2Fgzip-size-5.1.1.tgz"
@@ -11935,10 +11915,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"human-signals@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "human-signals@npm:3.0.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fhuman-signals%2F-%2Fhuman-signals-3.0.1.tgz"
-  checksum: 0bb27e72aea1666322f69ab9816e05df952ef2160346f2293f98f45d472edb1b62d0f1a596697b50d48d8f8222e6db3b9f9dc0b6bf6113866121001f0a8e48e9
+"human-signals@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "human-signals@npm:4.3.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fhuman-signals%2F-%2Fhuman-signals-4.3.0.tgz"
+  checksum: e02ae9b150cffc98c777c7fdddcfd4f24e79797703b929ef4a9d83ff5338736db44419fd992bd5676355aa050f29b9c140bb7b2640712e0ebe270b948baf58b0
   languageName: node
   linkType: hard
 
@@ -13918,10 +13898,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:2.0.6, lilconfig@npm:^2.0.3":
-  version: 2.0.6
-  resolution: "lilconfig@npm:2.0.6::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flilconfig%2F-%2Flilconfig-2.0.6.tgz"
-  checksum: 52bcb478586c629a78b9b06de72de897cd6d771725e70ee91ec16605721afebf43cf54b4d20b6bf904ca70877ddd9531b9578494c694072d1573a6d4aba1545a
+"lilconfig@npm:2.1.0, lilconfig@npm:^2.0.3":
+  version: 2.1.0
+  resolution: "lilconfig@npm:2.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flilconfig%2F-%2Flilconfig-2.1.0.tgz"
+  checksum: 64645641aa8d274c99338e130554abd6a0190533c0d9eb2ce7ebfaf2e05c7d9961f3ffe2bfa39efd3b60c521ba3dd24fa236fe2775fc38501bf82bf49d4678b8
   languageName: node
   linkType: hard
 
@@ -13932,39 +13912,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^13.1.2":
-  version: 13.1.2
-  resolution: "lint-staged@npm:13.1.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flint-staged%2F-%2Flint-staged-13.1.2.tgz"
+"lint-staged@npm:^13.0.3":
+  version: 13.2.2
+  resolution: "lint-staged@npm:13.2.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flint-staged%2F-%2Flint-staged-13.2.2.tgz"
   dependencies:
+    chalk: 5.2.0
     cli-truncate: ^3.1.0
-    colorette: ^2.0.19
-    commander: ^9.4.1
+    commander: ^10.0.0
     debug: ^4.3.4
-    execa: ^6.1.0
-    lilconfig: 2.0.6
-    listr2: ^5.0.5
+    execa: ^7.0.0
+    lilconfig: 2.1.0
+    listr2: ^5.0.7
     micromatch: ^4.0.5
     normalize-path: ^3.0.0
-    object-inspect: ^1.12.2
+    object-inspect: ^1.12.3
     pidtree: ^0.6.0
     string-argv: ^0.3.1
-    yaml: ^2.1.3
+    yaml: ^2.2.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: d8cc2321081caa83ea1f462743134156a3bbbd775bcdccfb13566ef7e1de0174e0528c638a26012be54cf4a62772bf0a5139f1aa97cd5e905fc10448c3e83993
+  checksum: a3f43ad7a88b57cbdd5e15a6b484955092ecf8bfbb38b009ec47d52ef8d16961785ce85fd6fb49a2d57ec7feb54d6724f1b0b2732f425d0e39b17206a88f7f96
   languageName: node
   linkType: hard
 
-"listr2@npm:^5.0.5":
-  version: 5.0.6
-  resolution: "listr2@npm:5.0.6::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flistr2%2F-%2Flistr2-5.0.6.tgz"
+"listr2@npm:^5.0.7":
+  version: 5.0.8
+  resolution: "listr2@npm:5.0.8::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flistr2%2F-%2Flistr2-5.0.8.tgz"
   dependencies:
     cli-truncate: ^2.1.0
     colorette: ^2.0.19
     log-update: ^4.0.0
     p-map: ^4.0.0
     rfdc: ^1.3.0
-    rxjs: ^7.5.7
+    rxjs: ^7.8.0
     through: ^2.3.8
     wrap-ansi: ^7.0.0
   peerDependencies:
@@ -13972,7 +13952,7 @@ __metadata:
   peerDependenciesMeta:
     enquirer:
       optional: true
-  checksum: 63b0be5e16094691c800f0a9cafd49dc2022c9fd0d3a3e714519d14d7b1c5a5f5aa0fe1098482634f81c86f84577938cddb30d3a1f163266c92b7de9e72d874b
+  checksum: 00f00ad18262909bafff21b42d2d94faa9ed3911d70094a12a1182e773533f9b3cfd78d83a81fdbfb7dbc42e3e3252093f504c822de152100a953a91f3adf7cb
   languageName: node
   linkType: hard
 
@@ -14226,7 +14206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.17.11, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.17.5, lodash@npm:^4.7.0, lodash@npm:~4.17.0":
+"lodash@npm:4.17.21, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.17.5, lodash@npm:^4.7.0, lodash@npm:~4.17.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Flodash%2F-%2Flodash-4.17.21.tgz"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -14276,7 +14256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.0.0, loose-envify@npm:^1.3.1, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.0.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Floose-envify%2F-%2Floose-envify-1.4.0.tgz"
   dependencies:
@@ -15264,13 +15244,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"o-stream@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "o-stream@npm:0.3.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fo-stream%2F-%2Fo-stream-0.3.0.tgz"
-  checksum: c6f721683ada66ad468cc3f480ef4323c0a786099fb2baf1dca349265dcd2ffc4ad8643eacccab40a0f0d1a3417f1e2d1d5ac2586e9bfcf264b945033e5d5a8f
-  languageName: node
-  linkType: hard
-
 "object-assign@npm:^4, object-assign@npm:^4.0.1, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fobject-assign%2F-%2Fobject-assign-4.1.1.tgz"
@@ -15303,10 +15276,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-inspect@npm:^1.12.2, object-inspect@npm:^1.9.0":
-  version: 1.12.2
-  resolution: "object-inspect@npm:1.12.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fobject-inspect%2F-%2Fobject-inspect-1.12.2.tgz"
-  checksum: e1bd625f4c44a2f733bd69cfccce6469f71333fb09c6de151f4f346c16d658ef7555727b12652c108e20c2afb908ae7cd165f52ca53745a1d6cbf228cdb46ebe
+"object-inspect@npm:^1.12.2, object-inspect@npm:^1.12.3, object-inspect@npm:^1.9.0":
+  version: 1.12.3
+  resolution: "object-inspect@npm:1.12.3::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fobject-inspect%2F-%2Fobject-inspect-1.12.3.tgz"
+  checksum: 752bb5f4dc595e214157ea8f442adb77bdb850ace762b078d151d8b6486331ab12364997a89ee6509be1023b15adf2b3774437a7105f8a5043dfda11ed622411
   languageName: node
   linkType: hard
 
@@ -15969,6 +15942,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pkce-challenge@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "pkce-challenge@npm:3.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fpkce-challenge%2F-%2Fpkce-challenge-3.1.0.tgz"
+  dependencies:
+    crypto-js: ^4.1.1
+  checksum: 5ff04324159946d1712557103f9cc6484ab0b86078c55049f5da1d709ffd9e1093868b44fb3fa98b162b14a6410f894d19eb09b79a6de0317be0ac9c86408b74
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^3.0.0":
   version: 3.0.0
   resolution: "pkg-dir@npm:3.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fpkg-dir%2F-%2Fpkg-dir-3.0.0.tgz"
@@ -16002,18 +15984,6 @@ __metadata:
   dependencies:
     semver-compare: ^1.0.0
   checksum: 222514d2841022be4b843f38d415beadcc6409c0545d6d153778d71c601bba7bbf1cd5827d650c7fae6a9a2ba7cf00f4b6729b40d015a3a5ba2937e57bc1c435
-  languageName: node
-  linkType: hard
-
-"plugin-error@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "plugin-error@npm:1.0.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fplugin-error%2F-%2Fplugin-error-1.0.1.tgz"
-  dependencies:
-    ansi-colors: ^1.0.1
-    arr-diff: ^4.0.0
-    arr-union: ^3.1.0
-    extend-shallow: ^3.0.2
-  checksum: 9b0ef44f8d2749013dfeb4a86c8082f2f277bf72e0c694c30dd504d0b329f321db91fe9d9cb0f7e8579f7ffa4260b7792827bc5ef4f87d6bcc0fc691de3d91a1
   languageName: node
   linkType: hard
 
@@ -16586,7 +16556,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"process-nextick-args@npm:^2.0.0, process-nextick-args@npm:~2.0.0":
+"process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fprocess-nextick-args%2F-%2Fprocess-nextick-args-2.0.1.tgz"
   checksum: bec089239487833d46b59d80327a1605e1c5287eaad770a291add7f45fda1bb5e28b38e0e061add0a1d0ee0984788ce74fa394d345eed1c420cacf392c554367
@@ -16644,7 +16614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.8.1, prop-types@npm:~15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fprop-types%2F-%2Fprop-types-15.8.1.tgz"
   dependencies:
@@ -16652,16 +16622,6 @@ __metadata:
     object-assign: ^4.1.1
     react-is: ^16.13.1
   checksum: 59ece7ca2fb9838031d73a48d4becb9a7cc1ed10e610517c7d8f19a1e02fa47f7c27d557d8a5702bec3cfeccddc853579832b43f449e54635803f277b1c78077
-  languageName: node
-  linkType: hard
-
-"prop-types@npm:~15.6.0":
-  version: 15.6.2
-  resolution: "prop-types@npm:15.6.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fprop-types%2F-%2Fprop-types-15.6.2.tgz"
-  dependencies:
-    loose-envify: ^1.3.1
-    object-assign: ^4.1.1
-  checksum: 05ee9c664628889b75f7c389c77acefca86d3d079a61432604cceddfe711cd4c3024aaef9c2a01e3cf37c7b22a224886bda3e3ea0e6d16a4078d2dd3e8d4e9f3
   languageName: node
   linkType: hard
 
@@ -17066,7 +17026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.1, readable-stream@npm:^2.0.5, readable-stream@npm:^2.3.5":
+"readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.1, readable-stream@npm:^2.0.5":
   version: 2.3.8
   resolution: "readable-stream@npm:2.3.8::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Freadable-stream%2F-%2Freadable-stream-2.3.8.tgz"
   dependencies:
@@ -17304,13 +17264,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remove-trailing-separator@npm:^1.0.1":
-  version: 1.1.0
-  resolution: "remove-trailing-separator@npm:1.1.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fremove-trailing-separator%2F-%2Fremove-trailing-separator-1.1.0.tgz"
-  checksum: 3568f9f8f5af3737b4aee9e6e1e8ec4be65a92da9cb27f989e0893714d50aa95ed2ff02d40d1fa35e1b1a234dc9c2437050ef356704a3999feaca6667d9e9bfc
-  languageName: node
-  linkType: hard
-
 "renderkid@npm:^3.0.0":
   version: 3.0.0
   resolution: "renderkid@npm:3.0.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Frenderkid%2F-%2Frenderkid-3.0.0.tgz"
@@ -17335,13 +17288,6 @@ __metadata:
   version: 1.6.1
   resolution: "repeat-string@npm:1.6.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Frepeat-string%2F-%2Frepeat-string-1.6.1.tgz"
   checksum: 87fa21bfdb2fbdedc44b9a5b118b7c1239bdd2c2c1e42742ef9119b7d412a5137a1d23f1a83dc6bb686f4f27429ac6f542e3d923090b44181bafa41e8ac0174d
-  languageName: node
-  linkType: hard
-
-"replace-ext@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "replace-ext@npm:1.0.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Freplace-ext%2F-%2Freplace-ext-1.0.1.tgz"
-  checksum: 9a9c3d68d0d31f20533ed23e9f6990cff8320cf357eebfa56c0d7b63746ae9f2d6267f3321e80e0bffcad854f710fc9a48dbcf7615579d767db69e9cd4a43168
   languageName: node
   linkType: hard
 
@@ -17615,7 +17561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.7":
+"rxjs@npm:^7.8.0":
   version: 7.8.0
   resolution: "rxjs@npm:7.8.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Frxjs%2F-%2Frxjs-7.8.0.tgz"
   dependencies:
@@ -18266,7 +18212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.5.1, source-map@npm:^0.5.6":
+"source-map@npm:^0.5.6":
   version: 0.5.7
   resolution: "source-map@npm:0.5.7::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fsource-map%2F-%2Fsource-map-0.5.7.tgz"
   checksum: 904e767bb9c494929be013017380cbba013637da1b28e5943b566031e29df04fba57edf3f093e0914be094648b577372bd8ad247fa98cfba9c600794cd16b599
@@ -18806,7 +18752,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"syncpack@npm:^8.5.14":
+"syncpack@npm:^8.2.4":
   version: 8.5.14
   resolution: "syncpack@npm:8.5.14::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fsyncpack%2F-%2Fsyncpack-8.5.14.tgz"
   dependencies:
@@ -18944,7 +18890,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.10.0, terser@npm:^5.14.1, terser@npm:^5.7.1":
+"terser@npm:^5.10.0, terser@npm:^5.14.1":
   version: 5.16.5
   resolution: "terser@npm:5.16.5::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fterser%2F-%2Fterser-5.16.5.tgz"
   dependencies:
@@ -19258,7 +19204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.5.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.1, tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Ftslib%2F-%2Ftslib-2.5.0.tgz"
   checksum: e32fc99cc730dd514e53c44e668d76016e738f0bcc726aad5dbd2d335cf19b87a95a9b1e4f0a9993e370f1d702b5e471cdd4acabcac428a3099d496b9af2021e
@@ -19803,29 +19749,6 @@ __metadata:
     core-util-is: 1.0.2
     extsprintf: ^1.2.0
   checksum: 293fb060a4c9b07965569a0c3e45efa954127818707995a8a4311f691b5d6687be99f972c759838ba6eecae717f9af28e3c49d2afc7bbdf5f0b675238f1426e8
-  languageName: node
-  linkType: hard
-
-"vinyl-sourcemaps-apply@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "vinyl-sourcemaps-apply@npm:0.2.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fvinyl-sourcemaps-apply%2F-%2Fvinyl-sourcemaps-apply-0.2.1.tgz"
-  dependencies:
-    source-map: ^0.5.1
-  checksum: 141c66335eb98f40e2c31418cda57b33ef5378480c73c8416fd88e44655212160119a629f740d1b1969e84481c5e01d3e3f861c38ed16a0cf2afcc112a466f7d
-  languageName: node
-  linkType: hard
-
-"vinyl@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "vinyl@npm:2.2.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fvinyl%2F-%2Fvinyl-2.2.1.tgz"
-  dependencies:
-    clone: ^2.1.1
-    clone-buffer: ^1.0.0
-    clone-stats: ^1.0.0
-    cloneable-readable: ^1.0.0
-    remove-trailing-separator: ^1.0.1
-    replace-ext: ^1.0.0
-  checksum: e7073fe5a3e10bbd5a3abe7ccf3351ed1b784178576b09642c08b0ef4056265476610aabd29eabfaaf456ada45f05f4112a35687d502f33aab33b025fc6ec38f
   languageName: node
   linkType: hard
 
@@ -20467,10 +20390,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.1.3":
-  version: 2.2.1
-  resolution: "yaml@npm:2.2.1::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fyaml%2F-%2Fyaml-2.2.1.tgz"
-  checksum: 12f3a73f2d28970d146184b1425d32a63f65e9f4840eeab09155a4d23a15be8401ac7a3a09b6626895ccf853c1b9069450957c0ad82cfe591369aaa58d1593d6
+"yaml@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "yaml@npm:2.2.2::__archiveUrl=https%3A%2F%2Frepo.dev.wixpress.com%2Fartifactory%2Fapi%2Fnpm%2Fnpm-repos%2Fyaml%2F-%2Fyaml-2.2.2.tgz"
+  checksum: a95bed9205a1f1cac11b315cb3f7ddf6b9979b85a478a18c86abf3066fd8d32c88f8de128c1ea97c2ac5f05de3268ff64e8286c241fd956851f1308044a50a9d
   languageName: node
   linkType: hard
 

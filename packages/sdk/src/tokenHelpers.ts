@@ -1,4 +1,4 @@
-import { AccessToken } from './auth/OAuthStrategy';
+import { AccessToken } from './auth/oauth2/types';
 
 export function getCurrentDate() {
   return Math.floor(Date.now() / 1000);

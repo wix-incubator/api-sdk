@@ -8,10 +8,6 @@
   "include": [
     "src"
   ],
-  "exclude": [
-    "**/*.spec.tsx",
-    "**/*.spec.ts"
-  ],
   "files": [
     "./src/external-types.d.ts",
     "./src/test-types.d.ts"

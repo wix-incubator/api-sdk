@@ -1,7 +1,11 @@
 import { cart, currentCart } from '@wix/ecom';
 import { schedule } from '@wix/events';
+import { alarms } from '@wix/motion';
 import { createClient } from '../wixClient';
 import { VALID_TOKEN } from './fixtures/constants';
+
+const expectStringToMatchAllOfStrings = (strings: string[]) =>
+  expect.stringMatching(RegExp(strings.map((str) => `(?=.*${str})`).join('')));
 
 describe('wixClient', () => {
   beforeEach(() => {
@@ -34,6 +38,26 @@ describe('wixClient', () => {
                 lineItems: [],
               },
             }),
+        }),
+      );
+    });
+
+    it('should send a BI header', async () => {
+      const client = createClient({ modules: { alarms } });
+
+      await client.alarms.alarm(100, {});
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          headers: expect.objectContaining({
+            'x-wix-bi-gateway': expectStringToMatchAllOfStrings([
+              'environment=js-sdk',
+              'package-name=@wix/motion',
+              'method-fqn=wix.coreservices.alarm.v1.AlarmService.Alarm',
+              'entity=wix.alarm.v1.alarm',
+            ]),
+          }),
         }),
       );
     });

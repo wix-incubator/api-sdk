@@ -1,4 +1,7 @@
 import { Simplify } from 'type-fest';
+import { AuthenticationStrategy } from './auth/strategy';
+import { biHeaderGenerator } from './bi/biHeaderGenerator';
+import { PublicMetadata, PUBLIC_METADATA_KEY, API_URL } from './common';
 
 type Headers = { Authorization: string } & Record<string, string>;
 
@@ -13,12 +16,11 @@ export interface IWrapper<Z extends AuthenticationStrategy> {
   auth: Z;
 }
 
-const API_URL = 'www.wixapis.com';
-
 const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
   origFunc: T,
   authStrategy: Z,
   headers: Headers,
+  publicMetadata: PublicMetadata,
   // @ts-expect-error
 ): ReturnType<T> => {
   return origFunc({
@@ -30,6 +32,7 @@ const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
       }
       try {
         const authHeaders = await authStrategy.getAuthHeaders();
+        const biHeader = biHeaderGenerator(requestOptions, publicMetadata);
         const res = await fetch(url, {
           method: requestOptions.method,
           ...(requestOptions.data && {
@@ -38,6 +41,7 @@ const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
           headers: {
             ...headers,
             ...authHeaders?.headers,
+            ...biHeader,
           },
         });
         if (res.status !== 200) {
@@ -51,7 +55,10 @@ const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
             res.status,
             dataError?.message,
             dataError?.details,
-            { requestId: res.headers.get('X-Wix-Request-Id') },
+            {
+              requestId: res.headers.get('X-Wix-Request-Id'),
+              details: dataError,
+            },
           );
         }
         const data = await res.json();
@@ -76,13 +83,13 @@ const errorBuilder = (
     response: {
       data: {
         details: {
-          ...details,
           ...(!details?.validationError && {
             applicationError: {
               description,
               code,
               data,
             },
+            ...details,
           }),
         },
         message: description,
@@ -117,7 +124,12 @@ export function createClient<
       if (isObject(value)) {
         prev[key] = traverse(value);
       } else if (typeof obj[key] === 'function') {
-        prev[key] = wrapperBuilder(value as Function, authStrategy, _headers);
+        prev[key] = wrapperBuilder(
+          value as Function,
+          authStrategy,
+          _headers,
+          obj[PUBLIC_METADATA_KEY] ?? {},
+        );
       } else {
         prev[key] = value;
       }

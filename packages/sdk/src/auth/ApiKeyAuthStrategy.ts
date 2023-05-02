@@ -1,3 +1,5 @@
+import { AuthenticationStrategy } from './strategy';
+
 export interface IApiKeyStrategy extends AuthenticationStrategy {
   setSiteId(siteId?: string): void;
   setAccountId(accountId?: string): void;
@@ -20,11 +22,11 @@ export function ApiKeyStrategy({
     headers['wix-account-id'] = accountId;
   }
   return {
-    setSiteId(siteId: string) {
-      headers['wix-site-id'] = siteId;
+    setSiteId(_siteId: string) {
+      headers['wix-site-id'] = _siteId;
     },
-    setAccountId(accountId: string) {
-      headers['wix-account-id'] = accountId;
+    setAccountId(_accountId: string) {
+      headers['wix-account-id'] = _accountId;
     },
     async getAuthHeaders(): Promise<{ headers: Record<string, string> }> {
       return {
