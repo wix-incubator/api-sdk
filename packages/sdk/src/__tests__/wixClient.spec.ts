@@ -21,10 +21,6 @@ describe('wixClient', () => {
     );
   });
 
-  it('should throw when no modules pass', () => {
-    expect(() => createClient({ modules: {} })).toThrowError('Missing modules');
-  });
-
   describe('headers', () => {
     beforeEach(() => {
       // @ts-expect-error

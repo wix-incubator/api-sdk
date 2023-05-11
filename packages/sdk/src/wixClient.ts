@@ -14,13 +14,13 @@ type WithoutFunctionWrapper<T> = {
 export interface IWrapper<Z extends AuthenticationStrategy> {
   setHeaders(headers: Headers): void;
   auth: Z;
+  fetch(relativeUrl: string, options: RequestInit): Promise<Response>;
 }
 
-const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
+const wrapperBuilder = <T extends Function>(
   origFunc: T,
-  authStrategy: Z,
-  headers: Headers,
   publicMetadata: PublicMetadata,
+  boundFetch: typeof fetch,
   // @ts-expect-error
 ): ReturnType<T> => {
   return origFunc({
@@ -31,16 +31,13 @@ const wrapperBuilder = <T extends Function, Z extends AuthenticationStrategy>(
         url += `?${requestOptions.params.toString()}`;
       }
       try {
-        const authHeaders = await authStrategy.getAuthHeaders();
         const biHeader = biHeaderGenerator(requestOptions, publicMetadata);
-        const res = await fetch(url, {
+        const res = await boundFetch(url, {
           method: requestOptions.method,
           ...(requestOptions.data && {
             body: JSON.stringify(requestOptions.data),
           }),
           headers: {
-            ...headers,
-            ...authHeaders?.headers,
             ...biHeader,
           },
         });
@@ -89,8 +86,8 @@ const errorBuilder = (
               code,
               data,
             },
-            ...details,
           }),
+          ...details,
         },
         message: description,
       },
@@ -103,17 +100,25 @@ export function createClient<
   T = any,
   Z extends AuthenticationStrategy = any,
 >(config: {
-  modules: T;
+  modules?: T;
   auth?: Z;
   headers?: Headers;
 }): WithoutFunctionWrapper<T> & IWrapper<Z> {
-  if (!config.modules || Object.entries(config.modules).length < 1) {
-    throw new Error('Missing modules');
-  }
-
   const _headers: Headers = config.headers || { Authorization: '' };
   const authStrategy = config.auth || {
     getAuthHeaders: () => Promise.resolve({ headers: {} }),
+  };
+
+  const boundFetch: typeof fetch = async (url, options) => {
+    const authHeaders = await authStrategy.getAuthHeaders();
+    return fetch(url, {
+      ...options,
+      headers: {
+        ..._headers,
+        ...authHeaders?.headers,
+        ...options?.headers,
+      },
+    });
   };
 
   const isObject = (val: any) =>
@@ -126,9 +131,8 @@ export function createClient<
       } else if (typeof obj[key] === 'function') {
         prev[key] = wrapperBuilder(
           value as Function,
-          authStrategy,
-          _headers,
           obj[PUBLIC_METADATA_KEY] ?? {},
+          boundFetch,
         );
       } else {
         prev[key] = value;
@@ -143,10 +147,16 @@ export function createClient<
     }
   };
 
-  const wrappedModules = traverse(config.modules);
+  const wrappedModules = config.modules ? traverse(config.modules) : {};
   return {
     ...wrappedModules,
     auth: authStrategy,
     setHeaders,
+    fetch: (relativeUrl: string, options: RequestInit) => {
+      const finalUrl = new URL(relativeUrl, `https://${API_URL}`);
+      finalUrl.host = API_URL;
+      finalUrl.protocol = 'https';
+      return boundFetch(finalUrl, options);
+    },
   };
 }

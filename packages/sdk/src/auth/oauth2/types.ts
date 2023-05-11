@@ -14,7 +14,9 @@ export interface AccessToken extends Token {
   expiresAt: number;
 }
 
-export interface RefreshToken extends Token {}
+export interface RefreshToken extends Token {
+  role: TokenRole;
+}
 
 export interface OauthData extends OauthPKCE {
   originalUri: string;
@@ -53,17 +55,22 @@ export interface IOAuthStrategy extends AuthenticationStrategy {
     oauthData: OauthData,
   ) => Promise<Tokens>;
   logout: (originalUrl: string) => Promise<{ logoutUrl: string }>;
-  parseFromUrl: () => { code: string; state: string };
+  parseFromUrl: () => {
+    code: string;
+    state: string;
+    error?: string;
+    errorDescription?: string;
+  };
   register: (params: RegisterParams) => Promise<StateMachine>;
   login: (params: LoginParams) => Promise<StateMachine>;
   proceed<T extends ProcessableState>(
     nextInputs: CalculateNextState<T>,
   ): Promise<StateMachine>;
   complete: (sessionToken: string) => Promise<Tokens>;
-  sendResetPasswordMail: (email: string) => Promise<void>;
+  sendResetPasswordMail: (email: string, redirectUri: string) => Promise<void>;
   getRecaptchaScriptUrl: () => string;
   getRecaptchaToken: () => Promise<string>;
-  isLoggedIn: () => boolean;
+  loggedIn: () => boolean;
 }
 
 type SuccessState = {
@@ -114,6 +121,12 @@ type UserCaptchaRequiredState = {
   };
 };
 
+export enum TokenRole {
+  NONE = 'none',
+  VISITOR = 'visitor',
+  MEMBER = 'member',
+}
+
 export type StateMachine =
   | InitialState
   | SuccessState
@@ -125,8 +138,8 @@ export type StateMachine =
 
 export type CalculateNextState<T> = T extends EmailVerificationRequiredState
   ? {
-      code: string;
-    }
+    code: string;
+  }
   : never;
 
 export type ProcessableState = EmailVerificationRequiredState;

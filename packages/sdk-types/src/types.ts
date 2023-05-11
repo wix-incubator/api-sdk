@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export declare type RequestOptions<T = any> = any;
 
 export interface HttpClient {

@@ -1,15 +1,32 @@
-import { cart } from '@wix/ecom';
 import { createClient } from '../wixClient';
 import { VALID_TOKEN } from './fixtures/constants';
 import { OAuthStrategy } from '../auth/oauth2/OAuthStrategy';
 import { authentication } from '@wix/identity';
 import * as pkceChallenge from 'pkce-challenge';
+import { TokenRole } from '../auth/oauth2/types';
+import { getCurrentDate } from '../tokenHelpers';
+import {
+  EMAIL_EXISTS,
+  INVALID_CAPTCHA,
+  INVALID_PASSWORD,
+  MISSING_CAPTCHA,
+  RESET_PASSWORD,
+} from '../auth/oauth2/constants';
 
 describe('direct login', () => {
+  const clientId = 'some-clientId';
   const getClient = () =>
     createClient({
-      modules: { cart },
-      auth: OAuthStrategy({ clientId: 'some-clientId' }),
+      auth: OAuthStrategy({
+        clientId,
+        tokens: {
+          refreshToken: { value: 'something', role: TokenRole.VISITOR },
+          accessToken: {
+            value: VALID_TOKEN,
+            expiresAt: getCurrentDate() + 1000,
+          },
+        },
+      }),
     });
 
   it('should get recaptcha script url', () => {
@@ -105,7 +122,212 @@ describe('direct login', () => {
     expect(data).toEqual({ stateToken: 'stateToken' });
   });
 
-  // todo: add error tests
+  describe('errors', () => {
+    it('should throw when invalid email', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 400,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message:
+                'loginId is invalid:\n`-- type.email is not a valid email address',
+              details: {
+                validationError: {
+                  fieldViolations: [
+                    {
+                      field: 'loginId.type.email',
+                      description: 'is not a valid email address',
+                      violatedRule: 'FORMAT',
+                      data: { type: 'EMAIL' },
+                    },
+                  ],
+                },
+              },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.register({
+        email: 'my@email.com',
+        password: '123456',
+        profile: { firstName: 'John' },
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('invalidEmail');
+    });
+
+    it('should throw when missing captcha', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: MISSING_CAPTCHA } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.register({
+        email: 'my@email.com',
+        password: '123456',
+        profile: { firstName: 'John' },
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('missingCaptchaToken');
+    });
+
+    it('should throw when invalid captcha', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: INVALID_CAPTCHA } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.register({
+        email: 'my@email.com',
+        password: '123456',
+        profile: { firstName: 'John' },
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('invalidCaptchaToken');
+    });
+
+    it('should throw when email exist', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: EMAIL_EXISTS } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.register({
+        email: 'my@email.com',
+        password: '123456',
+        profile: { firstName: 'John' },
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('emailAlreadyExists');
+    });
+
+    it('should throw when invalid password', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: INVALID_PASSWORD } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.login({
+        email: 'my@email.com',
+        password: '123456',
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('invalidPassword');
+    });
+
+    it('should throw when reset password', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: RESET_PASSWORD } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.login({
+        email: 'my@email.com',
+        password: '123456',
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('resetPassword');
+    });
+
+    it('should throw when invalid email', async () => {
+      // @ts-expect-error
+      global.fetch = jest.fn(() =>
+        Promise.resolve({
+          status: 403,
+          headers: { get: () => 'application/json' },
+          json: () =>
+            Promise.resolve({
+              message: "Didn't receive token",
+              details: { applicationError: { code: '-2222' } },
+            }),
+        }),
+      );
+
+      const client = getClient();
+
+      // @ts-expect-error
+      const { stateKind, error, errorCode } = await client.auth.login({
+        email: 'my@email.com',
+        password: '123456',
+      });
+
+      expect(stateKind).toEqual('failure');
+      expect(error).not.toEqual('');
+      expect(errorCode).toEqual('invalidEmail');
+    });
+  });
 
   it('should allow login', async () => {
     // @ts-expect-error
@@ -153,9 +375,9 @@ describe('direct login', () => {
             redirectSession: {
               fullUrl: 'https://redirect.com',
             },
-            accessToken: VALID_TOKEN,
-            refreshToken: 'some-refreshToken',
-            expiresIn: 3600,
+            access_token: VALID_TOKEN,
+            refresh_token: 'some-refreshToken',
+            expires_in: 3600,
           }),
       }),
     );
@@ -182,7 +404,7 @@ describe('direct login', () => {
         value: VALID_TOKEN,
         expiresAt: expect.any(Number),
       },
-      refreshToken: { value: 'some-refreshToken' },
+      refreshToken: { value: 'some-refreshToken', role: TokenRole.MEMBER },
     });
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
@@ -190,7 +412,7 @@ describe('direct login', () => {
         body: JSON.stringify({
           auth: {
             authRequest: {
-              clientId: 'some-clientId',
+              clientId,
               codeChallenge,
               codeChallengeMethod: 'S256',
               responseMode: 'web_message',
@@ -208,13 +430,17 @@ describe('direct login', () => {
   it('should send reset password mail', async () => {
     const client = getClient();
 
-    await client.auth.sendResetPasswordMail('email@gmail.com');
+    await client.auth.sendResetPasswordMail(
+      'email@gmail.com',
+      'https://url.com',
+    );
 
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
         body: JSON.stringify({
           email: 'email@gmail.com',
+          redirect: { url: 'https://url.com', clientId },
         }),
       }),
     );

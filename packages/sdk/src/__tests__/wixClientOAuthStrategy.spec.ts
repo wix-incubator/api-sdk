@@ -3,12 +3,11 @@ import { createClient } from '../wixClient';
 import { VALID_TOKEN } from './fixtures/constants';
 import { getCurrentDate } from '../tokenHelpers';
 import { OAuthStrategy } from '../auth/oauth2/OAuthStrategy';
-import { API_URL } from '../common';
+import { TokenRole } from '../auth/oauth2/types';
 
 describe('OAuthStrategy', () => {
   const getClient = () =>
     createClient({
-      modules: { cart },
       auth: OAuthStrategy({ clientId: 'some-clientId' }),
     });
 
@@ -19,9 +18,9 @@ describe('OAuthStrategy', () => {
         status: 200,
         json: () =>
           Promise.resolve({
-            accessToken: VALID_TOKEN,
-            refreshToken: 'some-refreshToken',
-            expiresIn: 3600,
+            access_token: VALID_TOKEN,
+            refresh_token: 'some-refreshToken',
+            expires_in: 3600,
             redirectSession: {
               fullUrl: 'https://redirect.com',
             },
@@ -48,7 +47,7 @@ describe('OAuthStrategy', () => {
           value: VALID_TOKEN,
           expiresAt: expect.any(Number),
         },
-        refreshToken: { value: 'some-refreshToken' },
+        refreshToken: { value: 'some-refreshToken', role: TokenRole.VISITOR },
       });
     });
 
@@ -68,14 +67,17 @@ describe('OAuthStrategy', () => {
             }),
         }),
       );
-      const client = getClient();
+      const client = createClient({
+        modules: { cart },
+        auth: OAuthStrategy({ clientId: 'some-clientId' }),
+      });
 
       client.auth.setTokens({
         accessToken: {
           value: VALID_TOKEN,
           expiresAt: getCurrentDate() - 1000,
         },
-        refreshToken: { value: 'something' },
+        refreshToken: { value: 'something', role: TokenRole.VISITOR },
       });
 
       await client.cart.createCart({});
@@ -93,7 +95,7 @@ describe('OAuthStrategy', () => {
 
     it('should return tokens when access token valid', async () => {
       const client = getClient();
-      const refreshToken = { value: 'something' };
+      const refreshToken = { value: 'something', role: TokenRole.MEMBER };
       const tokens = await client.auth.generateVisitorTokens({
         refreshToken,
         accessToken: {
@@ -113,7 +115,10 @@ describe('OAuthStrategy', () => {
 
     it('should generate access token based on refresh token', async () => {
       const client = getClient();
-      const refreshToken = { value: 'some-refreshToken' };
+      const refreshToken = {
+        value: 'some-refreshToken',
+        role: TokenRole.VISITOR,
+      };
       const tokens = await client.auth.generateVisitorTokens({
         refreshToken,
         accessToken: {
@@ -142,7 +147,10 @@ describe('OAuthStrategy', () => {
 
   it('should renew token', async () => {
     const client = getClient();
-    const tokens = await client.auth.renewToken({ value: 'some-refreshToken' });
+    const tokens = await client.auth.renewToken({
+      value: 'some-refreshToken',
+      role: TokenRole.VISITOR,
+    });
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),
       expect.objectContaining({
@@ -157,8 +165,51 @@ describe('OAuthStrategy', () => {
         value: VALID_TOKEN,
         expiresAt: expect.any(Number),
       },
-      refreshToken: { value: 'some-refreshToken' },
+      refreshToken: { value: 'some-refreshToken', role: TokenRole.VISITOR },
     });
+  });
+
+  it('should generate new token when refresh invalid', async () => {
+    global.fetch = jest
+      .fn()
+      .mockImplementationOnce(() =>
+        Promise.resolve({
+          status: 404,
+        }),
+      )
+      .mockImplementationOnce(() =>
+        Promise.resolve({
+          status: 200,
+          json: () => Promise.resolve({ access_token: VALID_TOKEN }),
+        }),
+      );
+    const client = getClient();
+    await client.auth.generateVisitorTokens({
+      refreshToken: {
+        value: 'some-refreshToken',
+        role: TokenRole.VISITOR,
+      },
+    });
+    expect(global.fetch).toHaveBeenNthCalledWith(
+      1,
+      expect.any(String),
+      expect.objectContaining({
+        body: JSON.stringify({
+          refreshToken: 'some-refreshToken',
+          grantType: 'refresh_token',
+        }),
+      }),
+    );
+    expect(global.fetch).toHaveBeenNthCalledWith(
+      2,
+      expect.any(String),
+      expect.objectContaining({
+        body: JSON.stringify({
+          clientId: 'some-clientId',
+          grantType: 'anonymous',
+        }),
+      }),
+    );
   });
 
   it('should set tokens', async () => {
@@ -176,14 +227,17 @@ describe('OAuthStrategy', () => {
       }),
     );
 
-    const client = getClient();
+    const client = createClient({
+      modules: { cart },
+      auth: OAuthStrategy({ clientId: 'some-clientId' }),
+    });
 
     client.auth.setTokens({
       accessToken: {
         value: VALID_TOKEN,
         expiresAt: getCurrentDate() + 1000,
       },
-      refreshToken: { value: 'something' },
+      refreshToken: { value: 'something', role: TokenRole.VISITOR },
     });
 
     await client.cart.createCart({});
@@ -200,7 +254,7 @@ describe('OAuthStrategy', () => {
         value: VALID_TOKEN,
         expiresAt: expect.any(Number),
       },
-      refreshToken: { value: 'something' },
+      refreshToken: { value: 'something', role: TokenRole.VISITOR },
     });
   });
 
@@ -214,7 +268,7 @@ describe('OAuthStrategy', () => {
             value: VALID_TOKEN,
             expiresAt: getCurrentDate() + 1000,
           },
-          refreshToken: { value: 'something' },
+          refreshToken: { value: 'something', role: TokenRole.VISITOR },
         },
       }),
     });
@@ -224,7 +278,7 @@ describe('OAuthStrategy', () => {
         value: VALID_TOKEN,
         expiresAt: expect.any(Number),
       },
-      refreshToken: { value: 'something' },
+      refreshToken: { value: 'something', role: TokenRole.VISITOR },
     });
   });
 
@@ -252,7 +306,7 @@ describe('OAuthStrategy', () => {
         value: VALID_TOKEN,
         expiresAt: getCurrentDate() + 1000,
       },
-      refreshToken: { value: 'something' },
+      refreshToken: { value: 'something', role: TokenRole.VISITOR },
     });
     const oauthState = client.auth.generateOAuthData(redirectUri);
     const { authUrl } = await client.auth.getAuthUrl(oauthState);
@@ -318,6 +372,14 @@ describe('OAuthStrategy', () => {
       ).rejects.toThrow();
     });
 
+    it('should return error if exists', async () => {
+      const client = getClient();
+      window.location.hash = `#code=something&state=something&error=invalid_grant&error_description=Invalid+authorization+code`;
+      const { errorDescription, error } = client.auth.parseFromUrl();
+      expect(error).toBe('invalid_grant');
+      expect(errorDescription).toBe('Invalid authorization code');
+    });
+
     it('should throw when code is missing', async () => {
       const client = getClient();
       const redirectUri = 'https://example.com';
@@ -352,7 +414,7 @@ describe('OAuthStrategy', () => {
           value: VALID_TOKEN,
           expiresAt: getCurrentDate() + 1000,
         },
-        refreshToken: { value: 'refresh' },
+        refreshToken: { value: 'refresh', role: TokenRole.MEMBER },
       });
       await client.auth.logout(originalUrl);
 
@@ -371,36 +433,6 @@ describe('OAuthStrategy', () => {
   });
 
   describe('isLoggedIn', () => {
-    it('should set when have values', async () => {
-      const client = getClient();
-      const refreshToken = { value: 'something' };
-
-      await client.auth.generateVisitorTokens({
-        refreshToken,
-        accessToken: {
-          value: VALID_TOKEN,
-          expiresAt: getCurrentDate() + 1000,
-        },
-      });
-      expect(global.fetch).toHaveBeenCalledWith(
-        `https://${API_URL}/members/v1/members/my`,
-        { headers: { Authorization: VALID_TOKEN } },
-      );
-    });
-
-    it('should set when have refresh token', async () => {
-      const client = getClient();
-      const refreshToken = { value: 'something' };
-
-      await client.auth.generateVisitorTokens({
-        refreshToken,
-      });
-      expect(global.fetch).toHaveBeenCalledWith(
-        `https://${API_URL}/members/v1/members/my`,
-        { headers: { Authorization: VALID_TOKEN } },
-      );
-    });
-
     it('should return true after login', async () => {
       const client = getClient();
 
@@ -408,9 +440,10 @@ describe('OAuthStrategy', () => {
       const oauthState = client.auth.generateOAuthData(redirectUri);
       window.location.hash = `#code=something&state=${oauthState.state}`;
       const { state, code } = client.auth.parseFromUrl();
-      await client.auth.getMemberTokens(code, state, oauthState);
+      const tokens = await client.auth.getMemberTokens(code, state, oauthState);
+      client.auth.setTokens(tokens);
 
-      expect(client.auth.isLoggedIn()).toBe(true);
+      expect(client.auth.loggedIn()).toBe(true);
     });
 
     it('should return true after logout', async () => {
@@ -422,7 +455,7 @@ describe('OAuthStrategy', () => {
       const { state, code } = client.auth.parseFromUrl();
       await client.auth.getMemberTokens(code, state, oauthState);
       await client.auth.logout('');
-      expect(client.auth.isLoggedIn()).toBe(false);
+      expect(client.auth.loggedIn()).toBe(false);
     });
   });
 });
