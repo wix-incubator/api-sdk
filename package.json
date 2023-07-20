@@ -9,6 +9,7 @@
   "scripts": {
     "build": "yarn workspaces foreach -ptv run build",
     "test": "yarn workspaces foreach -ptv run test",
+    "typecheck": "yarn workspaces foreach -ptv run typecheck",
     "lint": "yarn workspaces foreach -ptv run lint"
   },
   "devDependencies": {

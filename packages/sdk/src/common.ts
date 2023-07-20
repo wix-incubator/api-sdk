@@ -4,3 +4,4 @@ export type PublicMetadata = {
 };
 
 export const API_URL = 'www.wixapis.com';
+export const READ_ONLY_API_URL = 'readonly.wixapis.com';

@@ -1,5 +1,5 @@
 import { authentication } from '@wix/identity';
-import { AuthenticationStrategy } from '../strategy';
+import { AuthenticationStrategy } from '@wix/sdk-types';
 
 export interface Tokens {
   accessToken: AccessToken;
@@ -36,7 +36,7 @@ export interface RegisterParams extends LoginParams {
 export interface LoginParams {
   email: string;
   password: string;
-  captchaTokens?: { invisibleRecaptcha?: string; recaptcha?: string };
+  captchaTokens?: { invisibleRecaptchaToken?: string; recaptchaToken?: string };
 }
 
 export interface IOAuthStrategy extends AuthenticationStrategy {
@@ -48,7 +48,10 @@ export interface IOAuthStrategy extends AuthenticationStrategy {
   setTokens: (tokens: Tokens) => void;
   getTokens: () => Tokens;
   generateOAuthData: (redirectUri: string, originalUri?: string) => OauthData;
-  getAuthUrl: (oauthData: OauthData) => Promise<{ authUrl: string }>;
+  getAuthUrl: (
+    oauthData: OauthData,
+    opts?: { prompt?: 'login' | 'none' },
+  ) => Promise<{ authUrl: string }>;
   getMemberTokens: (
     code: string,
     state: string,
@@ -63,29 +66,57 @@ export interface IOAuthStrategy extends AuthenticationStrategy {
   };
   register: (params: RegisterParams) => Promise<StateMachine>;
   login: (params: LoginParams) => Promise<StateMachine>;
-  proceed<T extends ProcessableState>(
+  processVerification<T extends ProcessableState>(
     nextInputs: CalculateNextState<T>,
   ): Promise<StateMachine>;
+  /**
+   * @deprecated use processVerification instead
+   */
+  proceed<T extends ProcessableState>(
+    nextInputs: DeprecatedCalculateNextState<T>,
+  ): Promise<StateMachine>;
+  /**
+   * @deprecated use getMemberTokensForDirectLogin instead
+   */
   complete: (sessionToken: string) => Promise<Tokens>;
+  getMemberTokensForDirectLogin: (sessionToken: string) => Promise<Tokens>;
+  /**
+   * @deprecated use sendPasswordResetEmail instead
+   */
   sendResetPasswordMail: (email: string, redirectUri: string) => Promise<void>;
+  sendPasswordResetEmail: (email: string, redirectUri: string) => Promise<void>;
   getRecaptchaScriptUrl: () => string;
   getRecaptchaToken: () => Promise<string>;
   loggedIn: () => boolean;
 }
 
-type SuccessState = {
-  stateKind: 'success';
+export enum LoginState {
+  SUCCESS = 'SUCCESS',
+  INITIAL = 'INITIAL',
+  FAILURE = 'FAILURE',
+  EMAIL_VERIFICATION_REQUIRED = 'EMAIL_VERIFICATION_REQUIRED',
+  OWNER_APPROVAL_REQUIRED = 'OWNER_APPROVAL_REQUIRED',
+  USER_CAPTCHA_REQUIRED = 'USER_CAPTCHA_REQUIRED',
+  SILENT_CAPTCHA_REQUIRED = 'SILENT_CAPTCHA_REQUIRED',
+}
+
+interface LoginResults<SK extends string, LK extends LoginState> {
+  /**
+   * @deprecated use loginState instead
+   */
+  stateKind: SK;
+  loginState: LK;
+}
+
+interface SuccessState extends LoginResults<'success', LoginState.SUCCESS> {
   data: {
     sessionToken: string;
   };
-};
+}
 
-type InitialState = {
-  stateKind: 'initial';
-};
+interface InitialState extends LoginResults<'initial', LoginState.INITIAL> {}
 
-type ErrorState = {
-  stateKind: 'failure';
+interface ErrorState extends LoginResults<'failure', LoginState.FAILURE> {
   errorCode?:
     | 'invalidEmail'
     | 'invalidPassword'
@@ -94,32 +125,43 @@ type ErrorState = {
     | 'emailAlreadyExists'
     | 'invalidCaptchaToken';
   error: string;
-};
+}
 
-type EmailVerificationRequiredState = {
-  stateKind: 'emailVerificationRequired';
+interface EmailVerificationRequiredState
+  extends LoginResults<
+    'emailVerificationRequired',
+    LoginState.EMAIL_VERIFICATION_REQUIRED
+  > {
   data: {
     stateToken: string;
   };
-};
+}
 
-type OwnerApprovalRequiredState = {
-  stateKind: 'ownerApprovalRequired';
-};
+interface OwnerApprovalRequiredState
+  extends LoginResults<
+    'ownerApprovalRequired',
+    LoginState.OWNER_APPROVAL_REQUIRED
+  > {}
 
-type SilentCaptchaRequiredState = {
-  stateKind: 'silentCaptchaRequired';
+interface SilentCaptchaRequiredState
+  extends LoginResults<
+    'silentCaptchaRequired',
+    LoginState.SILENT_CAPTCHA_REQUIRED
+  > {
   data: {
     stateToken: string;
   };
-};
+}
 
-type UserCaptchaRequiredState = {
-  stateKind: 'userCaptchaRequired';
+interface UserCaptchaRequiredState
+  extends LoginResults<
+    'userCaptchaRequired',
+    LoginState.USER_CAPTCHA_REQUIRED
+  > {
   data: {
     stateToken: string;
   };
-};
+}
 
 export enum TokenRole {
   NONE = 'none',
@@ -136,10 +178,22 @@ export type StateMachine =
   | SilentCaptchaRequiredState
   | UserCaptchaRequiredState;
 
+type DeprecatedCode = {
+  /**
+   * @deprecated use verificationCode instead
+   */
+  code: string;
+};
+
+type VerificationCode = {
+  verificationCode: string;
+};
+
+export type DeprecatedCalculateNextState<T> =
+  T extends EmailVerificationRequiredState ? DeprecatedCode : never;
+
 export type CalculateNextState<T> = T extends EmailVerificationRequiredState
-  ? {
-    code: string;
-  }
+  ? VerificationCode
   : never;
 
 export type ProcessableState = EmailVerificationRequiredState;

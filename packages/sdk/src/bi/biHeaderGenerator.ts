@@ -1,10 +1,7 @@
+import { APIMetadata } from '@wix/sdk-types';
 import { PublicMetadata } from '../common';
 
 export const WixBIHeaderName = 'x-wix-bi-gateway';
-
-export type WixBIHeader = {
-  [WixBIHeaderName]: WixBIHeaderValues;
-};
 
 export type WixBIHeaderValues = {
   ['environment']: 'js-sdk';
@@ -14,15 +11,15 @@ export type WixBIHeaderValues = {
 };
 
 export function biHeaderGenerator(
-  requestOptions: any,
-  publicMetadata: PublicMetadata,
+  apiMetadata: APIMetadata,
+  publicMetadata?: PublicMetadata,
 ): { [WixBIHeaderName]: string } {
   return {
     [WixBIHeaderName]: objectToKeyValue({
       environment: 'js-sdk',
-      'package-name': publicMetadata?.PACKAGE_NAME,
-      'method-fqn': requestOptions?.methodFqn,
-      entity: requestOptions?.entityFqdn,
+      'package-name': apiMetadata.packageName ?? publicMetadata?.PACKAGE_NAME,
+      'method-fqn': apiMetadata.methodFqn,
+      entity: apiMetadata.entityFqdn,
     }),
   };
 }

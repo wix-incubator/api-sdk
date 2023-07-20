@@ -3,7 +3,7 @@ import { VALID_TOKEN } from './fixtures/constants';
 import { OAuthStrategy } from '../auth/oauth2/OAuthStrategy';
 import { authentication } from '@wix/identity';
 import * as pkceChallenge from 'pkce-challenge';
-import { TokenRole } from '../auth/oauth2/types';
+import { LoginState, TokenRole } from '../auth/oauth2/types';
 import { getCurrentDate } from '../tokenHelpers';
 import {
   EMAIL_EXISTS,
@@ -53,7 +53,7 @@ describe('direct login', () => {
     const client = getClient();
 
     // @ts-expect-error
-    const { stateKind, data } = await client.auth.register({
+    const { stateKind, loginState, data } = await client.auth.register({
       email: 'my@email.com',
       password: '123456',
       profile: { firstName: 'John' },
@@ -70,6 +70,7 @@ describe('direct login', () => {
       }),
     );
     expect(stateKind).toEqual('success');
+    expect(loginState).toEqual(LoginState.SUCCESS);
     expect(data).toEqual({ sessionToken: 'some-token' });
   });
 
@@ -87,13 +88,14 @@ describe('direct login', () => {
 
     const client = getClient();
 
-    const { stateKind } = await client.auth.register({
+    const { stateKind, loginState } = await client.auth.register({
       email: 'my@email.com',
       password: '123456',
       profile: { firstName: 'John' },
     });
 
     expect(stateKind).toEqual('ownerApprovalRequired');
+    expect(loginState).toEqual(LoginState.OWNER_APPROVAL_REQUIRED);
   });
 
   it('should allow register with email verification', async () => {
@@ -112,13 +114,14 @@ describe('direct login', () => {
     const client = getClient();
 
     // @ts-expect-error
-    const { stateKind, data } = await client.auth.register({
+    const { stateKind, loginState, data } = await client.auth.register({
       email: 'my@email.com',
       password: '123456',
       profile: { firstName: 'John' },
     });
 
     expect(stateKind).toEqual('emailVerificationRequired');
+    expect(loginState).toEqual(LoginState.EMAIL_VERIFICATION_REQUIRED);
     expect(data).toEqual({ stateToken: 'stateToken' });
   });
 
@@ -152,13 +155,15 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.register({
-        email: 'my@email.com',
-        password: '123456',
-        profile: { firstName: 'John' },
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.register({
+          email: 'my@email.com',
+          password: '123456',
+          profile: { firstName: 'John' },
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('invalidEmail');
     });
@@ -180,13 +185,15 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.register({
-        email: 'my@email.com',
-        password: '123456',
-        profile: { firstName: 'John' },
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.register({
+          email: 'my@email.com',
+          password: '123456',
+          profile: { firstName: 'John' },
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('missingCaptchaToken');
     });
@@ -208,13 +215,15 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.register({
-        email: 'my@email.com',
-        password: '123456',
-        profile: { firstName: 'John' },
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.register({
+          email: 'my@email.com',
+          password: '123456',
+          profile: { firstName: 'John' },
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('invalidCaptchaToken');
     });
@@ -236,13 +245,15 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.register({
-        email: 'my@email.com',
-        password: '123456',
-        profile: { firstName: 'John' },
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.register({
+          email: 'my@email.com',
+          password: '123456',
+          profile: { firstName: 'John' },
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('emailAlreadyExists');
     });
@@ -264,12 +275,14 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.login({
-        email: 'my@email.com',
-        password: '123456',
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.login({
+          email: 'my@email.com',
+          password: '123456',
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('invalidPassword');
     });
@@ -291,17 +304,19 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.login({
-        email: 'my@email.com',
-        password: '123456',
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.login({
+          email: 'my@email.com',
+          password: '123456',
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('resetPassword');
     });
 
-    it('should throw when invalid email', async () => {
+    it('should throw when invalid email on login', async () => {
       // @ts-expect-error
       global.fetch = jest.fn(() =>
         Promise.resolve({
@@ -318,12 +333,14 @@ describe('direct login', () => {
       const client = getClient();
 
       // @ts-expect-error
-      const { stateKind, error, errorCode } = await client.auth.login({
-        email: 'my@email.com',
-        password: '123456',
-      });
+      const { stateKind, loginState, error, errorCode } =
+        await client.auth.login({
+          email: 'my@email.com',
+          password: '123456',
+        });
 
       expect(stateKind).toEqual('failure');
+      expect(loginState).toEqual(LoginState.FAILURE);
       expect(error).not.toEqual('');
       expect(errorCode).toEqual('invalidEmail');
     });
@@ -345,7 +362,7 @@ describe('direct login', () => {
     const client = getClient();
 
     // @ts-expect-error
-    const { stateKind, data } = await client.auth.login({
+    const { stateKind, loginState, data } = await client.auth.login({
       email: 'my@email.com',
       password: '123456',
     });
@@ -360,6 +377,7 @@ describe('direct login', () => {
       }),
     );
     expect(stateKind).toEqual('success');
+    expect(loginState).toEqual(LoginState.SUCCESS);
     expect(data).toEqual({ sessionToken: 'some-token' });
   });
 
@@ -389,7 +407,8 @@ describe('direct login', () => {
 
     const client = getClient();
 
-    const tokensPromise = client.auth.complete(sessionToken);
+    const tokensPromise =
+      client.auth.getMemberTokensForDirectLogin(sessionToken);
 
     window.postMessage(
       {
@@ -421,6 +440,7 @@ describe('direct login', () => {
               state: codeChallenge,
               sessionToken,
             },
+            prompt: 'none',
           },
         }),
       }),
@@ -430,7 +450,7 @@ describe('direct login', () => {
   it('should send reset password mail', async () => {
     const client = getClient();
 
-    await client.auth.sendResetPasswordMail(
+    await client.auth.sendPasswordResetEmail(
       'email@gmail.com',
       'https://url.com',
     );
@@ -441,6 +461,51 @@ describe('direct login', () => {
         body: JSON.stringify({
           email: 'email@gmail.com',
           redirect: { url: 'https://url.com', clientId },
+        }),
+      }),
+    );
+  });
+
+  it('DEPRECATED should proceed after email verification', async () => {
+    // @ts-expect-error
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        status: 200,
+        json: () =>
+          Promise.resolve({
+            state: authentication.StateType.REQUIRE_EMAIL_VERIFICATION,
+            stateToken: 'stateToken',
+          }),
+      }),
+    );
+
+    const client = getClient();
+
+    await client.auth.register({
+      email: 'my@email.com',
+      password: '123456',
+    });
+
+    // @ts-expect-error
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        status: 200,
+        json: () =>
+          Promise.resolve({
+            state: authentication.StateType.SUCCESS,
+            sessionToken: 'some-token',
+          }),
+      }),
+    );
+
+    await client.auth.proceed({ code: '112233' });
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        body: JSON.stringify({
+          code: '112233',
+          stateToken: 'stateToken',
         }),
       }),
     );
@@ -478,7 +543,7 @@ describe('direct login', () => {
       }),
     );
 
-    await client.auth.proceed({ code: '112233' });
+    await client.auth.processVerification({ verificationCode: '112233' });
 
     expect(global.fetch).toHaveBeenCalledWith(
       expect.any(String),

@@ -1,119 +1,107 @@
-import { Simplify } from 'type-fest';
-import { AuthenticationStrategy } from './auth/strategy';
-import { biHeaderGenerator } from './bi/biHeaderGenerator';
-import { PublicMetadata, PUBLIC_METADATA_KEY, API_URL } from './common';
+import {
+  AuthenticationStrategy,
+  BuildRESTFunction,
+  HostModule,
+  HostModuleAPI,
+  RESTFunctionDescriptor,
+} from '@wix/sdk-types';
+import { ConditionalExcept, EmptyObject } from 'type-fest';
+import { API_URL, PUBLIC_METADATA_KEY, PublicMetadata } from './common';
+import { getDefaultContentHeader, isObject } from './helpers';
+import { buildRESTDescriptor } from './rest-modules';
+import { buildHostModule, isHostModule } from './host-modules';
 
 type Headers = { Authorization: string } & Record<string, string>;
 
-type WithoutFunctionWrapper<T> = {
-  [Key in keyof T]: T[Key] extends (...args: any) => any
-    ? ReturnType<T[Key]>
-    : Simplify<WithoutFunctionWrapper<T[Key]>>;
-};
+/**
+ * This type takes in a descriptors object of a certain Host (including an `unknown` host)
+ * and returns an object with the same structure, but with all descriptors replaced with their API.
+ * Any non-descriptor properties are removed from the returned object, including descriptors that
+ * do not match the given host (as they will not work with the given host).
+ */
+export type BuildDescriptors<T extends Descriptors<any>> = T extends HostModule<
+  any,
+  any
+>
+  ? HostModuleAPI<T>
+  : T extends RESTFunctionDescriptor
+  ? BuildRESTFunction<T>
+  : ConditionalExcept<
+      {
+        [Key in keyof T]: T[Key] extends Descriptors<any>
+          ? BuildDescriptors<T[Key]>
+          : never;
+      },
+      EmptyObject
+    >;
 
-export interface IWrapper<Z extends AuthenticationStrategy> {
+/**
+ * Descriptors are objects that describe the API of a module, and the module
+ * can either be a REST module or a host module.
+ * This type is recursive, so it can describe nested modules.
+ */
+export type Descriptors<Host> =
+  | RESTFunctionDescriptor
+  | HostModule<any, Host>
+  | {
+      // the `| any` is needed to allow non descriptor properties
+      // that will be ignored at runtime (like modules that export export enums in addition to functions)
+      [key: string]: Descriptors<Host> | PublicMetadata | any;
+    };
+
+/**
+ * This type is used in `createClient` to ensure that the given host matches the host of the given descriptors.
+ * If the host does not match, the descriptor is replaced with a host module that will throw an error when used.
+ */
+export type AssertHostMatches<
+  T extends Descriptors<any>,
+  Host,
+> = T extends HostModule<any, infer U>
+  ? Host extends U
+    ? T
+    : HostModule<any, Host>
+  : {
+      [Key in keyof T]: T[Key] extends Descriptors<any>
+        ? AssertHostMatches<T[Key], Host>
+        : T[Key];
+    };
+
+export type WixClient<
+  T extends Descriptors<Host> = Descriptors<unknown>,
+  Z extends AuthenticationStrategy<Host> = AuthenticationStrategy<unknown>,
+  Host = unknown,
+> = {
   setHeaders(headers: Headers): void;
   auth: Z;
   fetch(relativeUrl: string, options: RequestInit): Promise<Response>;
-}
-
-const wrapperBuilder = <T extends Function>(
-  origFunc: T,
-  publicMetadata: PublicMetadata,
-  boundFetch: typeof fetch,
-  // @ts-expect-error
-): ReturnType<T> => {
-  return origFunc({
-    request: async (factory: any) => {
-      const requestOptions = factory({ host: API_URL });
-      let url = `https://${API_URL}${requestOptions.url}`;
-      if (requestOptions.params && requestOptions.params.toString()) {
-        url += `?${requestOptions.params.toString()}`;
-      }
-      try {
-        const biHeader = biHeaderGenerator(requestOptions, publicMetadata);
-        const res = await boundFetch(url, {
-          method: requestOptions.method,
-          ...(requestOptions.data && {
-            body: JSON.stringify(requestOptions.data),
-          }),
-          headers: {
-            ...biHeader,
-          },
-        });
-        if (res.status !== 200) {
-          let dataError: any = null;
-          try {
-            dataError = await res.json();
-          } catch (e) {
-            //
-          }
-          throw errorBuilder(
-            res.status,
-            dataError?.message,
-            dataError?.details,
-            {
-              requestId: res.headers.get('X-Wix-Request-Id'),
-              details: dataError,
-            },
-          );
-        }
-        const data = await res.json();
-        return { data };
-      } catch (e: any) {
-        if (e.message?.includes('fetch is not defined')) {
-          console.error('Node.js v18+ is required');
-        }
-        throw e;
-      }
-    },
-  });
-};
-
-const errorBuilder = (
-  code: number,
-  description: string,
-  details?: any,
-  data?: Record<string, any>,
-) => {
-  return {
-    response: {
-      data: {
-        details: {
-          ...(!details?.validationError && {
-            applicationError: {
-              description,
-              code,
-              data,
-            },
-          }),
-          ...details,
-        },
-        message: description,
-      },
-      status: code,
-    },
-  };
-};
+  use<R extends Descriptors<Host> = EmptyObject>(
+    modules: AssertHostMatches<R, Host>,
+  ): BuildDescriptors<R>;
+} & BuildDescriptors<T>;
 
 export function createClient<
-  T = any,
-  Z extends AuthenticationStrategy = any,
+  T extends Descriptors<Host> = EmptyObject,
+  Z extends AuthenticationStrategy<Host> = AuthenticationStrategy<unknown>,
+  Host = unknown,
 >(config: {
-  modules?: T;
+  modules?: AssertHostMatches<T, Host>;
   auth?: Z;
   headers?: Headers;
-}): WithoutFunctionWrapper<T> & IWrapper<Z> {
+  host?: Host;
+}): WixClient<T, Z, Host> {
   const _headers: Headers = config.headers || { Authorization: '' };
   const authStrategy = config.auth || {
     getAuthHeaders: () => Promise.resolve({ headers: {} }),
   };
 
   const boundFetch: typeof fetch = async (url, options) => {
-    const authHeaders = await authStrategy.getAuthHeaders();
+    const authHeaders = await authStrategy.getAuthHeaders(config.host);
+    const defaultContentTypeHeader = getDefaultContentHeader(options);
+
     return fetch(url, {
       ...options,
       headers: {
+        ...defaultContentTypeHeader,
         ..._headers,
         ...authHeaders?.headers,
         ...options?.headers,
@@ -121,24 +109,34 @@ export function createClient<
     });
   };
 
-  const isObject = (val: any) =>
-    val && typeof val === 'object' && !Array.isArray(val);
-
-  const traverse = (obj: any) => {
-    return Object.entries(obj).reduce((prev: any, [key, value]) => {
-      if (isObject(value)) {
-        prev[key] = traverse(value);
-      } else if (typeof obj[key] === 'function') {
-        prev[key] = wrapperBuilder(
-          value as Function,
-          obj[PUBLIC_METADATA_KEY] ?? {},
-          boundFetch,
-        );
-      } else {
-        prev[key] = value;
-      }
-      return prev;
-    }, {});
+  // This is typed as `any` because when trying to properly type it as defined
+  // on the WixClient, typescript starts failing with `Type instantiation is
+  // excessively deep and possibly infinite.`
+  const use: any = (modules: any, metadata?: PublicMetadata) => {
+    if (isHostModule(modules)) {
+      return buildHostModule(
+        modules as HostModule<unknown, unknown>,
+        config.host,
+      );
+    } else if (typeof modules === 'function') {
+      return buildRESTDescriptor(
+        modules as RESTFunctionDescriptor,
+        metadata ?? {},
+        boundFetch,
+      );
+    } else if (isObject(modules)) {
+      return Object.fromEntries(
+        Object.entries(
+          modules as {
+            [key: string]: Descriptors<Host> | PublicMetadata | any;
+          },
+        ).map(([key, value]) => {
+          return [key, use(value, (modules as any)[PUBLIC_METADATA_KEY])];
+        }),
+      );
+    } else {
+      return modules;
+    }
   };
 
   const setHeaders = (headers: Headers) => {
@@ -147,12 +145,13 @@ export function createClient<
     }
   };
 
-  const wrappedModules = config.modules ? traverse(config.modules) : {};
+  const wrappedModules = config.modules ? use(config.modules) : {};
   return {
     ...wrappedModules,
     auth: authStrategy,
     setHeaders,
-    fetch: (relativeUrl: string, options: RequestInit) => {
+    use,
+    fetch: (relativeUrl: string, options?: RequestInit) => {
       const finalUrl = new URL(relativeUrl, `https://${API_URL}`);
       finalUrl.host = API_URL;
       finalUrl.protocol = 'https';

@@ -5,6 +5,9 @@ import { getCurrentDate } from '../tokenHelpers';
 import { OAuthStrategy } from '../auth/oauth2/OAuthStrategy';
 import { TokenRole } from '../auth/oauth2/types';
 
+const expectStringToMatchAllOfStrings = (strings: string[]) =>
+  expect.stringMatching(RegExp(strings.map((str) => `(?=.*${str})`).join('')));
+
 describe('OAuthStrategy', () => {
   const getClient = () =>
     createClient({
@@ -142,6 +145,25 @@ describe('OAuthStrategy', () => {
         },
         refreshToken,
       });
+    });
+
+    it('should send a bi header', async () => {
+      const client = getClient();
+      await client.auth.generateVisitorTokens();
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          headers: expect.objectContaining({
+            'x-wix-bi-gateway': expectStringToMatchAllOfStrings([
+              'environment=js-sdk',
+              'package-name=@wix/api-client',
+              'method-fqn=wix.identity.oauth2.v1.Oauth2Ng.Token',
+              'entity=wix.identity.oauth.v1.refresh_token',
+            ]),
+            'Content-Type': 'application/json',
+          }),
+        }),
+      );
     });
   });
 
@@ -326,6 +348,49 @@ describe('OAuthStrategy', () => {
               scope: 'offline_access',
               state: oauthState.state,
             },
+            prompt: 'login',
+          },
+        }),
+        headers: expect.objectContaining({
+          Authorization: VALID_TOKEN,
+        }),
+      }),
+    );
+
+    expect(authUrl).toBe('https://redirect.com');
+  });
+
+  it('should redirect to authorize endpoint with silent login when prompt is none', async () => {
+    const client = getClient();
+    const redirectUri = 'https://example.com';
+    client.auth.setTokens({
+      accessToken: {
+        value: VALID_TOKEN,
+        expiresAt: getCurrentDate() + 1000,
+      },
+      refreshToken: { value: 'something', role: TokenRole.VISITOR },
+    });
+    const oauthState = client.auth.generateOAuthData(redirectUri);
+    const { authUrl } = await client.auth.getAuthUrl(oauthState, {
+      prompt: 'none',
+    });
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        body: JSON.stringify({
+          auth: {
+            authRequest: {
+              redirectUri,
+              clientId: 'some-clientId',
+              codeChallenge: oauthState.codeChallenge,
+              codeChallengeMethod: 'S256',
+              responseMode: 'fragment',
+              responseType: 'code',
+              scope: 'offline_access',
+              state: oauthState.state,
+            },
+            prompt: 'none',
           },
         }),
         headers: expect.objectContaining({

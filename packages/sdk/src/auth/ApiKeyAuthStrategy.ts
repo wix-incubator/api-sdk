@@ -1,19 +1,26 @@
-import { AuthenticationStrategy } from './strategy';
+import { AuthenticationStrategy } from '@wix/sdk-types';
 
 export interface IApiKeyStrategy extends AuthenticationStrategy {
   setSiteId(siteId?: string): void;
   setAccountId(accountId?: string): void;
 }
 
+type Context =
+  | {
+      siteId: string;
+      accountId?: string;
+    }
+  | {
+      siteId?: string;
+      accountId: string;
+      apiKey: string;
+    };
+
 export function ApiKeyStrategy({
   siteId,
   accountId,
   apiKey,
-}: {
-  siteId?: string;
-  accountId?: string;
-  apiKey: string;
-}): IApiKeyStrategy {
+}: { apiKey: string } & Context): IApiKeyStrategy {
   const headers: Record<string, string> = { Authorization: apiKey };
   if (siteId) {
     headers['wix-site-id'] = siteId;

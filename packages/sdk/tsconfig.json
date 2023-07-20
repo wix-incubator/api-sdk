@@ -1,15 +1,9 @@
 {
-  "extends": "@wix/yoshi-flow-library/tsconfig.flow.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist/esm",
-    "declarationDir": "dist/types"
-  },
-  "include": [
-    "src"
-  ],
-  "files": [
-    "./src/external-types.d.ts",
-    "./src/test-types.d.ts"
-  ]
+    "target": "es2016",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "jsx": "react"
+  }
 }

@@ -96,7 +96,9 @@ describe('APIKeyStrategy', () => {
   it('should allow updating account and site Ids', async () => {
     const baseConfig = {
       apiKey: 'some-api-key',
+      accountId: 'some-account-id',
     };
+
     const siteId = 'some-site-id';
     const accountId = 'some-account-id';
 

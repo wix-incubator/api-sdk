@@ -8,6 +8,7 @@ import {
   CalculateNextState,
   IOAuthStrategy,
   LoginParams,
+  LoginState,
   OauthData,
   OauthPKCE,
   ProcessableState,
@@ -25,6 +26,7 @@ import {
   MISSING_CAPTCHA,
   RESET_PASSWORD,
 } from './constants';
+import { biHeaderGenerator } from '../../bi/biHeaderGenerator';
 
 const moduleWithTokens = { redirects, authentication, recovery, verification };
 const WIX_RECAPTCHA_ID = '6LdoPaUfAAAAAJphvHoUoOob7mx0KDlXyXlgrx5v';
@@ -42,7 +44,10 @@ export function OAuthStrategy(config: {
     _tokens.accessToken = tokens.accessToken;
     _tokens.refreshToken = tokens.refreshToken;
   };
-  let _state: StateMachine = { stateKind: 'initial' };
+  let _state: StateMachine = {
+    stateKind: 'initial',
+    loginState: LoginState.INITIAL,
+  };
 
   const getAuthHeaders = async () => {
     if (!_tokens.accessToken?.value || isTokenExpired(_tokens.accessToken)) {
@@ -141,6 +146,7 @@ export function OAuthStrategy(config: {
   const getAuthorizationUrlWithOptions = async (
     oauthData: Partial<OauthData>,
     responseMode: 'fragment' | 'web_message',
+    prompt: 'login' | 'none',
     sessionToken?: string,
   ) => {
     const { redirectSession } =
@@ -160,13 +166,25 @@ export function OAuthStrategy(config: {
             state: oauthData.state,
             ...(sessionToken && { sessionToken }),
           },
+          prompt: redirects.Prompt[prompt],
         },
       });
     return { authUrl: redirectSession!.fullUrl! };
   };
 
-  const getAuthUrl = async (oauthData: OauthData) => {
-    return getAuthorizationUrlWithOptions(oauthData, 'fragment');
+  const getAuthUrl = async (
+    oauthData: OauthData,
+    opts: {
+      prompt?: 'login' | 'none';
+    } = {
+      prompt: 'login',
+    },
+  ) => {
+    return getAuthorizationUrlWithOptions(
+      oauthData,
+      'fragment',
+      opts.prompt ?? 'login',
+    );
   };
 
   const parseFromUrl = () => {
@@ -233,6 +251,7 @@ export function OAuthStrategy(config: {
   ): StateMachine => {
     if (response.state === authentication.StateType.SUCCESS) {
       return {
+        loginState: LoginState.SUCCESS,
         stateKind: 'success',
         data: { sessionToken: response.sessionToken! },
       };
@@ -240,18 +259,24 @@ export function OAuthStrategy(config: {
       response.state === authentication.StateType.REQUIRE_OWNER_APPROVAL
     ) {
       return {
+        loginState: LoginState.OWNER_APPROVAL_REQUIRED,
         stateKind: 'ownerApprovalRequired',
       };
     } else if (
       response.state === authentication.StateType.REQUIRE_EMAIL_VERIFICATION
     ) {
       _state = {
+        loginState: LoginState.EMAIL_VERIFICATION_REQUIRED,
         stateKind: 'emailVerificationRequired',
         data: { stateToken: response.stateToken! },
       };
       return _state;
     }
-    return { stateKind: 'failure', error: 'Unknown _state' };
+    return {
+      stateKind: 'failure',
+      loginState: LoginState.FAILURE,
+      error: 'Unknown _state',
+    };
   };
 
   const register = async (params: RegisterParams): Promise<StateMachine> => {
@@ -266,8 +291,9 @@ export function OAuthStrategy(config: {
           ...(params.captchaTokens && {
             captchaTokens: [
               {
-                Recaptcha: params.captchaTokens?.recaptcha,
-                InvisibleRecaptcha: params.captchaTokens?.invisibleRecaptcha,
+                Recaptcha: params.captchaTokens?.recaptchaToken,
+                InvisibleRecaptcha:
+                  params.captchaTokens?.invisibleRecaptchaToken,
               },
             ],
           }),
@@ -281,6 +307,7 @@ export function OAuthStrategy(config: {
       if (emailValidation) {
         return {
           stateKind: 'failure',
+          loginState: LoginState.FAILURE,
           error: emailValidation.description,
           errorCode: 'invalidEmail',
         };
@@ -288,6 +315,7 @@ export function OAuthStrategy(config: {
       if (e.details.applicationError?.code === MISSING_CAPTCHA) {
         return {
           stateKind: 'failure',
+          loginState: LoginState.FAILURE,
           error: e.message,
           errorCode: 'missingCaptchaToken',
         };
@@ -295,6 +323,7 @@ export function OAuthStrategy(config: {
       if (e.details.applicationError?.code === EMAIL_EXISTS) {
         return {
           stateKind: 'failure',
+          loginState: LoginState.FAILURE,
           error: e.message,
           errorCode: 'emailAlreadyExists',
         };
@@ -302,11 +331,16 @@ export function OAuthStrategy(config: {
       if (e.details.applicationError?.code === INVALID_CAPTCHA) {
         return {
           stateKind: 'failure',
+          loginState: LoginState.FAILURE,
           error: e.message,
           errorCode: 'invalidCaptchaToken',
         };
       }
-      return { stateKind: 'failure', error: e.message };
+      return {
+        stateKind: 'failure',
+        loginState: LoginState.FAILURE,
+        error: e.message,
+      };
     }
   };
 
@@ -322,36 +356,44 @@ export function OAuthStrategy(config: {
     } catch (e: any) {
       return {
         stateKind: 'failure',
+        loginState: LoginState.FAILURE,
         error: e.message,
         errorCode:
           e.details.applicationError.code === INVALID_PASSWORD
             ? 'invalidPassword'
             : e.details.applicationError.code === RESET_PASSWORD
-              ? 'resetPassword'
-              : 'invalidEmail',
+            ? 'resetPassword'
+            : 'invalidEmail',
       };
     }
   };
 
-  const proceed = async <T extends ProcessableState>(
+  const processVerification = async <T extends ProcessableState>(
     nextInputs: CalculateNextState<T>,
   ): Promise<StateMachine> => {
     if (_state.stateKind === 'emailVerificationRequired') {
+      const code =
+        (nextInputs as any).verificationCode ?? (nextInputs as any).code;
       const res =
         await wixClientWithTokens.verification.verifyDuringAuthentication(
-          nextInputs.code,
+          code,
           { stateToken: _state.data.stateToken },
         );
       return handleState(res);
     }
-    return { stateKind: 'failure', error: 'Unknown _state' };
+    return {
+      stateKind: 'failure',
+      loginState: LoginState.FAILURE,
+      error: 'Unknown _state',
+    };
   };
 
-  const complete = async (sessionToken: string) => {
+  const getMemberTokensForDirectLogin = async (sessionToken: string) => {
     const oauthPKCE = generatePKCE();
     const { authUrl } = await getAuthorizationUrlWithOptions(
       oauthPKCE,
       'web_message',
+      'none',
       sessionToken,
     );
     const iframePromise = addPostMessageListener(oauthPKCE.state);
@@ -367,7 +409,7 @@ export function OAuthStrategy(config: {
       });
   };
 
-  const sendResetPasswordMail = async (email: string, redirectUri: string) => {
+  const sendPasswordResetEmail = async (email: string, redirectUri: string) => {
     await wixClientWithTokens.recovery.sendRecoveryEmail(email, {
       redirect: { url: redirectUri, clientId: config.clientId },
     });
@@ -406,10 +448,19 @@ export function OAuthStrategy(config: {
     loggedIn,
     logout,
     register,
-    proceed,
+    proceed: (nextInputs) => {
+      const { code, ...restProps } = nextInputs;
+      return processVerification({
+        verificationCode: code,
+        ...restProps,
+      });
+    },
+    processVerification,
     login,
-    complete,
-    sendResetPasswordMail,
+    complete: getMemberTokensForDirectLogin,
+    getMemberTokensForDirectLogin,
+    sendResetPasswordMail: sendPasswordResetEmail,
+    sendPasswordResetEmail,
     getRecaptchaScriptUrl,
     getRecaptchaToken,
   };
@@ -419,6 +470,14 @@ const fetchTokens = async (payload: any): Promise<TokenResponse> => {
   const res = await fetch(`https://${API_URL}/oauth2/token`, {
     method: 'POST',
     body: JSON.stringify(payload),
+    headers: {
+      ...biHeaderGenerator({
+        entityFqdn: 'wix.identity.oauth.v1.refresh_token',
+        methodFqn: 'wix.identity.oauth2.v1.Oauth2Ng.Token',
+        packageName: '@wix/api-client',
+      }),
+      'Content-Type': 'application/json',
+    },
   });
   if (res.status !== 200) {
     throw new Error('something went wrong');

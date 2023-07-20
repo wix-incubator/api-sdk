@@ -4,6 +4,7 @@ import { parse } from 'querystring';
 const URL_HASH_PREFIX = '#';
 const WIX_PROTOCOL = 'wix:';
 const WIX_IMAGE = 'image';
+const WIX_IMAGE_URL = 'https://static.wixstatic.com/media/';
 
 function getScaledToFillImageUrl(
   wixMediaIdentifier: string,
@@ -68,22 +69,30 @@ function getCroppedImageUrl(
 }
 
 function getImageUrl(val: string) {
-  const alignedImage = alignIfLegacy(val, WIX_IMAGE);
+  let id: string, filenameOrAltText: string;
+  let height: string, width: string;
 
-  const { hash, pathname } = new URL(alignedImage);
+  if (val.startsWith(WIX_IMAGE_URL)) {
+    id = val.split(WIX_IMAGE_URL).pop()!.split('/')[0];
+    width = val.split('/w_').pop()!.split(',')[0];
+    height = val.split(',h_').pop()!.split(',')[0];
+  } else {
+    const alignedImage = alignIfLegacy(val, WIX_IMAGE);
 
-  const { originHeight: height, originWidth: width } = parse(
-    hash.replace(URL_HASH_PREFIX, ''),
-  );
-  const [id, filenameOrAltText] = pathname
-    .replace(`${WIX_IMAGE}://v1/`, '')
-    .split('/');
+    const { hash, pathname } = new URL(alignedImage);
 
+    ({ originHeight: height, originWidth: width } = parse(
+      hash.replace(URL_HASH_PREFIX, ''),
+    ) as { originHeight: string; originWidth: string });
+    [id, filenameOrAltText] = pathname
+      .replace(`${WIX_IMAGE}://v1/`, '')
+      .split('/');
+  }
   const decodedFilenameOrAltText = decodeText(filenameOrAltText);
 
   const res = {
     id,
-    url: `https://static.wixstatic.com/media/${id}`,
+    url: `${WIX_IMAGE_URL}${id}`,
     height: Number(height),
     width: Number(width),
   };
